@@ -1,0 +1,18 @@
+uuid: 12961298-8e23-4dbe-b731-1e2d10cfeed7
+langcode: es
+status: true
+dependencies: {  }
+id: local
+label: Local
+description: 'Local environment'
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/config_split/local
+module:
+  devel: 0
+  stage_file_proxy: 0
+theme: {  }
+complete_list: {  }
+partial_list: {  }

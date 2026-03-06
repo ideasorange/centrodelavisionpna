@@ -258,7 +258,7 @@ $databases = [];
  * directory in the public files path. The setting below allows you to set
  * its location.
  */
-# $settings['config_sync_directory'] = '/directory/outside/webroot';
+$settings['config_sync_directory'] = '../config/sync';
 
 /**
  * Settings:
@@ -881,19 +881,15 @@ if (getenv('IS_DDEV_PROJECT') == 'true' && file_exists(__DIR__ . '/settings.ddev
 }
 
 /**
- * Load local development override configuration, if available.
+ * Local / environment-specific settings (not in git).
  *
- * Create a settings.local.php file to override variables on secondary (staging,
- * development, etc.) installations of this site.
+ * Create settings.local.php on each environment (local, dev, prod) with the
+ * appropriate content for that environment (database, hash_salt, env indicator,
+ * config split, cache settings, etc.). Use the example.settings.local.*.php
+ * files in this directory as templates.
  *
- * Typical uses of settings.local.php include:
- * - Disabling caching.
- * - Disabling JavaScript/CSS compression.
- * - Rerouting outgoing emails.
- *
- * Keep this code block at the end of this file to take full effect.
+ * @see README.settings.md
  */
-#
-# if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-#   include $app_root . '/' . $site_path . '/settings.local.php';
-# }
+if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+  include $app_root . '/' . $site_path . '/settings.local.php';
+}
