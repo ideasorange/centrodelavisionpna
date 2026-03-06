@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Sora:wght@100..800&display=swap");
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 1230px) {
+  .menu {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.hamburger {
+  display: flex;
+}
+@media (min-width: 1230px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+.navigation-menu {
+  display: none;
+  background: white;
+  position: static;
+}
+@media (min-width: 1230px) {
+  .navigation-menu {
+    display: block;
+  }
+}
+.navigation-menu.open {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 80px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding-top: 2rem;
+  z-index: 9;
+}
+.navigation-menu.open > .menu {
+  gap: 25px;
+}
+/*# sourceMappingURL=main_menu.css.map */

@@ -1,0 +1,18 @@
+{{ include('iobase:hamburger_icon', {
+  menu_name: 'navigation-menu',
+}) }}
+<div class="navigation-menu">
+<ul{{ attributes.addClass('menu') }}>
+{% for item in items %}
+  {{ include('iobase:menu_item', {
+    title: item.title,
+    url: item.url,
+    active: item.in_active_trail,
+  }) }}
+{% endfor %}
+</ul>
+{#<div class="">#}
+{#  <i id="hamburger" class="ri-menu-line"></i>#}
+{#  <ion-icon id="hamburger" name="menu-outline"></ion-icon>#}
+{#</div>#}
+</div>

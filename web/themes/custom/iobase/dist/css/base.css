@@ -1,0 +1,27 @@
+html body {
+  color: #2F323D;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+html body::selection, html body::-moz-selection {
+  color: white;
+  background: linear-gradient(270deg, #e836f8 52.66%, #2D58A6 70.97%);
+}
+html body * {
+  box-sizing: border-box;
+}
+html body a {
+  color: #F58622;
+  text-decoration: none;
+  transition: all 0.4s;
+  cursor: pointer;
+  outline: none;
+}
+html body a:focus, html body a:hover {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=base.css.map */

@@ -1,0 +1,18 @@
+uuid: c69e01ce-1a68-4a0a-a5c3-33920e02e432
+langcode: es
+status: true
+dependencies: {  }
+id: dev
+label: Dev
+description: 'Developing Environment'
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/config_split/dev
+module:
+  devel: 0
+  stage_file_proxy: 0
+theme: {  }
+complete_list: {  }
+partial_list: {  }

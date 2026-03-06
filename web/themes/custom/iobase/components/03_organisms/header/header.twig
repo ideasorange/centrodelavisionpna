@@ -1,0 +1,19 @@
+<div {{ attributes.addClass('header-wrapper') }}>
+  <section class="header-container">
+    <section>
+      {% block left %}
+        LEFT
+      {% endblock %}
+    </section>
+    <section>
+      {% block center %}
+
+      {% endblock %}
+    </section>
+    <section>
+      {% block right %}
+        {{ drupal_menu('main') }}
+      {% endblock %}
+    </section>
+  </section>
+</div>

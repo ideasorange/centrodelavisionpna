@@ -1,0 +1,75 @@
+// Import generic styles.
+@use "../../../scss/core" as *;
+
+.partners-block {
+  @extend %breakContainer;
+  padding: 3rem 0;
+  background-color: $color-white-01;
+}
+
+.partners-block__inner {
+  @extend %content-container;
+  text-align: center;
+  display: grid;
+  gap: 2rem;
+}
+
+.partners-block__header {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.partners-block__heading {
+  @extend %h2;
+  color: $color-blue-05;
+}
+
+.partners-block__grid { 
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  border-left: 1px solid $color-gray-01;
+  border-top: 1px solid $color-gray-01;
+}
+
+.partners-block__grid > * {
+  border-right: 1px solid $color-gray-01;
+  border-bottom: 1px solid $color-gray-01;
+}
+
+.partners-block__cta {
+  display: flex;
+  justify-content: center;
+}
+
+.partners-block__cta-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  background: $color-blue-01;
+  color: $color-white-01;
+  font-size: to-rem(16);
+  text-decoration: none;
+  border: 1px solid $color-blue-01;
+  transition: all $duration;
+
+  &:hover,
+  &:focus {
+    background: transparent;
+    color: $color-blue-01;
+    text-decoration: none;
+  }
+}
+
+@media (min-width: $tab) {
+  .partners-block__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: $desk) {
+  .partners-block__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

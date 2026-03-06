@@ -1,0 +1,35 @@
+// Import generic styles.
+@use "../../../scss/core" as *;
+
+//[data-component-id="iobase:footer_main"] {
+//  /* @todo Add your styles here. */
+//}
+
+.footer-main_wrapper {
+  @extend %breakContainer;
+  background: $color-blue-03;
+}
+
+.footer-main {
+  @extend %content-container;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  .top {
+    img {
+      width: 250px;
+    }
+  }
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    @media (min-width: $desk) {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      align-items: start;
+    }
+  }
+}

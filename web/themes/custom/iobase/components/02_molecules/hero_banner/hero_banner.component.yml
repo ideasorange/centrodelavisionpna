@@ -1,0 +1,46 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Hero Banner
+status: stable
+description: Hero Banner Component
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - core/once
+props:
+  type: object
+  required:
+    - title
+  properties:
+    title:
+      type: string
+      title: Title
+
+    subtitle:
+      type: string
+      title: Subtitle
+
+    background_image:
+      type: string
+      title: Background image URL
+
+    cta:
+      type: object
+      title: Call to action
+      properties:
+        label:
+          type: string
+        url:
+          type: string
+
+    main_image:
+      type: object
+      title: Main image
+      properties:
+        src:
+          type: string
+        alt:
+          type: string
+slots:
+  content:
+    title: Content
+    description: Others components

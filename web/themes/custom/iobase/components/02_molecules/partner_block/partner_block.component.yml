@@ -1,0 +1,31 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Partner Block
+status: stable
+description: Partner item with link and logo.
+libraryOverrides:
+  dependencies:
+    - core/drupal
+props:
+  type: object
+  properties:
+    partner:
+      type: object
+      title: Partner entity
+      description: Partner content entity with field_link and field_brand_logo.
+    link_url:
+      type: string
+      title: Link URL
+      description: Partner link URL (field_link).
+    link_title:
+      type: string
+      title: Link title
+      description: Optional link label for accessibility.
+    logo:
+      type: object
+      title: Brand logo
+      description: Partner logo image (field_brand_logo).
+      properties:
+        src:
+          type: string
+        alt:
+          type: string

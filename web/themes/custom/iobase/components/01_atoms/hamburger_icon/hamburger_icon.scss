@@ -1,0 +1,32 @@
+// Import generic styles.
+@use "../../../scss/core" as *;
+
+//[data-component-id="iobase:hamburger_icon"] {
+//  /* @todo Add your styles here. */
+//}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+
+  span {
+    width: 100%;
+    height: 4px;
+    background-color: orangered;
+    transition: all 0.3s ease;
+  }
+
+  &.open span:nth-child(1) {
+    transform: rotate(45deg) translate(7.5px, 7.5px);
+  }
+  &.open span:nth-child(2) {
+    opacity: 0;
+  }
+  &.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(7.5px, -7.5px);
+  }
+}

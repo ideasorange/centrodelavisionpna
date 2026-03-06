@@ -1,0 +1,38 @@
+<section class="hero-banner js-hero-banner"
+  {% if background_image %}
+    style="background-image: url('{{ background_image }}');"
+  {% endif %}
+>
+  <div class="hero-banner__overlay">
+    <div class="hero-banner__container">
+
+      <div class="hero-banner__content js-hero-banner-content">
+        {% if title %}
+          <h1 class="hero-banner__title">{{ title }}</h1>
+          <p>This is an update</>
+        {% endif %}
+
+        {% if subtitle %}
+          <p class="hero-banner__subtitle">{{ subtitle }}</p>
+        {% endif %}
+
+        {% if cta and cta.label and cta.url %}
+          <a href="{{ cta.url }}" class="hero-banner__cta">
+            {{ cta.label }}
+          </a>
+        {% endif %}
+      </div>
+
+      {% if main_image and main_image.src %}
+        <div class="hero-banner__image js-hero-banner-image">
+          <img
+            src="{{ main_image.src }}"
+            alt="{{ main_image.alt|default('') }}"
+            loading="lazy"
+          >
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+</section>

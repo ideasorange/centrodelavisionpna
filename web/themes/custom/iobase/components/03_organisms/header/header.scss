@@ -1,0 +1,19 @@
+// Import generic styles.
+@use "../../../scss/core" as *;
+
+[data-component-id="iobase:header"] {
+  /* @todo Add your styles here. */
+}
+
+.header-wrapper {
+  @extend %breakContainer;
+  //background: #EE2624;
+}
+.header-container {
+  @extend %content-container;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}

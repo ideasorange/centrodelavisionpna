@@ -1,0 +1,14 @@
+<div {{ attributes.addClass('footer-main_wrapper') }}>
+  <main class="footer-main">
+    <section class="top">
+      <a href="{{ target }}"><img src="{{ image }}"/></a>
+    </section>
+    <hr>
+    <section class="bottom">
+      {% block content %}
+
+      {% endblock %}
+    </section>
+  </main>
+</div>
+

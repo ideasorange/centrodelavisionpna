@@ -1,0 +1,16 @@
+uuid: 70801685-a337-4059-85c7-e50a8fda68ed
+langcode: es
+status: true
+dependencies: {  }
+id: prod
+label: Prod
+description: 'Production Environment'
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/config_split/prod
+module: {  }
+theme: {  }
+complete_list: {  }
+partial_list: {  }

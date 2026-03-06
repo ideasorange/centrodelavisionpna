@@ -1,0 +1,42 @@
+// Import generic styles.
+@use "../../../scss/core" as *;
+
+//[data-component-id="iobase:menu_item"] {
+//  /* @todo Add your styles here. */
+//}
+
+.menu-item {
+  list-style: none;
+
+  &:last-child {
+    border: solid 1px $color-orange-01;
+    background: $color-orange-01;
+    padding: 0.5rem;
+    border-radius: 10px;
+
+    &:hover {
+      background: transparent;
+    }
+
+    a {
+      color: white;
+
+      &:hover {
+        color: $color-orange-01;
+      }
+    }
+  }
+}
+
+.sdc-item {
+  text-decoration: none;
+  font-family: 'Sora';
+  color: black;
+  padding: 1rem;
+  font-size: to-rem(16);
+
+  &:hover {
+    color: $color-orange-01;
+    text-decoration: none;
+  }
+}

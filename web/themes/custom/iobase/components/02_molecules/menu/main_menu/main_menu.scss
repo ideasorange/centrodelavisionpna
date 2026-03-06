@@ -1,0 +1,49 @@
+// Import generic styles.
+@use "../../../../scss/core" as *;
+
+//[data-component-id="aec_theme:main_menu"] {
+//
+//}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (min-width: $desk) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.hamburger {
+  display: flex;
+  @media (min-width: $desk) {
+    display: none;
+  }
+}
+
+.navigation-menu {
+  display: none;
+  background: white;
+  position: static;
+  @media (min-width: $desk) {
+    display: block;
+  }
+  &.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 80px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding-top: 2rem;
+    z-index: 9;
+
+    & > .menu {
+      gap: 25px;
+    }
+  }
+}

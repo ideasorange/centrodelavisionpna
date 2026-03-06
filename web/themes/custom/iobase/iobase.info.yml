@@ -1,0 +1,36 @@
+name: iobase
+type: theme
+'base theme': stable9
+version: 1.0.0
+libraries:
+  - iobase/base
+  - iobase/messages
+  - core/normalize
+  - iobase/global-styling
+  - iobase/ionicicon
+libraries-extend:
+  user/drupal.user:
+    - iobase/user
+  core/drupal.dropbutton:
+    - iobase/dropbutton
+  core/drupal.dialog:
+    - iobase/dialog
+  file/drupal.file:
+    - iobase/file
+  core/drupal.progress:
+    - iobase/progress
+  core/drupal.tablesort:
+    - iobase/drupal.tablesort
+description: ''
+core_version_requirement: ^11
+generator: 'starterkit_theme:11.2.5'
+
+# Regions
+regions:
+  preheader: 'Pre header'
+  header: 'Header'
+  system: 'System'
+  content: 'Content'
+  sidebar: 'Sidebar'
+  prefooter: 'Pre footer'
+  footer: 'Footer'
