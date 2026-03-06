@@ -18,6 +18,7 @@ db_local_ddev.sql
 vendor
 /vendor/
 vendor/
+vendor/*
 web/core
 web/modules/contrib
 web/profiles/contrib
