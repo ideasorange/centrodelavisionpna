@@ -1,0 +1,60 @@
+// Import generic styles.
+@use "../../../scss/core" as *;
+
+.cta-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  font-family: $secondary-font-family;
+  font-size: to-rem(16);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: background-color $duration ease, color $duration ease, border-color $duration ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-primary;
+    outline-offset: 2px;
+  }
+
+  &__label {
+    white-space: nowrap;
+  }
+
+  // Primary variant – filled, brand green (WhatsApp-like).
+  &--primary {
+    background-color: $color-secondary-dark;
+    color: $color-white;
+    border-color: $color-secondary-dark;
+
+    &:hover,
+    &:focus {
+      background-color: #20bd5a;
+      border-color: #20bd5a;
+      color: $color-white;
+    }
+  }
+
+  // Secondary variant – outline, uses theme primary.
+  &--secondary {
+    background-color: transparent;
+    color: $color-primary;
+    border-color: $color-primary;
+
+    &:hover,
+    &:focus {
+      background-color: $color-primary;
+      color: $color-white;
+      border-color: $color-primary;
+    }
+  }
+}

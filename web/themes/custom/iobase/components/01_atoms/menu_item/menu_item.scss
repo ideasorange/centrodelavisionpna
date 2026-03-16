@@ -9,20 +9,25 @@
   list-style: none;
 
   &:last-child {
-    border: solid 1px $color-orange-01;
-    background: $color-orange-01;
+    @media (min-width: $desk) {
+      margin-left: 3rem;
+    }
+    border: solid 1px $color-secondary-dark;
+    background: $color-secondary-dark;
     padding: 0.5rem;
     border-radius: 10px;
 
     &:hover {
-      background: transparent;
+      background: $color-gray-900;
+      border: solid 1px $color-gray-900;
+      color: $color-white;
     }
 
     a {
       color: white;
 
       &:hover {
-        color: $color-orange-01;
+        color: $color-white;
       }
     }
   }
@@ -36,7 +41,7 @@
   font-size: to-rem(16);
 
   &:hover {
-    color: $color-orange-01;
+    color: $color-secondary-dark;
     text-decoration: none;
   }
 }

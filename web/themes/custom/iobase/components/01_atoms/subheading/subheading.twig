@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * Subheading atom – supporting text below a heading.
+ *
+ * Available config:
+ * - text: Subheading content.
+ * - tag: p | span (default p).
+ */
+#}
+{% set tag = tag|default('p') %}
+{% set tag = tag in ['p', 'span'] ? tag : 'p' %}
+{% set base_class = 'subheading' %}
+{% set subheading_attributes = attributes ? attributes.addClass(base_class) : create_attribute().addClass(base_class) %}
+
+<{{ tag }}
+  {{ subheading_attributes }}
+>
+  {{ text }}
+</{{ tag }}>

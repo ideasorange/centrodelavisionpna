@@ -1,0 +1,16 @@
+// Import generic styles.
+@use "../../core" as *;
+
+.design-direction {
+    .heading {
+        font-family: $secondary-font-family;
+        font-weight: 700;
+        margin: 0 0 0.5em;
+    }
+    .paragraph {
+      font-family: $base-font-family;
+      font-weight: 400;
+      margin: 0 0 0.5em;
+      color: $text-primary;
+    }
+}

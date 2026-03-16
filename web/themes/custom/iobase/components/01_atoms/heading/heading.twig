@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Heading atom – semantic heading with level (h1–h4).
+ *
+ * Available config:
+ * - text: Heading content.
+ * - level: h1 | h2 | h3 | h4 (default h2).
+ */
+#}
+{% set level = level|default('h2') %}
+{% set tag = level in ['h1', 'h2', 'h3', 'h4'] ? level : 'h2' %}
+{% set base_class = 'heading' %}
+{% set modifier_class = base_class ~ '--' ~ tag %}
+{% set heading_attributes = attributes ? attributes.addClass(base_class, modifier_class) : create_attribute().addClass(base_class, modifier_class) %}
+
+<{{ tag }}
+  {{ heading_attributes }}
+>
+  {{ text }}
+</{{ tag }}>

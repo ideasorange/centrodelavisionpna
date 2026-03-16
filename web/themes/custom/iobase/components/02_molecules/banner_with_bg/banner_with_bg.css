@@ -1,7 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Sora:wght@100..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 .banner-with-bg__heading {
-  font-family: "Sora", sans-serif;
+  font-family: "Albert Sans", sans-serif;
   font-weight: 700;
   margin: 0 0 0.5em;
 }
@@ -41,34 +40,34 @@
 }
 
 .banner-with-bg__heading {
-  color: #1B181B;
+  color: #1F2A33;
 }
 
 .banner-with-bg__subheading {
   margin: 0;
   font-size: 1.125rem;
-  color: #484C7A;
+  color: #134E75;
 }
 
 .banner-with-bg__description {
   margin-top: 0.5rem;
-  color: #2F323D;
+  color: #134E75;
 }
 
 .banner-with-bg--light {
-  background-color: #F5F5F5;
+  background-color: #F7F9FB;
 }
 
 .banner-with-bg--dark {
-  background-color: #003049;
+  background-color: #134E75;
 }
 
 .banner-with-bg--primary {
-  background-color: #F58622;
+  background-color: #1E6FA8;
 }
 
 .banner-with-bg--secondary {
-  background-color: #2D58A6;
+  background-color: #2BB3A3;
 }
 
 .banner-with-bg--dark .banner-with-bg__heading,
@@ -83,7 +82,7 @@
 .banner-with-bg--secondary .banner-with-bg__subheading,
 .banner-with-bg--secondary .banner-with-bg__description,
 .banner-with-bg--secondary a {
-  color: #FFF;
+  color: #FFFFFF;
 }
 
 @media (min-width: 768px) {

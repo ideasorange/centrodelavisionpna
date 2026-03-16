@@ -52,8 +52,33 @@
 
       <div class="layout-content">
 
+        {% embed 'iobase:hero_banner_front' with {
+          eyebrow: 'Bienvenidos'|t,
+          heading: 'Cuidado Personalizado para tu Visión'|t,
+          description: 'Experiencia profesional y atención personalizada para cuidar tu salud visual.'|t,
+          main_image: {
+            src: '/sites/default/files/medicos_bg.png',
+            alt: 'Centro de la Visión'
+          }
+        } %}
+          {% block cta %}
+            {% include 'iobase:cta' with {
+              title: 'Learn More'|t,
+              url: '/about-us',
+              variant: 'primary'
+            } %}
+
+            {% include 'iobase:cta' with {
+              title: 'Visit Partner'|t,
+              url: 'https://example.com',
+              variant: 'outline',
+              target: '_blank'
+            } %}
+          {% endblock %}
+        {% endembed %}
+
         {#Hero banner Block#}
-        {{ include('iobase:hero_banner', {
+        {# {{ include('iobase:hero_banner', {
           background_image: '/themes/custom/iobase/images/iOHeroBanner.png',
           title: 'Una idea solo es buena cuando se pone en práctica',
           subtitle: 'Mas de 10 años creando soluciones tecnólogicas a problemas cotidianos, con un enfoque 100% práctico y creativo.',
@@ -65,10 +90,10 @@
             src: '/themes/custom/iobase/images/iOPhoneHospinet.png',
             alt: 'Hero illustration'
           }
-        }) }}
+        }) }} #}
         {#Hero banner Block#}
 
-        {#<div class="reg-inv">
+        <div class="reg-inv">
           <div class="reg-inv_cont">
             <h2>Lorem ipsum dolor sit amet 1</h2>
             <p>Duis non quam et nisi tincidunt fermentum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam ullamcorper, mauris nec feugiat fermentum, purus lacus suscipit felis, et facilisis justo lacus id risus.
@@ -142,7 +167,7 @@
               Nullam vehicula magna sit amet magna ullamcorper, at dictum est gravida. Morbi nec magna at quam malesuada accumsan. Suspendisse potenti. Vivamus feugiat massa ut tortor scelerisque, non dapibus nulla consectetur. Aliquam erat volutpat.</p>
           </div>
         </div>
-        #}
+        
         {{ page.content }}
       </div>{# /.layout-content #}
     </div>

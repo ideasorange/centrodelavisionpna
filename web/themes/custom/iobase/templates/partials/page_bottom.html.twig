@@ -5,12 +5,14 @@
 		</div>
 	</div>
 {% endif %}
-{% if page.footer %}
+{# {% if page.footer %} #}
 	<footer class="page-region l-region-footer" role="contentinfo">
 		<div class="region-wrapper">
 			{{ page.footer }}
+			{% include 'iobase:footer_main' %}
+			{% include 'iobase:footer_bottom' %}
 		</div>
 	</footer>
-{% endif %}
+{# {% endif %} #}
 
 

@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+.color-palette {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.color-palette__swatch {
+  width: 120px;
+  height: 80px;
+  border-radius: 0.5rem;
+  border: 1px solid #E6EDF3;
+  box-shadow: 0 1px 3px rgba(31, 42, 51, 0.08);
+}
+
+.color-palette__label {
+  font-family: "Rubik", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #3C4A57;
+  text-align: center;
+}
+/*# sourceMappingURL=color_palette.css.map */

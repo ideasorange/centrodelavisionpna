@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * CTA Whatsapp atom – link that opens WhatsApp Web.
+ *
+ * Available config:
+ * - label: Button/link text.
+ * - phone_number: Number with country code (e.g. 5491112345678).
+ * - variant: primary | secondary.
+ * - pre_message: Optional pre-filled message in the chat.
+ */
+#}
+{% set variant = variant|default('primary') %}
+{% set base_class = 'cta-whatsapp' %}
+{% set modifier_class = base_class ~ '--' ~ variant %}
+
+{% set wa_url = 'https://wa.me/' ~ phone_number %}
+{% if pre_message is not empty %}
+  {% set wa_url = wa_url ~ '?text=' ~ pre_message|url_encode %}
+{% endif %}
+
+<a
+  {{ attributes.addClass(base_class, modifier_class) }}
+  href="{{ wa_url }}"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="{{ 'Open WhatsApp'|t }}"
+>
+  <span class="cta-whatsapp__label">{{ label }}</span>
+</a>

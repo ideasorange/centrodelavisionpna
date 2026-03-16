@@ -1,0 +1,45 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: CTA
+status: stable
+description: Call To Action link component with primary and outline variants.
+libraryOverrides:
+  dependencies:
+    - core/drupal
+props:
+  type: object
+  required:
+    - title
+    - url
+  properties:
+    title:
+      type: string
+      title: Title
+      description: Button/link text.
+    url:
+      type: string
+      title: URL
+      description: Internal or external URL to redirect.
+    variant:
+      type: string
+      title: Variant
+      description: Visual style variant.
+      enum:
+        - primary
+        - outline
+      default: primary
+    target:
+      type: string
+      title: Target
+      description: Link target attribute (_self, _blank).
+      enum:
+        - _self
+        - _blank
+      default: _self
+    color:
+      type: string
+      title: Color
+      description: Optional custom background/border color (CSS value).
+    text_color:
+      type: string
+      title: Text color
+      description: Optional custom text color (CSS value).
