@@ -1,0 +1,22 @@
+uuid: df98e0f8-76f3-4e9b-9087-87edc1bc9b5d
+langcode: es
+status: true
+dependencies:
+  theme:
+    - iobase
+_core:
+  default_config_hash: ydSxdq7R66I8UMC460rOzlfzvlUL4VRbdwc6z9DWaUI
+id: iobase_secondary_local_tasks
+theme: iobase
+region: content
+weight: -5
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Solapas secundarias'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

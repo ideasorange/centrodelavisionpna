@@ -45,6 +45,12 @@ module:
   text: 0
   token: 0
   toolbar: 0
+  twig_tweak: 0
+  ui_patterns: 0
+  ui_patterns_blocks: 0
+  ui_patterns_field_formatters: 0
+  ui_patterns_library: 0
+  ui_patterns_views: 0
   update: 0
   user: 0
   views_ui: 0
@@ -54,4 +60,6 @@ module:
 theme:
   olivero: 0
   claro: 0
+  stable9: 0
+  iobase: 0
 profile: standard
