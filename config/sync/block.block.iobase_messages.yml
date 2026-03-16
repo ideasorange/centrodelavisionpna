@@ -1,0 +1,22 @@
+uuid: 49983b71-c4dd-4d5a-b902-dfe85427f544
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - iobase
+_core:
+  default_config_hash: BZ5tpW7H8X4PVGRm3MImTIHd2tN0eF7zOtp4SpRYUA0
+id: iobase_messages
+theme: iobase
+region: header
+weight: -3
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Mensajes de estado'
+  label_display: '0'
+  provider: system
+visibility: {  }

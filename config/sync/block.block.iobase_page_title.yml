@@ -1,0 +1,20 @@
+uuid: 8f099762-ff30-4409-bf35-bbcff2e43132
+langcode: es
+status: true
+dependencies:
+  theme:
+    - iobase
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: iobase_page_title
+theme: iobase
+region: content
+weight: -4
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Título de la página'
+  label_display: '0'
+  provider: core
+visibility: {  }

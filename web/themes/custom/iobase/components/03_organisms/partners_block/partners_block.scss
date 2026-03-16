@@ -4,7 +4,7 @@
 .partners-block {
   @extend %breakContainer;
   padding: 3rem 0;
-  background-color: $color-white-01;
+  background-color: $color-white;
 }
 
 .partners-block__inner {
@@ -21,19 +21,19 @@
 
 .partners-block__heading {
   @extend %h2;
-  color: $color-blue-05;
+  color: $color-primary-light;
 }
 
 .partners-block__grid { 
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-  border-left: 1px solid $color-gray-01;
-  border-top: 1px solid $color-gray-01;
+  border-left: 1px solid $color-gray-300;
+  border-top: 1px solid $color-gray-300;
 }
 
 .partners-block__grid > * {
-  border-right: 1px solid $color-gray-01;
-  border-bottom: 1px solid $color-gray-01;
+  border-right: 1px solid $color-gray-300;
+  border-bottom: 1px solid $color-gray-300;
 }
 
 .partners-block__cta {
@@ -47,17 +47,17 @@
   justify-content: center;
   padding: 0.75rem 1.5rem;
   border-radius: 10px;
-  background: $color-blue-01;
-  color: $color-white-01;
+  background: $color-primary;
+  color: $color-white;
   font-size: to-rem(16);
   text-decoration: none;
-  border: 1px solid $color-blue-01;
+  border: 1px solid $color-primary;
   transition: all $duration;
 
   &:hover,
   &:focus {
     background: transparent;
-    color: $color-blue-01;
+    color: $color-primary;
     text-decoration: none;
   }
 }

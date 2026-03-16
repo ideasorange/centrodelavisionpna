@@ -1,0 +1,22 @@
+uuid: 8d5da96f-3d09-4300-a845-d6344e8f44fa
+langcode: es
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - iobase
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: iobase_powered
+theme: iobase
+region: preheader
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Funciona con Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

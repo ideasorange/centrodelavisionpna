@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+.subheading {
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #6B7A89;
+  margin: 0 0 1em;
+}
+@media (min-width: 1230px) {
+  .subheading {
+    font-size: 1.0625rem;
+  }
+}
+/*# sourceMappingURL=subheading.css.map */

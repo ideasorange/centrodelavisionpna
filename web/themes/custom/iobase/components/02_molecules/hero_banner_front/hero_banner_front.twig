@@ -1,0 +1,62 @@
+{#
+/**
+ * @file
+ * Hero Banner Front – molecule for the front page hero section.
+ *
+ * Available config:
+ * - eyebrow: Small text above the heading.
+ * - heading: Main H1 heading.
+ * - description: Supporting paragraph.
+ * - main_image:
+ *   - src: Image URL (e.g. /sites/default/files/hero.png).
+ *   - alt: Alt text.
+ * - background_color: Optional background color.
+ *
+ * Slots:
+ * - cta: Slot for CTA component(s).
+ */
+#}
+{% set base_class = 'hero-banner-front' %}
+
+<section
+  {{ attributes.addClass(base_class, 'js-hero-banner-front') }}
+  {% if background_color %}
+    style="--hero-banner-front-bg-color: {{ background_color }};"
+  {% endif %}
+>
+  <div class="{{ base_class }}__shape" aria-hidden="true"></div>
+
+  <div class="{{ base_class }}__inner">
+    <div class="{{ base_class }}__content js-hero-banner-front-content">
+      {% if eyebrow %}
+        <span class="{{ base_class }}__eyebrow">
+          <span class="{{ base_class }}__eyebrow-icon" aria-hidden="true"></span>
+          {{ eyebrow }}
+        </span>
+      {% endif %}
+
+      {% if heading %}
+        <h1 class="{{ base_class }}__heading">{{ heading }}</h1>
+      {% endif %}
+
+      {% if description %}
+        <p class="{{ base_class }}__description">{{ description }}</p>
+      {% endif %}
+
+      <div class="{{ base_class }}__cta-wrapper">
+        {% block cta %}{% endblock %}
+      </div>
+    </div>
+
+    {% if main_image and main_image.src %}
+      <div class="{{ base_class }}__image js-hero-banner-front-image">
+        <img
+          src="{{ main_image.src }}"
+          alt="{{ main_image.alt|default('') }}"
+          loading="eager"
+          fetchpriority="high"
+        />
+      </div>
+    {% endif %}
+  </div>
+</section>

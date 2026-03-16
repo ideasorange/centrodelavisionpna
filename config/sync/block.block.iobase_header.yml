@@ -1,0 +1,71 @@
+uuid: 288387b5-73a5-4a81-9aa2-a856d1a9f672
+langcode: es
+status: true
+dependencies:
+  module:
+    - ui_patterns
+    - ui_patterns_blocks
+  theme:
+    - iobase
+id: iobase_header
+theme: iobase
+region: header
+weight: 0
+provider: null
+plugin: 'ui_patterns:iobase:header'
+settings:
+  id: 'ui_patterns:iobase:header'
+  label: Header
+  label_display: '0'
+  provider: ui_patterns_blocks
+  ui_patterns:
+    component_id: 'iobase:header'
+    variant_id: null
+    props:
+      attributes:
+        source_id: attributes
+        source:
+          value: ''
+    slots:
+      left:
+        sources:
+          -
+            source_id: component
+            source:
+              component:
+                component_id: 'iobase:logo'
+                variant_id: null
+                props:
+                  attributes:
+                    source_id: attributes
+                    source:
+                      value: ''
+                  image:
+                    source_id: textfield
+                    source:
+                      value: /sites/default/files/cdv_logo_200.png
+                  alt:
+                    source_id: textfield
+                    source:
+                      value: ''
+                slots: {  }
+                third_party_settings: ''
+                node_id: ''
+            _weight: '0'
+            node_id: ''
+            third_party_settings: ''
+      center: {  }
+      right:
+        sources:
+          -
+            source_id: ''
+            source:
+              value:
+                value: ''
+                format: plain_text
+            _weight: '0'
+            node_id: ''
+            third_party_settings: ''
+    third_party_settings: ''
+    node_id: ''
+visibility: {  }

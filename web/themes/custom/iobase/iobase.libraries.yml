@@ -133,3 +133,10 @@ ionicicon:
   js:
     https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js:
       { type: external, minified: true, defer: true }
+
+# Custom Design Direction Page Styles
+design-direction:
+  version: VERSION
+  css:
+    theme:
+      dist/css/04_components/generics/design-direction.css: { }

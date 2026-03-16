@@ -1,0 +1,26 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Heading
+status: stable
+description: Heading atom with configurable level (h1–h4).
+libraryOverrides:
+  dependencies:
+    - core/drupal
+props:
+  type: object
+  required:
+    - text
+  properties:
+    text:
+      type: string
+      title: Text
+      description: Heading content.
+    level:
+      type: string
+      title: Level
+      description: HTML heading level.
+      enum:
+        - h1
+        - h2
+        - h3
+        - h4
+      default: h2

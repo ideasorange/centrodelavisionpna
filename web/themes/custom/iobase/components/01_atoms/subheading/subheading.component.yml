@@ -1,0 +1,24 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Subheading
+status: stable
+description: Subheading atom for supporting text below a heading.
+libraryOverrides:
+  dependencies:
+    - core/drupal
+props:
+  type: object
+  required:
+    - text
+  properties:
+    text:
+      type: string
+      title: Text
+      description: Subheading content.
+    tag:
+      type: string
+      title: Tag
+      description: HTML wrapper element.
+      enum:
+        - p
+        - span
+      default: p

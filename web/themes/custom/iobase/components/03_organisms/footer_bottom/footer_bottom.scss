@@ -6,7 +6,7 @@
 //}
 .footer-bottom_wrapper {
   @extend %breakContainer;
-  background: $color-blue-03;
+  background: #011625;
 }
 
 .footer-bottom {
@@ -16,11 +16,13 @@
   color: white;
   display: flex;
   justify-content: space-between;
+  text-align: center;
 
   .left {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    width: 100%;
     @media (min-width: $desk) {
       display: flex;
       flex-direction: row;

@@ -1,0 +1,28 @@
+// Import generic styles.
+@use "../../../scss/core" as *;
+
+// Block
+.color-palette {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+// Element: color rectangle box
+.color-palette__swatch {
+  width: 120px;
+  height: 80px;
+  border-radius: 0.5rem;
+  border: 1px solid $border-light;
+  box-shadow: 0 1px 3px rgba($color-gray-900, 0.08);
+}
+
+// Element: label below the box
+.color-palette__label {
+  font-family: $base-font-family;
+  font-size: to-rem(14);
+  font-weight: 500;
+  color: $color-gray-700;
+  text-align: center;
+}

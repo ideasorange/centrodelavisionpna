@@ -1,1 +1,1 @@
-{"version":3,"sources":["01_atoms/logo/logo.scss"],"names":[],"mappings":"AAAA;AACE;;AACA;EACE","sourcesContent":["[data-component-id=\"iobase:logo\"] {\n  /* @todo Add your styles here. */\n  .site-logo > img {\n    width: 200px;\n  }\n}\n"],"file":"logo.css"}
+{"version":3,"sources":["01_atoms/logo/logo.scss"],"names":[],"mappings":"AAAA;AACE;;AACA;EACE","sourcesContent":["[data-component-id=\"iobase:logo\"] {\n  /* @todo Add your styles here. */\n  .site-logo > img {\n    width: 110px;\n  }\n}\n"],"file":"logo.css"}

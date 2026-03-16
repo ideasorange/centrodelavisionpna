@@ -1,0 +1,22 @@
+uuid: 2d72da68-2894-4244-8944-9ec382968b6a
+langcode: es
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - iobase
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: iobase_help
+theme: iobase
+region: preheader
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Ayuda
+  label_display: '0'
+  provider: help
+visibility: {  }

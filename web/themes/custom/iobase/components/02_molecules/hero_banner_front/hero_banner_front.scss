@@ -1,0 +1,195 @@
+// Import generic styles.
+@use "../../../scss/core" as *;
+
+// Block
+.hero-banner-front {
+  --hero-banner-front-bg-color: #{$color-gray-100};
+
+  @extend %breakContainer;
+  position: relative;
+  background-color: var(--hero-banner-front-bg-color);
+  padding: 3rem 0;
+  overflow: hidden;
+
+  @media (min-width: $tab) {
+    padding: 4rem 0;
+  }
+
+  @media (min-width: $desk) {
+    padding: 5rem 0;
+  }
+}
+
+// Element: Decorative curved shape
+.hero-banner-front__shape {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba($color-secondary, 0.08) 0%, rgba($color-primary, 0.05) 100%);
+  border-bottom-left-radius: 50% 100%;
+  pointer-events: none;
+  z-index: 0;
+
+  @media (max-width: $tab) {
+    width: 70%;
+    opacity: 0.5;
+  }
+}
+
+// Element: Inner container
+.hero-banner-front__inner {
+  @extend %content-container;
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 2rem;
+
+  @media (min-width: $tab) {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  @media (min-width: $desk) {
+    gap: 4rem;
+  }
+}
+
+// Element: Content wrapper
+.hero-banner-front__content {
+  order: 2;
+  text-align: center;
+
+  @media (min-width: $tab) {
+    order: 1;
+    text-align: left;
+  }
+}
+
+// Element: Eyebrow text
+.hero-banner-front__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: $base-font-family;
+  font-size: to-rem(14);
+  font-weight: 500;
+  color: $color-gray-500;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+// Element: Eyebrow icon
+.hero-banner-front__eyebrow-icon {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: $color-secondary;
+  border-radius: 50%;
+}
+
+// Element: Heading
+.hero-banner-front__heading {
+  font-family: $secondary-font-family;
+  font-size: to-rem(32);
+  font-weight: 700;
+  line-height: 1.2;
+  color: $color-gray-900;
+  margin: 0 0 1rem;
+
+  @media (min-width: $tab) {
+    font-size: to-rem(40);
+  }
+
+  @media (min-width: $desk) {
+    font-size: to-rem(48);
+    margin-bottom: 1.5rem;
+  }
+}
+
+// Element: Description
+.hero-banner-front__description {
+  font-family: $base-font-family;
+  font-size: to-rem(16);
+  line-height: 1.6;
+  color: $color-gray-500;
+  margin: 0 0 1.5rem;
+  max-width: 500px;
+
+  @media (min-width: $tab) {
+    font-size: to-rem(17);
+  }
+
+  @media (min-width: $desk) {
+    font-size: to-rem(18);
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: $tab) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// Element: CTA wrapper
+.hero-banner-front__cta-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+
+  @media (min-width: $tab) {
+    justify-content: flex-start;
+  }
+}
+
+// Element: Image wrapper
+.hero-banner-front__image {
+  order: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: $tab) {
+    order: 2;
+    justify-content: flex-end;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+
+    @media (min-width: $tab) {
+      max-height: 450px;
+      object-fit: contain;
+    }
+
+    @media (min-width: $desk) {
+      max-height: 550px;
+    }
+  }
+}
+
+// Animation states
+.hero-banner-front__content,
+.hero-banner-front__image {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+// Modifier: Loaded state
+.hero-banner-front--loaded .hero-banner-front__content,
+.hero-banner-front--loaded .hero-banner-front__image {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-banner-front--loaded .hero-banner-front__image {
+  transition-delay: 0.15s;
+}
