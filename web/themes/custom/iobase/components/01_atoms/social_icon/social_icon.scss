@@ -1,0 +1,38 @@
+// Import generic styles.
+@use "../../../scss/core" as *;
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background-color: transparent;
+  border: 1px solid $color-white;
+  color: $color-gray-700;
+  text-decoration: none;
+  transition: background-color $duration ease, color $duration ease, transform $duration ease;
+
+  &:hover,
+  &:focus {
+    background-color: $color-primary;
+    color: $color-white;
+    text-decoration: none;
+    transform: translateY(-1px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-primary;
+    outline-offset: 2px;
+  }
+
+  &__icon {
+    font-size: 1.3rem;
+    color: $color-white;
+
+    ion-icon {
+      display: block;
+    }
+  }
+}

@@ -9,7 +9,73 @@
 	<footer class="page-region l-region-footer" role="contentinfo">
 		<div class="region-wrapper">
 			{{ page.footer }}
-			{% include 'iobase:footer_main' %}
+			{% embed 'iobase:footer_main' with {
+				title: 'Centro de la Visión Paraná'|t
+			} %}
+			{% block content %}
+				{% embed 'iobase:block_items_simple' with {
+					title: ''|t,
+					description: ''|t
+				} %}
+				{% block content %}
+					{% include 'iobase:logo_brand' with {
+						image: '/sites/default/files/logo_outlined.png',
+						alt: 'Centro de la Visión Paraná',
+						url: '/'  
+					} %}
+					<p class="description">Ofrecemos soluciones sanitarias, medicamentos, diagnósticos y productos de bienestar para una mejor salud.</p>
+					{% include 'iobase:social_icon' with {
+						icon: 'logo-facebook',
+						url: 'https://www.facebook.com/centrodelavisionparana'
+					} %}
+					{% include 'iobase:social_icon' with {
+						icon: 'logo-instagram',
+						url: 'https://www.instagram.com/centrodelavisionpna'
+					} %}
+				{% endblock %}
+				{% endembed %}
+
+				{% embed 'iobase:block_items_simple' with {
+					title: 'Enlaces de interés'|t,
+					description: ''|t
+				} %}
+				{% block content %}
+					<ul class="{{ base_class }}__list">
+						<li class="description"><a href="#" class="link">Solicita tu turno</a></li>
+						<li class="description"><a href="#" class="link">Dejanos tu opinión</a></li>
+						<li class="description"><a href="#" class="link">Profesionales</a></li>
+						<li class="description"><a href="#" class="link">Tecnologías</a></li>
+					</ul> 
+				{% endblock %}	
+				{% endembed %}
+				
+				{% embed 'iobase:block_items_simple' with {
+					title: 'Horarios de atención'|t,
+					description: ''|t
+				} %}
+				{% block content %}
+					<ul class="{{ base_class }}__list">
+						<li class="schedule"><a href="#" class="link">Lunes a Viernes: 08:00 - 18:00</a></li>
+						<li class="schedule"><a href="#" class="link">Sábados: 08:00 - 13:00</a></li>
+						<li class="schedule"><a href="#" class="link">Domingos: Cerrado</a></li>
+					</ul> 	
+				{% endblock %}	
+				{% endembed %}
+
+				{% embed 'iobase:block_items_simple' with {
+					title: 'Nuestras direcciones'|t,
+					description: ''|t
+				} %}
+				{% block content %}
+					<ul class="{{ base_class }}__list">
+						<li class="address"><a href="#" class="link">Urquiza 1234, Paraná, Entre Ríos</a></li>
+						<li class="address"><a href="#" class="link">Malvinas 91, Paraná, Entre Ríos</a></li>
+					</ul> 	
+				{% endblock %}	
+				{% endembed %}
+
+			{% endblock %}
+			{% endembed %}
 			{% include 'iobase:footer_bottom' %}
 		</div>
 	</footer>

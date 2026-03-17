@@ -1,15 +1,25 @@
-<div {{ attributes.addClass('footer-main_wrapper') }}>
-  <main class="footer-main">
-    <section class="top">
-      {# <a href="{{ target }}"><img src="{{ image }}"/></a> #}
-      <h2 class="footer-main_title">Centro de la Visión Paraná</h2>
-    </section>
-    <hr>
-    <section class="bottom">
-      {% block content %}
+{% set base_class = 'footer-main' %}
+{% set wrapper_attributes = attributes ? attributes.addClass(base_class ~ '__wrapper') : create_attribute().addClass(base_class ~ '__wrapper') %}
 
-      {% endblock %}
+<div {{ wrapper_attributes }}>
+  <footer class="{{ base_class }}">
+    <section class="{{ base_class }}__top">
+      {# Optional logo image linking to target URL. #}
+      {# {% if image and target %} #}
+      {#   <a href="{{ target }}" class="{{ base_class }}__logo"> #}
+      {#     <img src="{{ image }}" alt="" loading="lazy" /> #}
+      {#   </a> #}
+      {# {% endif %} #}
+
+      {% if title %}
+        <h2 class="{{ base_class }}__title">{{ title }}</h2>
+      {% endif %}
     </section>
-  </main>
+
+    <hr class="{{ base_class }}__divider">
+
+    <section class="{{ base_class }}__bottom">
+      {% block content %}{% endblock %}
+    </section>
+  </footer>
 </div>
-

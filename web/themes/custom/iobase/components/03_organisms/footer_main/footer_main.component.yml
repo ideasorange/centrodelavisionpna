@@ -9,6 +9,10 @@ libraryOverrides:
 props:
   type: object
   properties:
+    title:
+      type: string
+      title: Title
+      description: Main footer heading text.
     image:
       type: string
       title: Image

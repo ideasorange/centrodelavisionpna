@@ -5,7 +5,7 @@
 //  /* @todo Add your styles here. */
 //}
 
-.footer-main_wrapper {
+.footer-main__wrapper {
   @extend %breakContainer;
   background-color: #032a44;
   position: relative;
@@ -21,7 +21,7 @@
     z-index: 1;
     background-image: url('/sites/default/files/eyes-bg.png');
     background-repeat: repeat;
-    opacity: 0.05;
+    opacity: 0.03;
     pointer-events: none;
   }
 }
@@ -30,33 +30,41 @@
   @extend %content-container;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  .top {
-    img {
-      width: 250px;
-    }
-    .footer-main_title {
-      font-size: 2rem;
-      font-weight: 600;
-      color: $color-white;
-      text-align: center;
-    }
-    hr {
-      border: 1px solid $color-white;
-      width: 100%;
-      margin: 2rem 0;
+}
+
+.footer-main__top {
+  text-align: center;
+
+  .footer-main__title {
+    font-size: to-rem(24);
+    font-weight: 600;
+    color: $color-white;
+    margin: 0 0 1rem;
+
+    @media (min-width: $desk) {
+      font-size: to-rem(28);
     }
   }
-  .bottom {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    @media (min-width: $desk) {
-      display: flex;
-      flex-direction: row;
-      justify-content: start;
-      align-items: start;
-    }
+}
+
+.footer-main__divider {
+  border: 1px solid $color-white;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.footer-main__bottom {
+  @extend %content-container;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: flex-start;
+
+  @media (min-width: $tab) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (min-width: $desk) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }

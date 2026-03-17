@@ -1,27 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
-.menu-item {
+.menu .menu-item {
   list-style: none;
 }
 @media (min-width: 1230px) {
-  .menu-item:last-child {
+  .menu .menu-item:last-child {
     margin-left: 3rem;
   }
 }
-.menu-item:last-child {
+.menu .menu-item:last-child {
   border: solid 1px #1C857A;
   background: #1C857A;
   padding: 0.5rem;
   border-radius: 10px;
 }
-.menu-item:last-child:hover {
+.menu .menu-item:last-child:hover {
   background: #1F2A33;
   border: solid 1px #1F2A33;
   color: #FFFFFF;
 }
-.menu-item:last-child a {
+.menu .menu-item:last-child a {
   color: white;
 }
-.menu-item:last-child a:hover {
+.menu .menu-item:last-child a:hover {
   color: #FFFFFF;
 }
 

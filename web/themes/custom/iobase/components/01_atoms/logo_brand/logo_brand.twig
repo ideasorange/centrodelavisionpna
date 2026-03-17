@@ -1,0 +1,21 @@
+{#
+ * Logo Brand atom – displays brand logo linked to a URL.
+ *
+ * Props:
+ * - image: Logo URL.
+ * - alt: Alt text.
+ * - url: Link target (defaults to front page if not provided).
+ #}
+{% set base_class = 'logo-brand' %}
+{% set logo_attributes = attributes ? attributes.addClass(base_class) : create_attribute().addClass(base_class) %}
+{% set logo_url = url|default(path('<front>')) %}
+
+<a {{ logo_attributes }} href="{{ logo_url }}" rel="home">
+  <img
+    class="{{ base_class }}__image"
+    src="{{ image }}"
+    alt="{{ alt|default('Home'|t) }}"
+    loading="lazy"
+    fetchpriority="high"
+  />
+</a>
