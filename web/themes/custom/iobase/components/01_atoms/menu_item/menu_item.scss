@@ -4,34 +4,36 @@
 //[data-component-id="iobase:menu_item"] {
 //  /* @todo Add your styles here. */
 //}
-
-.menu-item {
-  list-style: none;
-
-  &:last-child {
-    @media (min-width: $desk) {
-      margin-left: 3rem;
-    }
-    border: solid 1px $color-secondary-dark;
-    background: $color-secondary-dark;
-    padding: 0.5rem;
-    border-radius: 10px;
-
-    &:hover {
-      background: $color-gray-900;
-      border: solid 1px $color-gray-900;
-      color: $color-white;
-    }
-
-    a {
-      color: white;
-
+.menu {
+  .menu-item {
+    list-style: none;
+  
+    &:last-child {
+      @media (min-width: $desk) {
+        margin-left: 3rem;
+      }
+      border: solid 1px $color-secondary-dark;
+      background: $color-secondary-dark;
+      padding: 0.5rem;
+      border-radius: 10px;
+  
       &:hover {
+        background: $color-gray-900;
+        border: solid 1px $color-gray-900;
         color: $color-white;
+      }
+  
+      a {
+        color: white;
+  
+        &:hover {
+          color: $color-white;
+        }
       }
     }
   }
 }
+
 
 .sdc-item {
   text-decoration: none;

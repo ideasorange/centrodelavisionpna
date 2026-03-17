@@ -1,0 +1,33 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Social Icon
+status: stable
+description: Social media icon link for external or internal profiles.
+libraryOverrides:
+  dependencies:
+    - core/drupal
+props:
+  type: object
+  required:
+    - url
+    - icon
+  properties:
+    url:
+      type: string
+      title: URL
+      description: Link to social profile or share URL.
+    icon:
+      type: string
+      title: Icon name
+      description: Ionicon name (e.g. logo-facebook, logo-instagram).
+    label:
+      type: string
+      title: Label
+      description: Accessible label (e.g. "Follow us on Facebook").
+    target:
+      type: string
+      title: Target
+      description: Link target attribute.
+      enum:
+        - _self
+        - _blank
+      default: _blank

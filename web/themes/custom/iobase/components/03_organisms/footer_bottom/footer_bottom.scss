@@ -14,21 +14,18 @@
   padding-top: 2rem;
   padding-bottom: 2rem;
   color: white;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
   text-align: center;
 
-  .left {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-    @media (min-width: $desk) {
-      display: flex;
-      flex-direction: row;
-    }
+  @media (min-width: $desk) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    align-items: center;
+    justify-items: stretch;
   }
-  .right {
 
+  .content {
+    width: 100%;
   }
 }
