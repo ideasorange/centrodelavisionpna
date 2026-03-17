@@ -1,0 +1,68 @@
+// scss/04_components/generics/webform-contact.scss
+@use "../../01_base/variables";
+
+.contact {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+
+    // webform flexbox
+    &__flexbox {
+        gap: 15px;
+        margin: 0;
+        .webform-flex {
+            width: 100%;
+            
+        }
+    }
+    
+    &__description {
+        margin: 0;
+            @media screen and (min-width: 721px) {
+            padding: 0 1.5rem;
+        }
+        &__title {
+            line-height: 1.2;
+            margin: 0;
+            font-size: 35px;
+            font-weight: 500;
+        }
+        &__image{
+            display: block;
+            border-radius: 10px;
+            height: auto;
+            max-width: 100%;
+            
+        }
+    }
+
+    &__consulta{
+        line-height: 1.5;
+        font-weight: 500;
+        font-size: 25px;
+    }
+    &__input {
+        padding: 5px;
+        border-width: thin;
+        border-radius: 7px;
+        max-width: 100%;
+    }
+
+    &__textarea {
+        padding: 5px;     
+        border-radius: 7px;
+        max-width: 100%;
+        min-height: 150px;
+    }
+
+    &__button {
+        .button {
+        width: 100%;
+        border-width: thin;
+        background: #3CB371;
+        border-radius: 5px;
+        padding: 0.5rem;
+        }   
+    }
+}
