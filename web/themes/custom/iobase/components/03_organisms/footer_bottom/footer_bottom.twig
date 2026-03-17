@@ -1,6 +1,8 @@
 <div {{ attributes.addClass('footer-bottom_wrapper') }}>
   <main class="footer-bottom">
-    <section class="left">
+    <section class="right">
+      {% block block %}
+        <section class="content">
       <span class="trademark">© {{ "now"|date("Y") }} Centro de la Visión Paraná.</span>
       <div class="link_groups">
         <a href="/politicas-de-privacidad">Politicas de privacidad</a>
@@ -8,9 +10,6 @@
         <a href="/terminos-y-condiciones">Terminos de uso</a>
       </div>
     </section>
-    <section class="right">
-      {% block block %}
-
       {% endblock %}
     </section>
   </main>

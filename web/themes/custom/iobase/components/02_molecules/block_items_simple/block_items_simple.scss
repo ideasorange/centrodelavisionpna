@@ -1,10 +1,97 @@
 // Import generic styles.
 @use "../../../scss/core" as *;
 
-//[data-component-id="iobase:block_items_simple"] {
-//  /* @todo Add your styles here. */
-//}
+.block-items-simple {
+  font-family: $base-font-family;
 
-.block-items-simple_wrapper {
-  color: white;
+  &__title {
+    font-family: $secondary-font-family;
+    font-size: to-rem(20);
+    font-weight: 600;
+    color: $color-white;
+    // margin: 0 0 0.5rem;
+  }
+
+  &__description {
+    font-size: to-rem(16);
+    color: $color-gray-500;
+    // margin: 0 0 1rem;
+  }
+
+  &__content {
+    // margin: 0;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    // margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__item {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid $border-light;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .link {
+    color: $text-on-primary;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  .description {
+    font-family: $base-font-family;
+    font-weight: 400;
+    margin: 0 0 0.5em;
+    color: $text-on-primary;
+  }
+
+  .schedule {
+    font-family: $base-font-family;
+    font-weight: 400;
+    margin: 0 0 0.5em;
+    color: $text-on-primary;
+    position: relative;
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+
+      background-image: url($image_base_path + 'icons/clock_white.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-color: transparent;
+    }
+  }
+
+  .address {
+    font-family: $base-font-family;
+    font-weight: 400;
+    margin: 0 0 0.5em;
+    color: $text-on-primary;
+    position: relative;
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 16px;  
+      height: 16px;
+      margin-right: 8px;
+      background-image: url($image_base_path + 'icons/geo-alt-fill_white.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-color: transparent;
+    }
+  }
 }

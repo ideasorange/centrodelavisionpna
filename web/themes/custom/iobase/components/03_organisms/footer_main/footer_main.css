@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
-.footer-main {
+.footer-main, .footer-main__bottom {
   max-width: 1230px;
   padding-left: 15px;
   padding-right: 15px;
@@ -7,17 +7,17 @@
   margin-right: auto;
 }
 
-.footer-main_wrapper {
+.footer-main__wrapper {
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
 }
 
-.footer-main_wrapper {
+.footer-main__wrapper {
   background-color: #032a44;
   position: relative;
   min-height: 400px;
 }
-.footer-main_wrapper:before {
+.footer-main__wrapper:before {
   content: "";
   position: absolute;
   top: 0;
@@ -27,7 +27,7 @@
   z-index: 1;
   background-image: url("/sites/default/files/eyes-bg.png");
   background-repeat: repeat;
-  opacity: 0.05;
+  opacity: 0.03;
   pointer-events: none;
 }
 
@@ -35,33 +35,42 @@
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-.footer-main .top img {
-  width: 250px;
-}
-.footer-main .top .footer-main_title {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #FFFFFF;
+
+.footer-main__top {
   text-align: center;
 }
-.footer-main .top hr {
+.footer-main__top .footer-main__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin: 0 0 1rem;
+}
+@media (min-width: 1230px) {
+  .footer-main__top .footer-main__title {
+    font-size: 1.75rem;
+  }
+}
+
+.footer-main__divider {
   border: 1px solid #FFFFFF;
   width: 100%;
   margin: 2rem 0;
 }
-.footer-main .bottom {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+.footer-main__bottom {
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 2rem;
+  align-items: flex-start;
+}
+@media (min-width: 768px) {
+  .footer-main__bottom {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 @media (min-width: 1230px) {
-  .footer-main .bottom {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: start;
+  .footer-main__bottom {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 /*# sourceMappingURL=footer_main.css.map */

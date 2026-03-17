@@ -1,5 +1,78 @@
 @import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
-.block-items-simple_wrapper {
-  color: white;
+.block-items-simple {
+  font-family: "Rubik", sans-serif;
+}
+.block-items-simple__title {
+  font-family: "Albert Sans", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+.block-items-simple__description {
+  font-size: 1rem;
+  color: #6B7A89;
+}
+.block-items-simple__list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.block-items-simple__item {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #E6EDF3;
+}
+.block-items-simple__item:last-child {
+  border-bottom: none;
+}
+.block-items-simple .link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.block-items-simple .link:hover, .block-items-simple .link:focus {
+  text-decoration: underline;
+}
+.block-items-simple .description {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  margin: 0 0 0.5em;
+  color: #FFFFFF;
+}
+.block-items-simple .schedule {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  margin: 0 0 0.5em;
+  color: #FFFFFF;
+  position: relative;
+}
+.block-items-simple .schedule::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  background-image: url("/themes/custom/iobase/images/icons/clock_white.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+.block-items-simple .address {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  margin: 0 0 0.5em;
+  color: #FFFFFF;
+  position: relative;
+}
+.block-items-simple .address::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  background-image: url("/themes/custom/iobase/images/icons/geo-alt-fill_white.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
 }
 /*# sourceMappingURL=block_items_simple.css.map */

@@ -1,12 +1,25 @@
-<div {{ attributes.addClass('block-items-simple_wrapper') }}>
-  <main class="block-items-simple">
-    <h3>{{ title }}</h3>
+{#
+ * Block Items Simple – list of items with title and optional description.
+ #}
+{% set base_class = 'block-items-simple' %}
+{% set block_attributes = attributes ? attributes.addClass(base_class) : create_attribute().addClass(base_class) %}
+
+<div {{ block_attributes.removeClass('footer-main__wrapper') }}>
+  {% if title %}
+    <h3 class="{{ base_class }}__title">{{ title }}</h3>
+  {% endif %}
+
+  {% if description %}
+    <p class="{{ base_class }}__description">{{ description }}</p>
+  {% endif %}
+
+  <div class="{{ base_class }}__content">
     {% block content %}
-      <ul>
-        <li>Item 1</li>
-        <li>Item 1</li>
-        <li>Item 1</li>
-      </ul>
+      {# <ul class="{{ base_class }}__list">
+        <li class="{{ base_class }}__item">Item 1</li>
+        <li class="{{ base_class }}__item">Item 2</li>
+        <li class="{{ base_class }}__item">Item 3</li>
+      </ul> #}
     {% endblock %}
-  </main>
+  </div>
 </div>

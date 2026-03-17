@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+.logo-brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.logo-brand__image {
+  display: block;
+  max-width: 180px;
+  height: auto;
+}
+/*# sourceMappingURL=logo_brand.css.map */
