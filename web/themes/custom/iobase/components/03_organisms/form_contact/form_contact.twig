@@ -1,0 +1,54 @@
+{#
+ * Form Contact – organism for contact section.
+ *
+ * Props:
+ * - title: Optional heading.
+ * - description: Optional supporting text.
+ * - layout: Layout variant ('content_form' or 'form_content').
+ * - background_variant: Background variant ('mint', 'white', 'light', 'dark', 'none').
+ * - background_color: Optional background color (CSS value) overrides variant.
+ *
+ * Slots:
+ * - content: Area for cards or other components.
+ * - form: Area for webform; by default prints `{{ form }}` from context.
+ #}
+{% set base_class = 'form-contact-us' %}
+
+{% set layout = layout|default('content_form') %}
+{% set background_variant = background_variant|default('mint') %}
+
+{% set modifier_classes = [
+  base_class ~ '--layout-' ~ layout|replace({'_':'-'}),
+  base_class ~ '--bg-' ~ background_variant,
+] %}
+
+{% set section_attributes = attributes ? attributes.addClass(base_class, modifier_classes) : create_attribute().addClass(base_class, modifier_classes) %}
+
+{# Allow UI Patterns / editors to pick any CSS color value. #}
+{% if background_color %}
+  {% set section_attributes = section_attributes.setAttribute('style', '--form-contact-bg: ' ~ background_color ~ ';') %}
+{% endif %}
+
+<section {{ section_attributes }}>
+  <div class="{{ base_class }}__inner">
+    <div class="{{ base_class }}__content">
+      {% if title %}
+        <h2 class="{{ base_class }}__title">{{ title }}</h2>
+      {% endif %}
+
+      {% if description %}
+        <p class="{{ base_class }}__description">{{ description }}</p>
+      {% endif %}
+
+      <div class="{{ base_class }}__content-slot">
+        {% block content %}{% endblock %}
+      </div>
+    </div>
+
+    <div class="{{ base_class }}__form">
+      {% block form %}
+        {{ form }}
+      {% endblock %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+.form-contact-us__inner {
+  max-width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-contact-us {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.form-contact-us {
+  background-color: var(--form-contact-bg, #F1FCF9);
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.form-contact-us__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .form-contact-us__inner {
+    flex-direction: row;
+    gap: 3rem;
+  }
+}
+.form-contact-us__content {
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .form-contact-us__content {
+    grid-area: content;
+  }
+}
+.form-contact-us__title {
+  font-family: "Albert Sans", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1F2A33;
+  margin: 0 0 0.75rem;
+}
+@media (min-width: 1230px) {
+  .form-contact-us__title {
+    font-size: 2rem;
+  }
+}
+.form-contact-us__description {
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #6B7A89;
+  margin: 0 0 1.5rem;
+}
+.form-contact-us__content-slot {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.form-contact-us__form {
+  background-color: #FFFFFF;
+  border-radius: 0.75rem;
+  box-shadow: 0 12px 30px rgba(31, 42, 51, 0.08);
+  padding: 1.5rem;
+}
+@media (min-width: 768px) {
+  .form-contact-us__form {
+    grid-area: form;
+    padding: 2rem;
+    max-width: 460px;
+  }
+}
+.form-contact-us {
+  /* Layout variants */
+}
+.form-contact-us--layout-form-content .form-contact-us__inner {
+  flex-direction: row-reverse;
+}
+@media (min-width: 768px) {
+  .form-contact-us--layout-form-content .form-contact-us__inner {
+    flex-direction: row-reverse;
+  }
+}
+.form-contact-us {
+  /* Background variants (can be overridden by --form-contact-bg inline style) */
+}
+.form-contact-us--bg-none {
+  --form-contact-bg: transparent;
+}
+.form-contact-us--bg-mint {
+  --form-contact-bg: #F1FCF9;
+}
+.form-contact-us--bg-white {
+  --form-contact-bg: #FFFFFF;
+}
+.form-contact-us--bg-light {
+  --form-contact-bg: #F7F9FB;
+}
+.form-contact-us--bg-dark {
+  --form-contact-bg: #1F2A33;
+}
+/*# sourceMappingURL=form_contact.css.map */

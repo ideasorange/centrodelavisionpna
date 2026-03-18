@@ -1,0 +1,30 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Card Simple
+status: stable
+description: Simple card with title, description, and image.
+libraryOverrides:
+  dependencies:
+    - core/drupal
+props:
+  type: object
+  required:
+    - title
+    - description
+    - image
+  properties:
+    title:
+      type: string
+      title: Title
+      description: Card title.
+    description:
+      type: string
+      title: Description
+      description: Card body text.
+    image:
+      type: string
+      title: Image URL
+      description: Image path (e.g. /sites/default/files/card.jpg).
+    alt:
+      type: string
+      title: Alt text
+      description: Alternative text for accessibility.

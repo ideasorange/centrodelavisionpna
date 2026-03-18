@@ -117,6 +117,8 @@ global-styling:
       dist/css/fonts.css: { }
       dist/css/base.css: { }
 
+
+
 # Layout.
 layout:
   css:
@@ -140,3 +142,10 @@ design-direction:
   css:
     theme:
       dist/css/04_components/generics/design-direction.css: { }
+
+# Webform Contact Component
+webform-contact:
+  version: VERSION
+  css:
+    theme:
+      dist/css/04_components/generics/webform-contact.css: { }

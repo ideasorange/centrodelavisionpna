@@ -1,0 +1,48 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Form Contact
+status: stable
+description: Contact section with content area and webform slot.
+libraryOverrides:
+  dependencies:
+    - core/drupal
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: Title
+      description: Optional heading for the contact section.
+    description:
+      type: string
+      title: Description
+      description: Optional supporting text above the form.
+    layout:
+      type: string
+      title: Layout
+      description: Choose whether the content slot is shown left or right (at tablet/desktop widths).
+      enum:
+        - content_form
+        - form_content
+      default: content_form
+    background_variant:
+      type: string
+      title: Background variant
+      description: Background color variant for the main container.
+      enum:
+        - mint
+        - white
+        - light
+        - dark
+        - none
+      default: mint
+    background_color:
+      type: string
+      title: Background color
+      description: Optional background color (CSS value) that overrides the background variant.
+slots:
+  form:
+    title: Form
+    description: Webform or other form component (UI Patterns will supply `form`).
+  content:
+    title: Content
+    description: Other components or text (e.g. contact info, cards).
