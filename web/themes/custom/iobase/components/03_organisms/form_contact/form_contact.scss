@@ -1,0 +1,103 @@
+// Import generic styles.
+@use "../../../scss/core" as *;
+
+.form-contact-us {
+  @extend %breakContainer;
+  background-color: var(--form-contact-bg, #F1FCF9);
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  &__inner {
+    @extend %content-container;
+    display: flex;
+    flex-direction: column;
+    //grid-template-columns: 1fr;
+    gap: 2rem;
+
+    @media (min-width: $tab) {
+      // grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
+      // grid-template-areas: "content form";
+      // align-items: flex-start;
+      flex-direction: row;
+      gap: 3rem;
+    }
+  }
+
+  &__content {
+    text-align: left;
+    @media (min-width: $tab) {
+      grid-area: content;
+    }
+  }
+
+  &__title {
+    font-family: $secondary-font-family;
+    font-size: to-rem(28);
+    font-weight: 700;
+    color: $color-gray-900;
+    margin: 0 0 0.75rem;
+
+    @media (min-width: $desk) {
+      font-size: to-rem(32);
+    }
+  }
+
+  &__description {
+    font-family: $base-font-family;
+    font-size: to-rem(16);
+    line-height: 1.6;
+    color: $color-gray-500;
+    margin: 0 0 1.5rem;
+  }
+
+  &__content-slot {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  &__form {
+    background-color: $color-white;
+    border-radius: 0.75rem;
+    box-shadow: 0 12px 30px rgba($color-gray-900, 0.08);
+    padding: 1.5rem;
+
+    @media (min-width: $tab) {
+      grid-area: form;
+      padding: 2rem;
+      max-width: 460px;
+    }
+  }
+
+  /* Layout variants */
+  &--layout-form-content {
+    .form-contact-us__inner {
+      flex-direction: row-reverse;
+      @media (min-width: $tab) {
+        // grid-template-areas: "form content";
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  /* Background variants (can be overridden by --form-contact-bg inline style) */
+  &--bg-none {
+    --form-contact-bg: transparent;
+  }
+
+  &--bg-mint {
+    --form-contact-bg: #F1FCF9;
+  }
+
+  &--bg-white {
+    --form-contact-bg: #FFFFFF;
+  }
+
+  &--bg-light {
+    --form-contact-bg: #{$color-gray-100};
+  }
+
+  &--bg-dark {
+    --form-contact-bg: #{$color-gray-900};
+  }
+}

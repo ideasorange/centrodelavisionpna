@@ -1,0 +1,103 @@
+uuid: 5da428e4-1f1b-48cd-b551-9a991e7f557a
+langcode: es
+status: true
+dependencies:
+  config:
+    - webform.webform.contactanos
+  module:
+    - ui_patterns
+    - ui_patterns_blocks
+    - webform
+  theme:
+    - iobase
+id: iobase_formcontact
+theme: iobase
+region: content
+weight: 0
+provider: null
+plugin: 'ui_patterns:iobase:form_contact'
+settings:
+  id: 'ui_patterns:iobase:form_contact'
+  label: 'Form Contact'
+  label_display: '0'
+  provider: ui_patterns_blocks
+  ui_patterns:
+    component_id: 'iobase:form_contact'
+    variant_id: null
+    props:
+      attributes:
+        source_id: attributes
+        source:
+          value: ''
+      title:
+        source_id: textfield
+        source:
+          value: ''
+      description:
+        source_id: textfield
+        source:
+          value: ''
+      layout:
+        source_id: select
+        source:
+          value: content_form
+      background_variant:
+        source_id: select
+        source:
+          value: mint
+      background_color:
+        source_id: textfield
+        source:
+          value: '#e9e9e4'
+    slots:
+      form:
+        sources:
+          -
+            source_id: block
+            source:
+              plugin_id: webform_block
+              webform_block:
+                webform_id: contactanos
+                settings:
+                  default_data: ''
+            _weight: '0'
+            node_id: ''
+            third_party_settings: ''
+      content:
+        sources:
+          -
+            source_id: component
+            source:
+              component:
+                component_id: 'iobase:card_simple'
+                variant_id: null
+                props:
+                  attributes:
+                    source_id: attributes
+                    source:
+                      value: ''
+                  title:
+                    source_id: textfield
+                    source:
+                      value: 'Reserva un turno ahora mismo.'
+                  description:
+                    source_id: textfield
+                    source:
+                      value: 'Agendá tu consulta ahora y descubrí la excelencia en el cuidado de tus ojos. Contamos con un equipo especializado dedicado a bri'
+                  image:
+                    source_id: textfield
+                    source:
+                      value: /sites/default/files/eyes.png
+                  alt:
+                    source_id: textfield
+                    source:
+                      value: ''
+                slots: {  }
+                third_party_settings: ''
+                node_id: ''
+            _weight: '0'
+            node_id: ''
+            third_party_settings: ''
+    third_party_settings: ''
+    node_id: ''
+visibility: {  }
