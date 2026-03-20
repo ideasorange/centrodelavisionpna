@@ -149,3 +149,9 @@ webform-contact:
   css:
     theme:
       dist/css/04_components/generics/webform-contact.css: { }
+# Webform Comment Component
+webform-comment:
+  version: VERSION
+  css:
+    theme:
+      dist/css/04_components/generics/webform-comment.css: { }

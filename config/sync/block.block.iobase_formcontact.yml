@@ -13,7 +13,7 @@ dependencies:
 id: iobase_formcontact
 theme: iobase
 region: content
-weight: 0
+weight: -2
 provider: null
 plugin: 'ui_patterns:iobase:form_contact'
 settings:
@@ -44,7 +44,7 @@ settings:
       background_variant:
         source_id: select
         source:
-          value: mint
+          value: none
       background_color:
         source_id: textfield
         source:

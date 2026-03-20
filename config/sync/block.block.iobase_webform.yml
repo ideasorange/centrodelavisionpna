@@ -1,0 +1,26 @@
+uuid: f94804da-bf7e-440c-8290-a62cefa46708
+langcode: es
+status: true
+dependencies:
+  config:
+    - webform.webform.comentarios
+  module:
+    - webform
+  theme:
+    - iobase
+id: iobase_webform
+theme: iobase
+region: content
+weight: -4
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: Webform
+  label_display: '0'
+  provider: webform
+  webform_id: comentarios
+  default_data: ''
+  redirect: false
+  lazy: false
+visibility: {  }
