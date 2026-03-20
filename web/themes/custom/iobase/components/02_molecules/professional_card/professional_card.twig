@@ -1,0 +1,31 @@
+{#
+ * Professional Card – image + title + description.
+ #}
+{% set base_class = 'professional-card' %}
+{% set card_attributes = attributes ? attributes.addClass(base_class) : create_attribute().addClass(base_class) %}
+
+<article {{ card_attributes }}>
+  <div class="{{ base_class }}__inner">
+    {% if image %}
+      <div class="{{ base_class }}__image-wrapper">
+        <img
+          class="{{ base_class }}__image"
+          src="{{ image }}"
+          alt="{{ alt|default(title) }}"
+          loading="lazy"
+        />
+      </div>
+    {% endif %}
+
+    <header class="{{ base_class }}__header">
+      {% if title %}
+        <h3 class="{{ base_class }}__title">{{ title }}</h3>
+      {% endif %}
+
+      {% if description %}
+        <p class="{{ base_class }}__description">{{ description }}</p>
+      {% endif %}
+    </header>
+  </div>
+</article>
+

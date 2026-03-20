@@ -1,0 +1,38 @@
+uuid: f7f4d24e-72a3-4532-98fc-d58bb790d707
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.professional.field_description
+    - field.field.node.professional.field_prof_image
+    - node.type.professional
+  module:
+    - user
+id: node.professional.default
+targetEntityType: node
+bundle: professional
+mode: default
+content:
+  field_description:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_prof_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

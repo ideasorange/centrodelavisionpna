@@ -1,0 +1,102 @@
+{#
+/**
+ * @file
+ * Theme override to display a block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - in_preview: Whether the plugin is being rendered in preview mode.
+ * - content: The content of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_block()
+ */
+#}
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+    {{ content }}
+
+    <br><br><br>
+        <h2 class="heading">Titulos y Subtiutulos</h2>
+        <hr>
+        {% include 'iobase:heading' with {
+          text: 'Título Principal'|t,
+          level: 'h1'
+        } %}
+        <p class="paragraph">Duis non quam et nisi tincidunt fermentum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam ullamcorper, mauris nec feugiat fermentum, purus lacus suscipit felis, et facilisis justo lacus id risus. Phasellus ac eros at urna condimentum lacinia. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed bibendum, sapien a venenatis fermentum, mauris augue cursus turpis, vitae elementum massa orci sit amet massa. In hac habitasse platea dictumst. Curabitur tincidunt, felis a elementum tincidunt, ex felis fermentum dui, eget pulvinar arcu eros eu eros. Vestibulum sollicitudin pretium velit, eget volutpat justo fermentum sit amet. Pellentesque in nulla in nisi dictum interdum. Praesent quis orci sit amet ante facilisis suscipit. Integer in eros molestie, ultricies arcu ac, cursus quam. Nulla facilisi. Ut egestas semper magna ac condimentum. Aliquam erat volutpat. Sed bibendum sollicitudin orci, at viverra metus vehicula sed. Nullam vehicula magna sit amet magna ullamcorper, at dictum est gravida. Morbi nec magna at quam malesuada accumsan. Suspendisse potenti. Vivamus feugiat massa ut tortor scelerisque, non dapibus nulla consectetur. Aliquam erat volutpat.</p>
+
+        {% include 'iobase:heading' with {
+          text: 'Título Secundario'|t,
+          level: 'h2'
+        } %}
+        <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>{# /.layout-content #}
+      
+      <br><br><br>
+      <h2 class="heading">Paleta de colores</h2>
+      <hr>
+      {% include 'iobase:color_palette' with {
+        color: '#1E6FA8',
+        text: 'Primary'|t
+      } %}
+
+      {% include 'iobase:color_palette' with {
+        color: '#2BB3A3',
+        text: 'Secondary'|t
+      } %}
+
+      {% include 'iobase:color_palette' with {
+        color: '#1F2A33',
+        text: 'Text'|t
+      } %}
+
+      {% include 'iobase:color_palette' with {
+        color: '#F7F9FB',
+        text: 'Background'|t
+      } %}
+
+      {% include 'iobase:color_palette' with {
+        color: '#E6EDF3',
+        text: 'Border'|t
+      } %}
+
+      {% include 'iobase:color_palette' with {
+        color: '#C8D4E0', 
+        text: 'Border'|t
+      } %}
+
+      {% include 'iobase:color_palette' with {
+        color: '#6B7A89',
+        text: 'Text'|t
+      } %}
+    <br><br><br>
+    
+  {% endblock %}
+</div>

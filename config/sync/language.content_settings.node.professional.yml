@@ -1,0 +1,11 @@
+uuid: 30c8951e-128d-4530-9169-734d256949b5
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.professional
+id: node.professional
+target_entity_type_id: node
+target_bundle: professional
+default_langcode: site_default
+language_alterable: false
