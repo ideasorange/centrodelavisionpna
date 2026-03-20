@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+.professional-carousel__heading {
+  font-family: "Albert Sans", sans-serif;
+  font-weight: 700;
+  margin: 0 0 0.5em;
+}
+
+.professional-carousel__heading {
+  font-size: 2.25rem;
+  line-height: 2.1875rem;
+}
+@media (min-width: 1230px) {
+  .professional-carousel__heading {
+    font-size: 1.875rem;
+    line-height: 2.5rem;
+  }
+}
+
+.professional-carousel__inner {
+  max-width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.professional-carousel {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.professional-carousel {
+  padding: 3rem 0;
+}
+
+.professional-carousel__header {
+  max-width: 720px;
+  margin: 0 0 2rem;
+}
+
+.professional-carousel__scroller {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1.5rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  /* CSS-only carousel feel */
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+}
+
+.professional-carousel__scroller > * {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+/*# sourceMappingURL=professional_carousel.css.map */

@@ -1,0 +1,19 @@
+uuid: 7ed10ad7-24ad-4b48-b6f9-fd67ef0c9bc1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.professional
+id: node.professional.field_description
+field_name: field_description
+entity_type: node
+bundle: professional
+label: Descripción
+description: Descripción
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

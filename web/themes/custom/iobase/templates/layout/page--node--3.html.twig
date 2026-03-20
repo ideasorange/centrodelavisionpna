@@ -53,62 +53,6 @@
 
       <div class="layout-content">
         {{ page.content }}
-        
-        <br><br><br>
-        <h2 class="heading">Titulos y Subtiutulos</h2>
-        <hr>
-        {% include 'iobase:heading' with {
-          text: 'Título Principal'|t,
-          level: 'h1'
-        } %}
-        <p class="paragraph">Duis non quam et nisi tincidunt fermentum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam ullamcorper, mauris nec feugiat fermentum, purus lacus suscipit felis, et facilisis justo lacus id risus. Phasellus ac eros at urna condimentum lacinia. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed bibendum, sapien a venenatis fermentum, mauris augue cursus turpis, vitae elementum massa orci sit amet massa. In hac habitasse platea dictumst. Curabitur tincidunt, felis a elementum tincidunt, ex felis fermentum dui, eget pulvinar arcu eros eu eros. Vestibulum sollicitudin pretium velit, eget volutpat justo fermentum sit amet. Pellentesque in nulla in nisi dictum interdum. Praesent quis orci sit amet ante facilisis suscipit. Integer in eros molestie, ultricies arcu ac, cursus quam. Nulla facilisi. Ut egestas semper magna ac condimentum. Aliquam erat volutpat. Sed bibendum sollicitudin orci, at viverra metus vehicula sed. Nullam vehicula magna sit amet magna ullamcorper, at dictum est gravida. Morbi nec magna at quam malesuada accumsan. Suspendisse potenti. Vivamus feugiat massa ut tortor scelerisque, non dapibus nulla consectetur. Aliquam erat volutpat.</p>
-
-        {% include 'iobase:heading' with {
-          text: 'Título Secundario'|t,
-          level: 'h2'
-        } %}
-        <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>{# /.layout-content #}
-      
-      <br><br><br>
-      <h2 class="heading">Paleta de colores</h2>
-      <hr>
-      {% include 'iobase:color_palette' with {
-        color: '#1E6FA8',
-        text: 'Primary'|t
-      } %}
-
-      {% include 'iobase:color_palette' with {
-        color: '#2BB3A3',
-        text: 'Secondary'|t
-      } %}
-
-      {% include 'iobase:color_palette' with {
-        color: '#1F2A33',
-        text: 'Text'|t
-      } %}
-
-      {% include 'iobase:color_palette' with {
-        color: '#F7F9FB',
-        text: 'Background'|t
-      } %}
-
-      {% include 'iobase:color_palette' with {
-        color: '#E6EDF3',
-        text: 'Border'|t
-      } %}
-
-      {% include 'iobase:color_palette' with {
-        color: '#C8D4E0', 
-        text: 'Border'|t
-      } %}
-
-      {% include 'iobase:color_palette' with {
-        color: '#6B7A89',
-        text: 'Text'|t
-      } %}
-    <br><br><br>
     </div>
   </main>
 
