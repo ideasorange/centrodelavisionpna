@@ -1,0 +1,20 @@
+{#
+ * Professional Carousel – heading + horizontal list of cards.
+ #}
+{% set base_class = 'professional-carousel' %}
+{% set section_attributes = attributes ? attributes.addClass(base_class) : create_attribute().addClass(base_class) %}
+
+<section {{ section_attributes }}>
+  <div class="{{ base_class }}__inner">
+    {% if heading %}
+      <header class="{{ base_class }}__header">
+        <h2 class="{{ base_class }}__heading">{{ heading }}</h2>
+      </header>
+    {% endif %}
+
+    <div class="{{ base_class }}__scroller" role="list">
+      {% block items %}{% endblock %}
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,26 @@
+// Import generic styles.
+@use "../../../scss/core" as *;
+
+.professional-block {
+  @extend %breakContainer;
+  padding: 6rem 0;
+}
+
+.professional-block__inner {
+  @extend %content-container;
+}
+
+.professional-block__header {
+  max-width: 720px;
+  margin: 0 0 2rem;
+}
+
+.professional-block__heading {
+  @extend %h2;
+}
+
+.professional-block__section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}

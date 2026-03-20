@@ -1,0 +1,17 @@
+uuid: 7ebaa681-4242-42b2-be2f-5ff07f81e0d9
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Profesional
+type: professional
+description: 'Crear nuevo profesional medico del centro.'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

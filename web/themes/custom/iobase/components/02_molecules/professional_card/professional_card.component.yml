@@ -1,0 +1,31 @@
+$schema: 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Professional Card
+status: stable
+description: Card for a Professional/Doctor result (image, title, description).
+libraryOverrides:
+  dependencies:
+    - core/drupal
+props:
+  type: object
+  required:
+    - title
+    - description
+    - image
+  properties:
+    title:
+      type: string
+      title: Title
+      description: Professional/doctor name.
+    description:
+      type: string
+      title: Description
+      description: Short description (e.g. specialties or role).
+    image:
+      type: string
+      title: Image URL
+      description: Image path/URL for the professional card (e.g. /sites/default/files/doctor.jpg).
+    alt:
+      type: string
+      title: Alt text
+      description: Image alt text (defaults to title).
+
