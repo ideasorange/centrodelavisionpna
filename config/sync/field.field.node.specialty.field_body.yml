@@ -1,0 +1,26 @@
+uuid: 508da2d1-24dc-4b79-8882-f6e89fab97da
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_body
+    - filter.format.full_html
+    - node.type.specialty
+  module:
+    - text
+id: node.specialty.field_body
+field_name: field_body
+entity_type: node
+bundle: specialty
+label: Descripción
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats:
+    - full_html
+field_type: text_with_summary
