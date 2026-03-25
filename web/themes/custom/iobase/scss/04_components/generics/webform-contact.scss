@@ -1,11 +1,22 @@
 // scss/04_components/generics/webform-contact.scss
-@use "../../01_base/variables";
+// Import generic styles.
+@use "../../core" as *;
 
 .contact {
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
     padding: 1rem;
+    background-color: $color-white;
+    border-radius: 0.75rem;
+    box-shadow: 0 12px 30px rgba($color-gray-900, 0.08);
+    padding: 1.5rem;
+
+    @media (min-width: $tab) {
+        grid-area: form;
+        padding: 2rem;
+        max-width: 460px;
+      }
 
     // webform flexbox
     &__flexbox {
@@ -43,17 +54,19 @@
         font-size: 25px;
     }
     &__input {
-        padding: 5px;
+        padding: 15px;
         border-width: thin;
         border-radius: 7px;
         max-width: 100%;
+        border: solid 1px #c5c5c5;
     }
 
     &__textarea {
-        padding: 5px;     
+        padding: 15px;     
         border-radius: 7px;
         max-width: 100%;
         min-height: 150px;
+        border: solid 1px #c5c5c5
     }
 
     &__button {
@@ -63,6 +76,7 @@
         background: #3CB371;
         border-radius: 5px;
         padding: 0.5rem;
+        border: none;
         }   
     }
 }

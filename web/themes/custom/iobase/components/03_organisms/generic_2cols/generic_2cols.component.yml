@@ -1,0 +1,36 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Generic 2 Columns
+status: stable
+description: Generic 2 columns section with left and right content slots.
+libraryOverrides:
+  dependencies:
+    - core/drupal
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: Title
+      description: Optional heading for the contact section.
+    background_variant:
+      type: string
+      title: Background variant
+      description: Background color variant for the main container.
+      enum:
+        - mint
+        - white
+        - light
+        - dark
+        - none
+      default: mint
+    background_color:
+      type: string
+      title: Background color
+      description: Optional background color (CSS value) that overrides the background variant.
+slots:
+  left:
+    title: Left
+    description: Left side content.
+  right:
+    title: Right
+    description: Right side content.

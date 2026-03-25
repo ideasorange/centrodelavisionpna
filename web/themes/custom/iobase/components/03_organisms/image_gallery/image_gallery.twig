@@ -1,0 +1,94 @@
+{#
+/**
+ * @file
+ * Image gallery – Splide main carousel with synced thumbnails.
+ *
+ * Up to 10 slides: image_N_url + image_N_alt (plain text). Leave URL empty to skip.
+ */
+#}
+{% set base_class = 'image-gallery' %}
+{% set gallery_attributes = attributes ? attributes.addClass(base_class, 'js-image-gallery') : create_attribute().addClass(base_class, 'js-image-gallery') %}
+
+{# True if at least one image URL is set (explicit check avoids Twig loop scoping issues). #}
+{% set has_gallery =
+  image_1_url|default('')|trim or image_2_url|default('')|trim or image_3_url|default('')|trim
+  or image_4_url|default('')|trim or image_5_url|default('')|trim or image_6_url|default('')|trim
+  or image_7_url|default('')|trim or image_8_url|default('')|trim or image_9_url|default('')|trim
+  or image_10_url|default('')|trim
+%}
+
+<section {{ gallery_attributes.setAttribute('aria-label', heading|default('Image gallery'|t)) }}>
+  <div class="{{ base_class }}__inner">
+    {% if heading or subheading %}
+      <header class="{{ base_class }}__header">
+        {% if heading %}
+          <h2 class="{{ base_class }}__heading">{{ heading }}</h2>
+        {% endif %}
+        {% if subheading %}
+          <p class="{{ base_class }}__subheading">{{ subheading }}</p>
+        {% endif %}
+      </header>
+    {% endif %}
+
+    {% if has_gallery %}
+      <div class="{{ base_class }}__carousels">
+        <div class="splide {{ base_class }}__main js-image-gallery__main" role="region" aria-label="{{ 'Main gallery'|t }}">
+          <div class="splide__track">
+            <ul class="splide__list">
+              {% set is_first_main_slide = true %}
+              {% for i in 1..10 %}
+                {% set img_url = attribute(_context, 'image_' ~ i ~ '_url')|default('')|trim %}
+                {% if img_url %}
+                  {% set img_alt = attribute(_context, 'image_' ~ i ~ '_alt')|default('')|trim %}
+                  <li class="splide__slide">
+                    <figure class="{{ base_class }}__figure">
+                      <img
+                        class="{{ base_class }}__image"
+                        src="{{ img_url }}"
+                        alt="{{ img_alt|default('Gallery image'|t) }}"
+                        width="1200"
+                        height="800"
+                        loading="{{ is_first_main_slide ? 'eager' : 'lazy' }}"
+                        decoding="async"
+                      >
+                    </figure>
+                  </li>
+                  {% set is_first_main_slide = false %}
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+
+        <div class="splide {{ base_class }}__thumbs js-image-gallery__thumbs" role="region" aria-label="{{ 'Gallery thumbnails'|t }}">
+          <div class="splide__track">
+            <ul class="splide__list">
+              {% for i in 1..10 %}
+                {% set img_url = attribute(_context, 'image_' ~ i ~ '_url')|default('')|trim %}
+                {% if img_url %}
+                  <li class="splide__slide">
+                    <button
+                      type="button"
+                      class="{{ base_class }}__thumb-button"
+                      aria-label="{{ 'Show image @num'|t({'@num': i}) }}"
+                    >
+                      <img
+                        class="{{ base_class }}__thumb-image"
+                        src="{{ img_url }}"
+                        alt=""
+                        width="160"
+                        height="100"
+                        loading="lazy"
+                        decoding="async"
+                      >
+                    </button>
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</section>

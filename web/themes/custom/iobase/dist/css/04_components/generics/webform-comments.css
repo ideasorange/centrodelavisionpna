@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
-.contact {
+.comment {
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
@@ -10,64 +10,39 @@
   padding: 1.5rem;
 }
 @media (min-width: 768px) {
-  .contact {
+  .comment {
     grid-area: form;
     padding: 2rem;
     max-width: 460px;
   }
 }
-.contact__flexbox {
-  gap: 15px;
-  margin: 0;
-}
-.contact__flexbox .webform-flex {
-  width: 100%;
-}
-.contact__description {
-  margin: 0;
-}
-@media screen and (min-width: 721px) {
-  .contact__description {
-    padding: 0 1.5rem;
-  }
-}
-.contact__description__title {
-  line-height: 1.2;
-  margin: 0;
-  font-size: 35px;
-  font-weight: 500;
-}
-.contact__description__image {
-  display: block;
-  border-radius: 10px;
-  height: auto;
-  max-width: 100%;
-}
-.contact__consulta {
+.comment__title {
   line-height: 1.5;
   font-weight: 500;
   font-size: 25px;
 }
-.contact__input {
+.comment__input {
   padding: 15px;
   border-width: thin;
   border-radius: 7px;
   max-width: 100%;
   border: solid 1px #c5c5c5;
 }
-.contact__textarea {
+.comment__textarea {
   padding: 15px;
   border-radius: 7px;
   max-width: 100%;
   min-height: 150px;
   border: solid 1px #c5c5c5;
 }
-.contact__button .button {
-  width: 100%;
+.comment__button .button {
+  font-weight: 500;
+  color: white;
+  width: fit-content;
   border-width: thin;
   background: #3CB371;
   border-radius: 5px;
   padding: 0.5rem;
   border: none;
 }
-/*# sourceMappingURL=webform-contact.css.map */
+/*# sourceMappingURL=webform-comments.css.map */

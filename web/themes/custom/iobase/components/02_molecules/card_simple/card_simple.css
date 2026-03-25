@@ -45,7 +45,7 @@
 .card-simple__image {
   display: block;
   width: 100%;
-  height: auto;
+  height: 350px;
   object-fit: cover;
 }
 /*# sourceMappingURL=card_simple.css.map */

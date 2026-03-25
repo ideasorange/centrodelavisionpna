@@ -60,24 +60,16 @@
   flex-direction: column;
   gap: 1.25rem;
 }
-.form-contact-us__form {
-  background-color: #FFFFFF;
-  border-radius: 0.75rem;
-  box-shadow: 0 12px 30px rgba(31, 42, 51, 0.08);
-  padding: 1.5rem;
-}
 @media (min-width: 768px) {
   .form-contact-us__form {
     grid-area: form;
-    padding: 2rem;
-    max-width: 460px;
   }
 }
 .form-contact-us {
   /* Layout variants */
 }
 .form-contact-us--layout-form-content .form-contact-us__inner {
-  flex-direction: row-reverse;
+  flex-direction: column;
 }
 @media (min-width: 768px) {
   .form-contact-us--layout-form-content .form-contact-us__inner {
