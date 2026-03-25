@@ -1,0 +1,120 @@
+uuid: 4492d693-2bbd-4270-acdf-a655136972f8
+langcode: es
+status: true
+dependencies:
+  module:
+    - ui_patterns
+    - ui_patterns_blocks
+  theme:
+    - iobase
+id: iobase_imagegallery
+theme: iobase
+region: content
+weight: -3
+provider: null
+plugin: 'ui_patterns:iobase:image_gallery'
+settings:
+  id: 'ui_patterns:iobase:image_gallery'
+  label: 'Image gallery'
+  label_display: '0'
+  provider: ui_patterns_blocks
+  ui_patterns:
+    component_id: 'iobase:image_gallery'
+    variant_id: null
+    props:
+      attributes:
+        source_id: attributes
+        source:
+          value: ''
+      heading:
+        source_id: textfield
+        source:
+          value: 'Nuestro Nuevo Centro'
+      subheading:
+        source_id: textfield
+        source:
+          value: 'Renovamos nuestro lugar de atencion para brindar a nuestro pacientes una mejor experiencia.'
+      image_1_url:
+        source_id: textfield
+        source:
+          value: /sites/default/files/images_gallery/img001.png
+      image_1_alt:
+        source_id: textfield
+        source:
+          value: Img1
+      image_2_url:
+        source_id: textfield
+        source:
+          value: /sites/default/files/images_gallery/img002.png
+      image_2_alt:
+        source_id: textfield
+        source:
+          value: Img2
+      image_3_url:
+        source_id: textfield
+        source:
+          value: /sites/default/files/images_gallery/img003.png
+      image_3_alt:
+        source_id: textfield
+        source:
+          value: ''
+      image_4_url:
+        source_id: textfield
+        source:
+          value: ''
+      image_4_alt:
+        source_id: textfield
+        source:
+          value: ''
+      image_5_url:
+        source_id: textfield
+        source:
+          value: ''
+      image_5_alt:
+        source_id: textfield
+        source:
+          value: ''
+      image_6_url:
+        source_id: textfield
+        source:
+          value: ''
+      image_6_alt:
+        source_id: textfield
+        source:
+          value: ''
+      image_7_url:
+        source_id: textfield
+        source:
+          value: ''
+      image_7_alt:
+        source_id: textfield
+        source:
+          value: ''
+      image_8_url:
+        source_id: textfield
+        source:
+          value: ''
+      image_8_alt:
+        source_id: textfield
+        source:
+          value: ''
+      image_9_url:
+        source_id: textfield
+        source:
+          value: ''
+      image_9_alt:
+        source_id: textfield
+        source:
+          value: ''
+      image_10_url:
+        source_id: textfield
+        source:
+          value: ''
+      image_10_alt:
+        source_id: textfield
+        source:
+          value: ''
+    slots: {  }
+    third_party_settings: ''
+    node_id: ''
+visibility: {  }

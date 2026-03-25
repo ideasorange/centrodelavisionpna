@@ -125,6 +125,25 @@ layout:
     theme:
       dist/css/04_components/page/layout.css: { }
 
+# Splide carousel (https://splidejs.com/) – used by SDC image_gallery.
+splide:
+  remote: https://splidejs.com/
+  version: 4.1.4
+  license:
+    name: MIT
+    url: https://github.com/Splidejs/splide/blob/master/LICENSE
+    gpl-compatible: true
+  css:
+    theme:
+      https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css:
+        type: external
+        minified: true
+  js:
+    https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js:
+      type: external
+      minified: true
+      defer: true
+
 ionicicon:
   remote: https://ionic.io/ionicons
   version: 7.1.0
@@ -149,3 +168,9 @@ webform-contact:
   css:
     theme:
       dist/css/04_components/generics/webform-contact.css: { }
+# Webform Comment Component
+webform-comments:
+  version: VERSION
+  css:
+    theme:
+      dist/css/04_components/generics/webform-comments.css: { }

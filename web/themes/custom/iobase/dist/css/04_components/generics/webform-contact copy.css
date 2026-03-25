@@ -1,20 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 .contact {
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
   padding: 1rem;
-  background-color: #FFFFFF;
-  border-radius: 0.75rem;
-  box-shadow: 0 12px 30px rgba(31, 42, 51, 0.08);
-  padding: 1.5rem;
-}
-@media (min-width: 768px) {
-  .contact {
-    grid-area: form;
-    padding: 2rem;
-    max-width: 460px;
-  }
 }
 .contact__flexbox {
   gap: 15px;
@@ -49,18 +37,16 @@
   font-size: 25px;
 }
 .contact__input {
-  padding: 15px;
+  padding: 5px;
   border-width: thin;
   border-radius: 7px;
   max-width: 100%;
-  border: solid 1px #c5c5c5;
 }
 .contact__textarea {
-  padding: 15px;
+  padding: 5px;
   border-radius: 7px;
   max-width: 100%;
   min-height: 150px;
-  border: solid 1px #c5c5c5;
 }
 .contact__button .button {
   width: 100%;
@@ -68,6 +54,5 @@
   background: #3CB371;
   border-radius: 5px;
   padding: 0.5rem;
-  border: none;
 }
-/*# sourceMappingURL=webform-contact.css.map */
+/*# sourceMappingURL=webform-contact copy.css.map */

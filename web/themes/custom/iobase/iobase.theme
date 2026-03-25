@@ -87,4 +87,8 @@ function iobase_preprocess_webform(&$variables)
   if ($variables['element']['#webform_id'] === 'contact') {
     $variables['#attached']['library'][] = 'iobase/webform-contact';
   }
+
+  if ($variables['element']['#webform_id'] === 'comentarios') {
+    $variables['#attached']['library'][] = 'iobase/webform-comment';
+  }
 }

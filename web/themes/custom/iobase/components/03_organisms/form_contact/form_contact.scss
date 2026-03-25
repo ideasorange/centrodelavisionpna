@@ -57,22 +57,22 @@
   }
 
   &__form {
-    background-color: $color-white;
-    border-radius: 0.75rem;
-    box-shadow: 0 12px 30px rgba($color-gray-900, 0.08);
-    padding: 1.5rem;
+    // background-color: $color-white;
+    // border-radius: 0.75rem;
+    // box-shadow: 0 12px 30px rgba($color-gray-900, 0.08);
+    // padding: 1.5rem;
 
     @media (min-width: $tab) {
       grid-area: form;
-      padding: 2rem;
-      max-width: 460px;
+      // padding: 2rem;
+      // max-width: 460px;
     }
   }
 
   /* Layout variants */
   &--layout-form-content {
     .form-contact-us__inner {
-      flex-direction: row-reverse;
+      flex-direction: column;
       @media (min-width: $tab) {
         // grid-template-areas: "form content";
         flex-direction: row-reverse;

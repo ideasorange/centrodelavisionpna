@@ -6,7 +6,7 @@
  * Available config:
  * - title: Button/link text.
  * - url: Internal or external URL.
- * - variant: primary | outline.
+ * - variant: primary | secondary | tertiary | primary-outline | secondary-outline | tertiary-outline.
  * - target: _self | _blank.
  * - color: Optional custom background/border color.
  * - text_color: Optional custom text color.
@@ -15,17 +15,22 @@
 {% set variant = variant|default('primary') %}
 {% set target = target|default('_self') %}
 {% set base_class = 'cta' %}
-{% set modifier_class = base_class ~ '--' ~ variant %}
+{% set normalized_variant = variant|replace({'_':'-'}) %}
+{# Backward compatibility: keep old "outline" value as primary outline. #}
+{% if normalized_variant == 'outline' %}
+  {% set normalized_variant = 'primary-outline' %}
+{% endif %}
+{% set modifier_class = base_class ~ '--' ~ normalized_variant %}
 
 {% set inline_styles = [] %}
 {% if color %}
-  {% if variant == 'primary' %}
+  {% if normalized_variant in ['primary', 'secondary', 'tertiary'] %}
     {% set inline_styles = inline_styles|merge(['background-color: ' ~ color, 'border-color: ' ~ color]) %}
   {% else %}
     {% set inline_styles = inline_styles|merge(['border-color: ' ~ color, 'color: ' ~ color]) %}
   {% endif %}
 {% endif %}
-{% if text_color and variant == 'primary' %}
+{% if text_color and normalized_variant in ['primary', 'secondary', 'tertiary'] %}
   {% set inline_styles = inline_styles|merge(['color: ' ~ text_color]) %}
 {% endif %}
 

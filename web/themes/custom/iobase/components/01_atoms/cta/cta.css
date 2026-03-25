@@ -34,14 +34,54 @@
   border-color: #134E75;
   color: #FFFFFF;
 }
-.cta--outline {
+.cta--secondary {
+  background-color: #2BB3A3;
+  color: #FFFFFF;
+  border-color: #2BB3A3;
+}
+.cta--secondary:hover, .cta--secondary:focus {
+  background-color: #1C857A;
+  border-color: #1C857A;
+  color: #FFFFFF;
+}
+.cta--tertiary {
+  background-color: #1F2A33;
+  color: #FFFFFF;
+  border-color: #1F2A33;
+}
+.cta--tertiary:hover, .cta--tertiary:focus {
+  background-color: #3C4A57;
+  border-color: #3C4A57;
+  color: #FFFFFF;
+}
+.cta--primary-outline, .cta--outline {
   background-color: transparent;
   color: #1E6FA8;
   border-color: #1E6FA8;
 }
-.cta--outline:hover, .cta--outline:focus {
+.cta--primary-outline:hover, .cta--primary-outline:focus, .cta--outline:hover, .cta--outline:focus {
   background-color: #1E6FA8;
   color: #FFFFFF;
   border-color: #1E6FA8;
+}
+.cta--secondary-outline {
+  background-color: transparent;
+  color: #2BB3A3;
+  border-color: #2BB3A3;
+}
+.cta--secondary-outline:hover, .cta--secondary-outline:focus {
+  background-color: #2BB3A3;
+  color: #FFFFFF;
+  border-color: #2BB3A3;
+}
+.cta--tertiary-outline {
+  background-color: transparent;
+  color: #1F2A33;
+  border-color: #1F2A33;
+}
+.cta--tertiary-outline:hover, .cta--tertiary-outline:focus {
+  background-color: #1F2A33;
+  color: #FFFFFF;
+  border-color: #1F2A33;
 }
 /*# sourceMappingURL=cta.css.map */

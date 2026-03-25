@@ -1,7 +1,7 @@
 '$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
 name: CTA
 status: stable
-description: Call To Action link component with primary and outline variants.
+description: Call To Action link component with primary, secondary, tertiary and outline variants.
 libraryOverrides:
   dependencies:
     - core/drupal
@@ -25,6 +25,11 @@ props:
       description: Visual style variant.
       enum:
         - primary
+        - secondary
+        - tertiary
+        - primary-outline
+        - secondary-outline
+        - tertiary-outline
         - outline
       default: primary
     target:

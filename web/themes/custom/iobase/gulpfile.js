@@ -70,4 +70,7 @@ function watcherTaskComponents() {
   //gulp.watch(settings.jsCompSrcDirs, buildStylesComponents);
 }
 
+exports.buildStyles = buildStyles;
+exports.buildStylesComponents = buildStylesComponents;
+exports.build = parallel(buildStyles, buildStylesComponents);
 exports.watch = parallel(watcherTask, watcherTaskComponents);

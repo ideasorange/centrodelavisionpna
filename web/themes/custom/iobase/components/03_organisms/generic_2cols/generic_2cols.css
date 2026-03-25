@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+.generic-2cols {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.generic-2cols {
+  background-color: var(--generic-2cols-bg, #F1FCF9);
+}
+.generic-2cols__inner {
+  height: 100%;
+}
+.generic-2cols__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .generic-2cols__content {
+    gap: 3rem;
+  }
+}
+.generic-2cols__title {
+  font-family: "Albert Sans", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1F2A33;
+  margin: 0 0 0.75rem;
+}
+@media (min-width: 1230px) {
+  .generic-2cols__title {
+    font-size: 2rem;
+  }
+}
+.generic-2cols__left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  overflow: hidden;
+}
+.generic-2cols__right {
+  overflow: hidden;
+}
+.generic-2cols {
+  /* Background variants (can be overridden by --form-contact-bg inline style) */
+}
+.generic-2cols--bg-none {
+  --generic-2cols-bg: transparent;
+}
+.generic-2cols--bg-mint {
+  --generic-2cols-bg: #F1FCF9;
+}
+.generic-2cols--bg-white {
+  --generic-2cols-bg: #FFFFFF;
+}
+.generic-2cols--bg-light {
+  --generic-2cols-bg: #F7F9FB;
+}
+.generic-2cols--bg-dark {
+  --generic-2cols-bg: #1F2A33;
+}
+/*# sourceMappingURL=generic_2cols.css.map */

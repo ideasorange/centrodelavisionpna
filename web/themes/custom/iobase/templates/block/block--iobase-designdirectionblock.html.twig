@@ -96,7 +96,46 @@
         color: '#6B7A89',
         text: 'Text'|t
       } %}
+
     <br><br><br>
-    
+    <h2 class="heading">Botones</h2>
+    <hr>
+    {% embed 'iobase:cta' with {
+      title: 'Learn More'|t,
+      url: '/about-us',
+      variant: 'primary'
+    } %}{% endembed %}
+
+    {% embed 'iobase:cta' with {
+      title: 'Learn More'|t,
+      url: '/about-us',
+      variant: 'primary-outline',
+      target: '_blank'
+    } %}{% endembed %}
+    <br><br>
+    {% embed 'iobase:cta' with {
+      title: 'Contactanos'|t,
+      url: '/about-us',
+      variant: 'secondary'
+    } %}{% endembed %}
+    {% embed 'iobase:cta' with {
+      title: 'Contactanos'|t,
+      url: 'https://example.com',
+      variant: 'secondary-outline',
+      target: '_blank'
+    } %}{% endembed %}
+    <br><br>
+    {% embed 'iobase:cta' with {
+      title: 'Enviar'|t,
+      url: '/about-us',
+      variant: 'tertiary'
+    } %}{% endembed %}
+
+    {% embed 'iobase:cta' with {
+      title: 'Enviar'|t,
+      url: '/about-us',
+      variant: 'tertiary-outline'
+    } %}{% endembed %}
+    <br><br><br>
   {% endblock %}
 </div>

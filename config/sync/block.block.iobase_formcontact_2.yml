@@ -1,19 +1,19 @@
-uuid: 5da428e4-1f1b-48cd-b551-9a991e7f557a
+uuid: 99597de1-32da-44a3-9e66-7d00b21d64ef
 langcode: es
 status: true
 dependencies:
   config:
-    - webform.webform.contactanos
+    - webform.webform.comentarios
   module:
     - ui_patterns
     - ui_patterns_blocks
     - webform
   theme:
     - iobase
-id: iobase_formcontact
+id: iobase_formcontact_2
 theme: iobase
 region: content
-weight: -2
+weight: 0
 provider: null
 plugin: 'ui_patterns:iobase:form_contact'
 settings:
@@ -40,15 +40,15 @@ settings:
       layout:
         source_id: select
         source:
-          value: content_form
+          value: form_content
       background_variant:
         source_id: select
         source:
-          value: none
+          value: mint
       background_color:
         source_id: textfield
         source:
-          value: '#e9e9e4'
+          value: '#e7eefb'
     slots:
       form:
         sources:
@@ -57,7 +57,7 @@ settings:
             source:
               plugin_id: webform_block
               webform_block:
-                webform_id: contactanos
+                webform_id: comentarios
                 settings:
                   default_data: ''
             _weight: '0'
@@ -79,15 +79,15 @@ settings:
                   title:
                     source_id: textfield
                     source:
-                      value: 'Reserva un turno ahora mismo.'
+                      value: 'Dejanos tu comentario'
                   description:
                     source_id: textfield
                     source:
-                      value: 'Agendá tu consulta ahora y descubrí la excelencia en el cuidado de tus ojos. Contamos con un equipo especializado dedicado a bri'
+                      value: 'Ayudanos a seguir mejorando con tu comentario o decinos lo que estamos haciendo bien.'
                   image:
                     source_id: textfield
                     source:
-                      value: /sites/default/files/eyes.png
+                      value: /sites/default/files/girlphone.png
                   alt:
                     source_id: textfield
                     source:

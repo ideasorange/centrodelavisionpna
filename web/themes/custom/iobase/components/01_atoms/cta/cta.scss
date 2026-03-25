@@ -30,7 +30,7 @@
     white-space: nowrap;
   }
 
-  // Primary variant – filled button.
+  // Filled variants.
   &--primary {
     background-color: $color-primary;
     color: $color-white;
@@ -44,7 +44,34 @@
     }
   }
 
-  // Outline variant – transparent with border.
+  &--secondary {
+    background-color: $color-secondary;
+    color: $color-white;
+    border-color: $color-secondary;
+
+    &:hover,
+    &:focus {
+      background-color: $color-secondary-dark;
+      border-color: $color-secondary-dark;
+      color: $color-white;
+    }
+  }
+
+  &--tertiary {
+    background-color: $color-gray-900;
+    color: $color-white;
+    border-color: $color-gray-900;
+
+    &:hover,
+    &:focus {
+      background-color: $color-gray-700;
+      border-color: $color-gray-700;
+      color: $color-white;
+    }
+  }
+
+  // Outline variants.
+  &--primary-outline,
   &--outline {
     background-color: transparent;
     color: $color-primary;
@@ -55,6 +82,32 @@
       background-color: $color-primary;
       color: $color-white;
       border-color: $color-primary;
+    }
+  }
+
+  &--secondary-outline {
+    background-color: transparent;
+    color: $color-secondary;
+    border-color: $color-secondary;
+
+    &:hover,
+    &:focus {
+      background-color: $color-secondary;
+      color: $color-white;
+      border-color: $color-secondary;
+    }
+  }
+
+  &--tertiary-outline {
+    background-color: transparent;
+    color: $color-gray-900;
+    border-color: $color-gray-900;
+
+    &:hover,
+    &:focus {
+      background-color: $color-gray-900;
+      color: $color-white;
+      border-color: $color-gray-900;
     }
   }
 }

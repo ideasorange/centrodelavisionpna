@@ -1,0 +1,33 @@
+.comment {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.comment__title {
+  line-height: 1.5;
+  font-weight: 500;
+  font-size: 25px;
+}
+.comment__input {
+  padding: 5px;
+  border-width: thin;
+  border-radius: 7px;
+  max-width: 100%;
+}
+.comment__textarea {
+  padding: 5px;
+  border-radius: 7px;
+  max-width: 100%;
+  min-height: 150px;
+}
+.comment__button .button {
+  font-weight: 500;
+  color: white;
+  width: fit-content;
+  border-width: thin;
+  background: #3CB371;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+/*# sourceMappingURL=webform-comment.css.map */

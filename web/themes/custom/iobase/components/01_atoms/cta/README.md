@@ -4,7 +4,7 @@ Atom component: Call To Action link styled as a button.
 
 ## Usage
 
-Use this component for primary and secondary CTAs throughout the site. Supports both internal Drupal paths and external URLs.
+Use this component for primary, secondary and tertiary CTAs throughout the site. Supports both internal Drupal paths and external URLs.
 
 ### Props
 
@@ -12,7 +12,7 @@ Use this component for primary and secondary CTAs throughout the site. Supports 
 |--------------|--------|----------|-----------|-----------------------------------------------------|
 | `title`      | string | Yes      | —         | Button text.                                        |
 | `url`        | string | Yes      | —         | Internal or external URL.                           |
-| `variant`    | string | No       | `primary` | `primary` (filled) or `outline` (border only).      |
+| `variant`    | string | No       | `primary` | `primary`, `secondary`, `tertiary`, `primary-outline`, `secondary-outline`, `tertiary-outline` (legacy `outline` also supported). |
 | `target`     | string | No       | `_self`   | `_self` or `_blank` (opens in new tab).             |
 | `color`      | string | No       | —         | Custom background/border color (CSS value).         |
 | `text_color` | string | No       | —         | Custom text color (CSS value, primary variant only).|
@@ -29,13 +29,13 @@ Primary CTA:
 } %}{% endembed %}
 ```
 
-Outline CTA with external link:
+Secondary outline CTA with external link:
 
 ```twig
 {% embed 'iobase:cta' with {
   title: 'Visit Our Partner'|t,
   url: 'https://example.com',
-  variant: 'outline',
+  variant: 'secondary-outline',
   target: '_blank'
 } %}{% endembed %}
 ```
@@ -55,4 +55,9 @@ Custom colors:
 ### Variants
 
 - **primary**: Filled button with theme primary color.
-- **outline**: Transparent background with border; fills on hover.
+- **secondary**: Filled button with theme secondary color.
+- **tertiary**: Filled button with neutral dark color.
+- **primary-outline**: Primary outline button; fills on hover.
+- **secondary-outline**: Secondary outline button; fills on hover.
+- **tertiary-outline**: Tertiary outline button; fills on hover.
+- **outline**: Legacy alias for `primary-outline`.
