@@ -37,7 +37,7 @@ settings:
       image_1_url:
         source_id: textfield
         source:
-          value: /sites/default/files/images_gallery/img001.png
+          value: /sites/default/files/images_gallery/image001.webp
       image_1_alt:
         source_id: textfield
         source:
@@ -45,7 +45,7 @@ settings:
       image_2_url:
         source_id: textfield
         source:
-          value: /sites/default/files/images_gallery/img002.png
+          value: /sites/default/files/images_gallery/image002.webp
       image_2_alt:
         source_id: textfield
         source:
@@ -53,7 +53,7 @@ settings:
       image_3_url:
         source_id: textfield
         source:
-          value: /sites/default/files/images_gallery/img003.png
+          value: /sites/default/files/images_gallery/image003.webp
       image_3_alt:
         source_id: textfield
         source:
@@ -61,7 +61,7 @@ settings:
       image_4_url:
         source_id: textfield
         source:
-          value: ''
+          value: /sites/default/files/images_gallery/image004.webp
       image_4_alt:
         source_id: textfield
         source:
@@ -69,7 +69,7 @@ settings:
       image_5_url:
         source_id: textfield
         source:
-          value: ''
+          value: /sites/default/files/images_gallery/image005.webp
       image_5_alt:
         source_id: textfield
         source:
@@ -77,7 +77,7 @@ settings:
       image_6_url:
         source_id: textfield
         source:
-          value: ''
+          value: /sites/default/files/images_gallery/image006.webp
       image_6_alt:
         source_id: textfield
         source:
@@ -85,7 +85,7 @@ settings:
       image_7_url:
         source_id: textfield
         source:
-          value: ''
+          value: /sites/default/files/images_gallery/image007.webp
       image_7_alt:
         source_id: textfield
         source:
@@ -93,7 +93,7 @@ settings:
       image_8_url:
         source_id: textfield
         source:
-          value: ''
+          value: /sites/default/files/images_gallery/image008.webp
       image_8_alt:
         source_id: textfield
         source:

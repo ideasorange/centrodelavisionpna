@@ -1,5 +1,9 @@
 @use "variables" as *;
 
+html {
+  scroll-behavior: smooth;
+}
+
 html body {
   color: $color-black-01;
   font-family: $base-font-family;

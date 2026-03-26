@@ -1,0 +1,25 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: CTA Block
+status: stable
+description: Fixed bottom quick-contact control that opens a fade/slide panel with arbitrary content (schedules, WhatsApp, etc.).
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - core/once
+props:
+  type: object
+  required:
+    - title
+  properties:
+    title:
+      type: string
+      title: Title
+      description: Label on the fixed trigger button (e.g. "Contacto").
+    color:
+      type: string
+      title: Button color
+      description: 'Optional CSS color for the trigger (e.g. #1E6FA8 or var(--color-primary)).'
+slots:
+  content:
+    title: Content
+    description: Inner panel content (blocks, institute hours, WhatsApp CTA, etc.).

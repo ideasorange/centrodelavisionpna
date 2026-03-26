@@ -16,7 +16,7 @@
   --hero-banner-front-bg-color: #F7F9FB;
   position: relative;
   background-color: var(--hero-banner-front-bg-color);
-  padding: 3rem 0;
+  padding: 1rem 0;
   overflow: hidden;
 }
 @media (min-width: 768px) {
