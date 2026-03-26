@@ -1,0 +1,28 @@
+uuid: 0d36d474-5d5e-4fd3-bcc0-e9118cf78d86
+langcode: es
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.specialty.field_body
+    - field.field.node.specialty.field_icon
+    - field.field.node.specialty.layout_builder__layout
+    - node.type.specialty
+  module:
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.specialty.full
+targetEntityType: node
+bundle: specialty
+mode: full
+content: {  }
+hidden:
+  field_body: true
+  field_icon: true
+  langcode: true
+  layout_builder__layout: true
+  links: true

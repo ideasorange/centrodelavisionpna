@@ -3,6 +3,7 @@ langcode: es
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.teaser
     - node.type.specialty
   module:
     - node
@@ -186,6 +187,33 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
+  block_especialties_card:
+    id: block_especialties_card
+    display_title: Bloque
+    display_plugin: block
+    position: 3
+    display_options:
+      style:
+        type: default
+        options: {  }
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: teaser
+      defaults:
+        style: false
+        row: false
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
   block_specialties:
     id: block_specialties
     display_title: Block
@@ -197,8 +225,20 @@ display:
         options:
           offset: 0
           items_per_page: 9
+      style:
+        type: default
+        options: {  }
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
       defaults:
         pager: false
+        style: false
+        row: false
       display_extenders: {  }
     cache_metadata:
       max-age: -1
