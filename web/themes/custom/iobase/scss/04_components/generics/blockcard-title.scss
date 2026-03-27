@@ -1,0 +1,36 @@
+// scss/04_components/generics/blockcard-title.scss
+// Import generic styles.
+@use "../../core" as *;
+
+.blockcard-title {
+    max-width: 100%;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border: solid 1px #dad8d8;
+    font-weight: 400;
+
+    &__title {
+        margin: 0;
+        line-height: normal;
+        font-weight: 500;
+        color: #1F2A33;
+
+        @media (min-width: $tab) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__rowitem:not(:last-child) {
+        border-bottom: solid 1px #dad8d8;
+    }
+
+    &__rowitem:last-child {
+        .cardtitle {
+            &__title {
+                a {
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+}
