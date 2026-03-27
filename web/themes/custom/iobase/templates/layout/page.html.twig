@@ -64,20 +64,20 @@
           {% block cta %}
             {% include 'iobase:cta' with {
               title: 'Enviá tu consulta'|t,
-              url: '/about-us',
+              url: '/#webform-submission-contactanos-add-form',
               variant: 'primary'
             } %}
 
             {% include 'iobase:cta' with {
-              title: 'Services'|t,
-              url: 'https://example.com',
+              title: 'Especialidades'|t,
+              url: '/#webform-submission-contactanos-add-form',
               variant: 'outline',
               target: '_blank'
             } %}
           {% endblock %}
         {% endembed %}
 
-        <div class="reg-inv">
+        {# <div class="reg-inv">
           <div class="reg-inv_cont">
             <h2>Lorem ipsum dolor sit amet 1</h2>
             <p>Duis non quam et nisi tincidunt fermentum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam ullamcorper, mauris nec feugiat fermentum, purus lacus suscipit felis, et facilisis justo lacus id risus.
@@ -99,7 +99,7 @@
 
               Nullam vehicula magna sit amet magna ullamcorper, at dictum est gravida. Morbi nec magna at quam malesuada accumsan. Suspendisse potenti. Vivamus feugiat massa ut tortor scelerisque, non dapibus nulla consectetur. Aliquam erat volutpat.</p>
           </div>
-        </div>
+        </div> #}
         
         {{ page.content }}
       </div>{# /.layout-content #}

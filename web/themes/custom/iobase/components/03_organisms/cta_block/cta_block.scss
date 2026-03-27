@@ -1,0 +1,143 @@
+// Import generic styles.
+@use "../../../scss/core" as *;
+
+.cta-block {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 220;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+
+  &.is-open {
+    pointer-events: auto;
+  }
+}
+
+.cta-block__backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: rgba($color-gray-900, 0.45);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity $duration ease, visibility 0s linear $duration;
+  pointer-events: none;
+  cursor: pointer;
+
+  .cta-block.is-open & {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity $duration ease, visibility 0s linear 0s;
+    pointer-events: auto;
+  }
+}
+
+.cta-block__panel {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: $desk;
+  margin: 0 auto;
+  padding: 0 $gutter;
+  max-height: min(70vh, 32rem);
+  overflow: auto;
+  background: $color-white;
+  border-radius: to-rem(12) to-rem(12) 0 0;
+  box-shadow: 0 to-rem(-4) to-rem(24) rgba($color-black, 0.12);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100%);
+  transition:
+    opacity $duration ease,
+    transform $duration ease,
+    visibility 0s linear $duration;
+  pointer-events: none;
+
+  .cta-block.is-open & {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition:
+      opacity $duration ease,
+      transform $duration ease,
+      visibility 0s linear 0s;
+    pointer-events: auto;
+  }
+}
+
+.cta-block__panel-inner {
+  padding: to-rem(20) 0 to-rem(24);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-block__trigger {
+  position: relative;
+  width: 80%;
+  @media (min-width: $desk) {
+    width: unset;
+  }
+  z-index: 2;
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: to-rem(8);
+  margin: 0 $gutter to-rem(16);
+  padding: to-rem(12) to-rem(24);
+  font-family: $base-font-family;
+  @include font-size(15, 16);
+  font-weight: 600;
+  color: $text-on-primary;
+  background-color: $color-primary;
+  border: to-rem(2) solid $color-primary;
+  border-radius: to-rem(15);
+  cursor: pointer;
+  box-shadow: 0 to-rem(4) to-rem(16) rgba($color-gray-900, 0.18);
+  transition: transform 0.15s ease, box-shadow $duration ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 to-rem(6) to-rem(20) rgba($color-gray-900, 0.22);
+  }
+
+  &:focus-visible {
+    outline: to-rem(3) solid $color-secondary-light;
+    outline-offset: to-rem(2);
+  }
+
+  .cta-block.is-open & {
+    .cta-block__trigger-icon::before {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.cta-block__trigger-label {
+  line-height: 1.2;
+}
+
+.cta-block__trigger-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: to-rem(20);
+  height: to-rem(20);
+
+  &::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: to-rem(5) solid transparent;
+    border-right: to-rem(5) solid transparent;
+    border-top: to-rem(6) solid currentColor;
+    transition: transform $duration ease;
+  }
+}
