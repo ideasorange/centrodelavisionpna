@@ -93,7 +93,7 @@ display:
         options:
           offset: 0
           pagination_heading_level: h4
-          items_per_page: 12
+          items_per_page: 9
           total_pages: null
           id: 0
           tags:
@@ -303,6 +303,7 @@ display:
     display_plugin: page
     position: 1
     display_options:
+      title: 'Nuestras Especialidades'
       style:
         type: default
         options:
@@ -313,10 +314,15 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: title
+          view_mode: teaser
       defaults:
+        title: false
+        css_class: false
         style: false
         row: false
+        header: false
+      css_class: blockcard-teaser
+      header: {  }
       display_extenders: {  }
       path: especialidades
     cache_metadata:

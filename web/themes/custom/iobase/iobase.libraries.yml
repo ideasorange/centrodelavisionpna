@@ -204,3 +204,11 @@ blockcard-title:
   css:
     theme:
       dist/css/04_components/generics/blockcard-title.css: { }
+
+# Page full width layout component
+node-full-layout:
+  css:
+    theme:
+      dist/css/04_components/page/node-full-layout.css: { }
+  dependencies:
+    - iobase/node

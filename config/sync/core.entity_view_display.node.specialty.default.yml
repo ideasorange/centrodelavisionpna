@@ -9,7 +9,6 @@ dependencies:
     - views.view.specialties
   module:
     - layout_builder
-    - layout_discovery
     - user
     - views
 third_party_settings:
@@ -17,16 +16,6 @@ third_party_settings:
     enabled: true
     allow_custom: false
     sections:
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: Header
-          context_mapping: {  }
-          layout_builder_styles_style:
-            card_title_wrapper: 0
-            specialty_card_wrapper: 0
-        components: {  }
-        third_party_settings: {  }
       -
         layout_id: layout_twocol_section
         layout_settings:
@@ -42,16 +31,26 @@ third_party_settings:
             region: first
             configuration:
               id: 'field_block:node:specialty:field_body'
+              label: Descripción
               label_display: '0'
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
                 type: text_default
-                label: above
+                label: hidden
                 settings: {  }
                 third_party_settings: {  }
             weight: 0
-            additional: {  }
+            additional:
+              layout_builder_styles_style:
+                card_teaser_body_wrapper: 0
+                card_teaser_fields_wrapper: 0
+                card_teaser_icon_wrapper: 0
+                card_teaser_link_wrapper: 0
+                card_title_title_wrapper: 0
+                node_full_body_wrapper: node_full_body_wrapper
           a754cf08-7a57-4e78-bb25-ed58987ebbd2:
             uuid: a754cf08-7a57-4e78-bb25-ed58987ebbd2
             region: second

@@ -115,7 +115,7 @@ function iobase_preprocess_views_view(&$variables)
   $view = $variables['view'];
 
   // VerificationID of display
-  if ($view->current_display === 'block_specialties_teaser') {
+  if ($view->current_display === 'block_specialties_teaser' || 'page_specialties' ) {
     // Attach "block-card" librarie
     $variables['#attached']['library'][] = 'iobase/blockcard-teaser';
   }

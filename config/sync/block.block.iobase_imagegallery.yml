@@ -10,7 +10,7 @@ dependencies:
 id: iobase_imagegallery
 theme: iobase
 region: content
-weight: -3
+weight: -1
 provider: null
 plugin: 'ui_patterns:iobase:image_gallery'
 settings:

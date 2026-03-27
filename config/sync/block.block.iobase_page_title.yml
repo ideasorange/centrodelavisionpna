@@ -2,6 +2,8 @@ uuid: 8f099762-ff30-4409-bf35-bbcff2e43132
 langcode: es
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - iobase
 _core:
@@ -9,7 +11,7 @@ _core:
 id: iobase_page_title
 theme: iobase
 region: content
-weight: -6
+weight: -4
 provider: null
 plugin: page_title_block
 settings:
@@ -17,4 +19,8 @@ settings:
   label: 'Título de la página'
   label_display: '0'
   provider: core
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/especialidades/*\r\n/especialidades"

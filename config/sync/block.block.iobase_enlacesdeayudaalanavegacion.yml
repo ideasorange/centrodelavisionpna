@@ -1,17 +1,15 @@
-uuid: 7197ba7e-fd07-45e5-b81e-34fa100161ad
+uuid: 2480e07b-a497-4340-a199-6d0f0d032314
 langcode: es
 status: true
 dependencies:
   module:
     - system
   theme:
-    - claro
-_core:
-  default_config_hash: NjcxOBrPOiK5-38t56DwFBDVY4yer7YSlbRWXFuHe7A
-id: claro_breadcrumbs
-theme: claro
-region: breadcrumb
-weight: 0
+    - iobase
+id: iobase_enlacesdeayudaalanavegacion
+theme: iobase
+region: content
+weight: -9
 provider: null
 plugin: system_breadcrumb_block
 settings:
@@ -22,5 +20,5 @@ settings:
 visibility:
   request_path:
     id: request_path
-    negate: true
-    pages: ''
+    negate: false
+    pages: /especialidades
