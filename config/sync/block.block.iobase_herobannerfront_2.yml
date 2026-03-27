@@ -50,7 +50,7 @@ settings:
           1:
             source_id: block
             source:
-              plugin_id: ''
+              plugin_id: system_breadcrumb_block
             _weight: '1'
             node_id: ''
             third_party_settings: ''

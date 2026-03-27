@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: specialty_card_wrapper
 label: 'Card Teaser Wrapper'
-classes: "cardteaser\r\nhola"
+classes: cardteaser
 type: section
 group: card_teaser
 block_restrictions: {  }

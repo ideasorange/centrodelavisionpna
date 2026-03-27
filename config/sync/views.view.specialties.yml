@@ -303,7 +303,7 @@ display:
     display_plugin: page
     position: 1
     display_options:
-      title: 'Nuestras Especialidades'
+      title: Especialidades
       style:
         type: default
         options:

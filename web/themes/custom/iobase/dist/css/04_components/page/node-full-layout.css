@@ -4,12 +4,8 @@
   font-size: 3rem;
 }
 .node-full-layout__body .field--name-field-body {
-  margin-bottom: 1.5rem;
   line-height: 1.7;
   font-weight: 300;
-}
-.node-full-layout__body .field--name-field-body * {
-  margin: 0;
 }
 @media (min-width: 768px) {
   .node-full-layout .layout__region--second {

@@ -127,6 +127,7 @@ bundle: specialty
 mode: teaser
 content: {  }
 hidden:
+  breadcrumbs: true
   field_body: true
   field_icon: true
   langcode: true

@@ -11,7 +11,7 @@ dependencies:
 id: iobase_herobannerfront
 theme: iobase
 region: content
-weight: -8
+weight: -9
 provider: null
 plugin: 'ui_patterns:iobase:hero_banner_front'
 settings:
@@ -45,7 +45,15 @@ settings:
           value: ''
       main_image: {  }
     slots:
-      cta: {  }
+      cta:
+        sources:
+          -
+            source_id: block
+            source:
+              plugin_id: system_breadcrumb_block
+            _weight: '0'
+            node_id: ''
+            third_party_settings: ''
     third_party_settings: ''
     node_id: ''
 visibility:

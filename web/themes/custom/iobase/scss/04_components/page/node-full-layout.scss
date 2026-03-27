@@ -9,17 +9,10 @@
 
         }
         &__body {
-        .field--name-field-body {
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
-            font-weight: 300;
-            
-        }
-
-        .field--name-field-body * {
-            margin: 0;
-
-        }
+            .field--name-field-body {
+                line-height: 1.7;
+                font-weight: 300;
+           }
         }
         .layout__region--second {
             @media (min-width: $tab) {

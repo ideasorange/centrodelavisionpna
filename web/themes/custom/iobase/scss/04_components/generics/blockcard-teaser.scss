@@ -4,10 +4,13 @@
 
 .blockcard-teaser {
     max-width: 100%;
+    margin: 2rem 0;
+    
     
     &__title {
         line-height: normal;
         color: #1F2A33;
+        margin-block-start: 0;
 
             @media (min-width: $tab) {
                 font-size: 2.5rem;
