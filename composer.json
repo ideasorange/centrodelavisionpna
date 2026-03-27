@@ -26,6 +26,7 @@
         "drupal/devel": "^5.5",
         "drupal/environment_indicator": "^4.0",
         "drupal/honeypot": "^2.2",
+        "drupal/layout_builder_styles": "^2.1",
         "drupal/mailsystem": "^4.5",
         "drupal/metatag": "^2.2",
         "drupal/pathauto": "^1.14",
@@ -63,6 +64,10 @@
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
+            },
+            "file-mapping": {
+                "[web-root]/robots.txt": false,
+                "[web-root]/sites/development.services.yml": false
             }
         },
         "installer-paths": {

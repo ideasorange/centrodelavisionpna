@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.title
     - node.type.specialty
   module:
     - node
@@ -92,7 +93,7 @@ display:
         options:
           offset: 0
           pagination_heading_level: h4
-          items_per_page: 10
+          items_per_page: 12
           total_pages: null
           id: 0
           tags:
@@ -187,12 +188,18 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  block_especialties_card:
-    id: block_especialties_card
-    display_title: Bloque
+  block_specialties_teaser:
+    id: block_specialties_teaser
+    display_title: 'Block Card Teaser'
     display_plugin: block
     position: 3
     display_options:
+      title: 'Atención de calidad en todas las especialedades médicas.'
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 12
       style:
         type: default
         options: {  }
@@ -202,44 +209,86 @@ display:
           relationship: none
           view_mode: teaser
       defaults:
+        title: false
+        css_class: false
+        pager: false
         style: false
         row: false
+        header: false
+      css_class: blockcard-teaser
+      display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: true
+          content:
+            value: '<h2 class="blockcard-teaser__title"> Atención de  calidad en todas las especialedades médicas.</h2>'
+            format: full_html
+          tokenize: false
       display_extenders: {  }
+      block_description: Card-Teaser
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  block_specialties:
-    id: block_specialties
-    display_title: Block
+  block_specialties_title:
+    id: block_specialties_title
+    display_title: 'Block Card Title'
     display_plugin: block
     position: 2
     display_options:
+      title: Especialidades
       pager:
         type: some
         options:
           offset: 0
-          items_per_page: 9
+          items_per_page: 12
       style:
         type: default
-        options: {  }
-      row:
-        type: fields
         options:
-          default_field_elements: true
-          inline: {  }
-          separator: ''
-          hide_empty: false
+          row_class: blockcard-title__rowitem
+          default_row_class: false
+          uses_fields: false
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: title
       defaults:
+        title: false
+        css_class: false
         pager: false
         style: false
         row: false
+        header: false
+      css_class: blockcard-title
+      display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: true
+          content:
+            value: '<h2 class="blockcard-title__title">Nuestros Servicios</h2>'
+            format: full_html
+          tokenize: false
       display_extenders: {  }
+      block_description: Card-Title
     cache_metadata:
       max-age: -1
       contexts:
@@ -254,6 +303,20 @@ display:
     display_plugin: page
     position: 1
     display_options:
+      style:
+        type: default
+        options:
+          row_class: ''
+          default_row_class: false
+          uses_fields: false
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: title
+      defaults:
+        style: false
+        row: false
       display_extenders: {  }
       path: especialidades
     cache_metadata:

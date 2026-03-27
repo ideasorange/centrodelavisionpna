@@ -168,9 +168,39 @@ webform-contact:
   css:
     theme:
       dist/css/04_components/generics/webform-contact.css: { }
+
 # Webform Comment Component
 webform-comments:
   version: VERSION
   css:
     theme:
       dist/css/04_components/generics/webform-comments.css: { }
+
+# Card Component implememt with Teaser view mode
+card-teaser:
+  version: VERSION
+  css:
+    theme:
+      dist/css/04_components/generics/card-teaser.css: { }
+
+# Block Card teaser component
+blockcard-teaser:
+  version: VERSION
+  css:
+    theme:
+      dist/css/04_components/generics/blockcard-teaser.css: { }
+
+# List Component implememt with Title view mode
+card-title:
+  version: VERSION
+  css:
+    theme:
+      dist/css/04_components/generics/card-title.css: { }
+
+
+# Block Card title component
+blockcard-title:
+  version: VERSION
+  css:
+    theme:
+      dist/css/04_components/generics/blockcard-title.css: { }

@@ -1,0 +1,12 @@
+uuid: ef024967-df1c-48a2-93dd-253e4d9195b1
+langcode: es
+status: true
+dependencies: {  }
+id: card_title_title_wrapper
+label: 'Card title title wrapper'
+classes: cardtitle__title
+type: component
+group: card_teaser
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

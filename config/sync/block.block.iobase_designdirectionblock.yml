@@ -2,10 +2,7 @@ uuid: 6e6b5202-48d3-4007-a24d-06cf43894838
 langcode: es
 status: true
 dependencies:
-  content:
-    - 'block_content:basic:1e324147-c64d-4561-b3ba-c460b086e1b8'
   module:
-    - block_content
     - system
   theme:
     - iobase

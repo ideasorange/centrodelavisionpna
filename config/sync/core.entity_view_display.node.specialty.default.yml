@@ -5,25 +5,41 @@ dependencies:
   config:
     - field.field.node.specialty.field_body
     - field.field.node.specialty.field_icon
-    - field.field.node.specialty.layout_builder__layout
     - node.type.specialty
+    - views.view.specialties
   module:
     - layout_builder
     - layout_discovery
     - user
+    - views
 third_party_settings:
   layout_builder:
     enabled: true
-    allow_custom: true
+    allow_custom: false
     sections:
       -
         layout_id: layout_onecol
         layout_settings:
-          label: ''
+          label: Header
+          context_mapping: {  }
+          layout_builder_styles_style:
+            card_title_wrapper: 0
+            specialty_card_wrapper: 0
+        components: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: Content
+          context_mapping: {  }
+          column_widths: 67-33
+          layout_builder_styles_style:
+            card_title_wrapper: 0
+            specialty_card_wrapper: 0
         components:
           fce28eb2-6cf6-476c-9abd-37ab4eb250f2:
             uuid: fce28eb2-6cf6-476c-9abd-37ab4eb250f2
-            region: content
+            region: first
             configuration:
               id: 'field_block:node:specialty:field_body'
               label_display: '0'
@@ -36,6 +52,25 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 0
             additional: {  }
+          a754cf08-7a57-4e78-bb25-ed58987ebbd2:
+            uuid: a754cf08-7a57-4e78-bb25-ed58987ebbd2
+            region: second
+            configuration:
+              id: 'views_block:specialties-block_specialties_title'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: null
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                card_teaser_body_wrapper: 0
+                card_teaser_fields_wrapper: 0
+                card_teaser_icon_wrapper: 0
+                card_teaser_link_wrapper: 0
+                card_title_title_wrapper: 0
         third_party_settings: {  }
 id: node.specialty.default
 targetEntityType: node

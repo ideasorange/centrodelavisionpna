@@ -1,0 +1,10 @@
+uuid: cd95dcdc-bcf4-4ac1-ad09-7778d45d91df
+langcode: es
+status: true
+dependencies: {  }
+id: card_teaser
+label: 'Style Cards'
+multiselect: multiple
+form_type: checkboxes
+required: false
+weight: 0
