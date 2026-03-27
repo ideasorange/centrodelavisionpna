@@ -9,7 +9,7 @@ dependencies:
 id: iobase_designdirectionblock
 theme: iobase
 region: content
-weight: -5
+weight: -2
 provider: null
 plugin: 'block_content:1e324147-c64d-4561-b3ba-c460b086e1b8'
 settings:
