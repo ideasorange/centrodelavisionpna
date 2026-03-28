@@ -1,0 +1,42 @@
+{#
+/**
+ * @file
+ * Splide carousel with AutoScroll + Intersection — slot content becomes slides.
+ */
+#}
+{% set base_class = 'slide-autoscroll' %}
+{% set section_attributes = attributes ? attributes.addClass(base_class, 'js-slide-autoscroll') : create_attribute().addClass(base_class, 'js-slide-autoscroll') %}
+
+<section {{ section_attributes.setAttribute('aria-label', heading|default('Scrolling content'|t)) }}>
+  <div class="{{ base_class }}__inner">
+    {% if heading or subheading %}
+      <header class="{{ base_class }}__header">
+        {% if heading %}
+          <h2 class="{{ base_class }}__heading">{{ heading }}</h2>
+        {% endif %}
+        {% if subheading %}
+          <p class="{{ base_class }}__subheading">{{ subheading }}</p>
+        {% endif %}
+      </header>
+    {% endif %}
+
+    <div class="{{ base_class }}__viewport">
+      {# Raw slot: JS wraps each direct child in li.splide__slide #}
+      <div class="{{ base_class }}__slot js-slide-autoscroll__slot" hidden>
+        {% block scrolling_content %}
+          {{ scrolling_content }}
+        {% endblock %}
+      </div>
+
+      <div
+        class="splide {{ base_class }}__splide js-slide-autoscroll__splide"
+        role="region"
+        aria-label="{{ 'Scrolling carousel'|t }}"
+      >
+        <div class="splide__track">
+          <ul class="splide__list js-slide-autoscroll__list"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
