@@ -5,6 +5,7 @@ dependencies:
   config:
     - webform.webform.comentarios
   module:
+    - system
     - ui_patterns
     - ui_patterns_blocks
     - webform
@@ -100,4 +101,8 @@ settings:
             third_party_settings: ''
     third_party_settings: ''
     node_id: ''
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "<front>\r\n/design-direction"

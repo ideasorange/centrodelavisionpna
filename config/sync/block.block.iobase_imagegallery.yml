@@ -3,6 +3,7 @@ langcode: es
 status: true
 dependencies:
   module:
+    - system
     - ui_patterns
     - ui_patterns_blocks
   theme:
@@ -117,4 +118,8 @@ settings:
     slots: {  }
     third_party_settings: ''
     node_id: ''
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "<front>\r\n/design-direction"

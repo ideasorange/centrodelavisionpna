@@ -51,31 +51,32 @@
       <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
       <div class="layout-content">
+        {% if is_front %}
+          {% embed 'iobase:hero_banner_front' with {
+            eyebrow: '10 años cuidando tu salud visual'|t,
+            heading: 'Tu visión, nuestro compromiso'|t,
+            description: 'Experiencia profesional y atención personalizada para cuidar tu salud visual.'|t,
+            main_image: {
+              src: '/sites/default/files/medicos_bg.png',
+              alt: 'Centro de la Visión'
+            }
+          } %}
+            {% block cta %}
+              {% include 'iobase:cta' with {
+                title: 'Enviá tu consulta'|t,
+                url: '/#webform-submission-contactanos-add-form',
+                variant: 'primary'
+              } %}
 
-        {% embed 'iobase:hero_banner_front' with {
-          eyebrow: '10 años cuidando tu salud visual'|t,
-          heading: 'Tu visión, nuestro compromiso'|t,
-          description: 'Experiencia profesional y atención personalizada para cuidar tu salud visual.'|t,
-          main_image: {
-            src: '/sites/default/files/medicos_bg.png',
-            alt: 'Centro de la Visión'
-          }
-        } %}
-          {% block cta %}
-            {% include 'iobase:cta' with {
-              title: 'Enviá tu consulta'|t,
-              url: '/#webform-submission-contactanos-add-form',
-              variant: 'primary'
-            } %}
-
-            {% include 'iobase:cta' with {
-              title: 'Especialidades'|t,
-              url: '/#webform-submission-contactanos-add-form',
-              variant: 'outline',
-              target: '_blank'
-            } %}
-          {% endblock %}
-        {% endembed %}
+              {% include 'iobase:cta' with {
+                title: 'Especialidades'|t,
+                url: '/#webform-submission-contactanos-add-form',
+                variant: 'outline',
+                target: '_blank'
+              } %}
+            {% endblock %}
+          {% endembed %}
+        {% endif %}
 
         {# <div class="reg-inv">
           <div class="reg-inv_cont">
