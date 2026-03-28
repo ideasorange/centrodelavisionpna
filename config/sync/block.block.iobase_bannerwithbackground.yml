@@ -40,7 +40,183 @@ settings:
         source:
           value: primary
     slots:
-      description: {  }
+      description:
+        sources:
+          -
+            source_id: component
+            source:
+              component:
+                component_id: 'iobase:slide_autoscroll'
+                variant_id: null
+                props:
+                  attributes:
+                    source_id: attributes
+                    source:
+                      value: ''
+                  heading:
+                    source_id: textfield
+                    source:
+                      value: ''
+                  subheading:
+                    source_id: textfield
+                    source:
+                      value: ''
+                slots:
+                  scrolling_content:
+                    sources:
+                      4:
+                        source_id: component
+                        source:
+                          component:
+                            component_id: 'iobase:opinion_card'
+                            variant_id: null
+                            props:
+                              attributes:
+                                source_id: attributes
+                                source:
+                                  value: ''
+                              full_name:
+                                source_id: textfield
+                                source:
+                                  value: 'Carlos Rigoni '
+                              opinion:
+                                source_id: textfield
+                                source:
+                                  value: 'Desde que me opere, mi vida cambio, gracias al equipo'
+                              svg_url:
+                                source_id: textfield
+                                source:
+                                  value: /sites/default/files/opinion.svg
+                              stars:
+                                source_id: textfield
+                                source:
+                                  value: ★★★★★
+                              appearance:
+                                source_id: select
+                                source:
+                                  value: transparent
+                            slots: {  }
+                            third_party_settings: ''
+                            node_id: ''
+                        _weight: '4'
+                        node_id: ''
+                        third_party_settings: ''
+                      5:
+                        source_id: component
+                        source:
+                          component:
+                            component_id: 'iobase:opinion_card'
+                            variant_id: null
+                            props:
+                              attributes:
+                                source_id: attributes
+                                source:
+                                  value: ''
+                              full_name:
+                                source_id: textfield
+                                source:
+                                  value: 'Mariana Cardozo'
+                              opinion:
+                                source_id: textfield
+                                source:
+                                  value: 'Gracias a los doctores por la atencion y calidad !'
+                              svg_url:
+                                source_id: textfield
+                                source:
+                                  value: /sites/default/files/opinion.svg
+                              stars:
+                                source_id: textfield
+                                source:
+                                  value: ★★★★★
+                              appearance:
+                                source_id: select
+                                source:
+                                  value: transparent
+                            slots: {  }
+                            third_party_settings: ''
+                            node_id: ''
+                        _weight: '5'
+                        node_id: ''
+                        third_party_settings: ''
+                      6:
+                        source_id: component
+                        source:
+                          component:
+                            component_id: 'iobase:opinion_card'
+                            variant_id: null
+                            props:
+                              attributes:
+                                source_id: attributes
+                                source:
+                                  value: ''
+                              full_name:
+                                source_id: textfield
+                                source:
+                                  value: 'Estella Diaz'
+                              opinion:
+                                source_id: textfield
+                                source:
+                                  value: 'Excelente atencion y calidad.'
+                              svg_url:
+                                source_id: textfield
+                                source:
+                                  value: /sites/default/files/opinion.svg
+                              stars:
+                                source_id: textfield
+                                source:
+                                  value: ★★★★★
+                              appearance:
+                                source_id: select
+                                source:
+                                  value: transparent
+                            slots: {  }
+                            third_party_settings: ''
+                            node_id: ''
+                        _weight: '6'
+                        node_id: ''
+                        third_party_settings: ''
+                      7:
+                        source_id: component
+                        source:
+                          component:
+                            component_id: 'iobase:opinion_card'
+                            variant_id: null
+                            props:
+                              attributes:
+                                source_id: attributes
+                                source:
+                                  value: ''
+                              full_name:
+                                source_id: textfield
+                                source:
+                                  value: 'Inés Colombatti'
+                              opinion:
+                                source_id: textfield
+                                source:
+                                  value: 'Realmente tienen un gran equipo médico y un servicio administrativo que me ha sorprendido gratamente. Felicitaciones por todos los servicios ofrecidos.'
+                              svg_url:
+                                source_id: textfield
+                                source:
+                                  value: /sites/default/files/opinion.svg
+                              stars:
+                                source_id: textfield
+                                source:
+                                  value: ★★★★★
+                              appearance:
+                                source_id: select
+                                source:
+                                  value: transparent
+                            slots: {  }
+                            third_party_settings: ''
+                            node_id: ''
+                        _weight: '7'
+                        node_id: ''
+                        third_party_settings: ''
+                third_party_settings: ''
+                node_id: ''
+            _weight: '0'
+            node_id: ''
+            third_party_settings: ''
     third_party_settings: ''
     node_id: ''
 visibility:

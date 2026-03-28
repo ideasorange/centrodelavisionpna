@@ -35,8 +35,11 @@
 }
 
 .banner-with-bg__inner {
-  display: grid;
-  gap: 0.75rem;
+  display: flex;
+  flex-direction: column;
+}
+.banner-with-bg__inner {
+  gap: 1rem;
 }
 
 .banner-with-bg__heading {
