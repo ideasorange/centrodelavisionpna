@@ -1,7 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 [data-component-id="iobase:logo"] {
   /* @todo Add your styles here. */
 }
 [data-component-id="iobase:logo"] .site-logo > img {
-  width: 110px;
+  width: 80px;
+}
+@media (min-width: 1230px) {
+  [data-component-id="iobase:logo"] .site-logo > img {
+    width: 110px;
+  }
 }
 /*# sourceMappingURL=logo.css.map */
