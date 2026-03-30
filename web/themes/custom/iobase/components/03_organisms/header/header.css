@@ -16,6 +16,10 @@
   /* @todo Add your styles here. */
 }
 
+.header-wrapper {
+  background-color: #FFFFFF;
+}
+
 .header-container {
   display: flex;
   justify-content: space-between;
