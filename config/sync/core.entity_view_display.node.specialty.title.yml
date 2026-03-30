@@ -57,6 +57,7 @@ bundle: specialty
 mode: title
 content: {  }
 hidden:
+  breadcrumbs: true
   field_body: true
   field_icon: true
   langcode: true

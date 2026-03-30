@@ -1,0 +1,29 @@
+uuid: f378547b-e979-45ea-9bae-5cf19fd81b06
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.specialties
+  module:
+    - system
+    - views
+  theme:
+    - iobase
+id: iobase_views_block__specialties_block_specialties_teaser
+theme: iobase
+region: content
+weight: -3
+provider: null
+plugin: 'views_block:specialties-block_specialties_teaser'
+settings:
+  id: 'views_block:specialties-block_specialties_teaser'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: null
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "<front>\r\n/design-direction"
