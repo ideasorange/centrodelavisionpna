@@ -10,7 +10,7 @@
 {% set base_class = 'cta-block' %}
 {% set trigger_styles = [] %}
 {% if color %}
-  {% set trigger_styles = trigger_styles|merge(['background-color: ' ~ color, 'border-color: ' ~ color]) %}
+  {% set trigger_styles = trigger_styles|merge(['background-color: ' ~ color]) %}
 {% endif %}
 {% set trigger_style_attr = trigger_styles|length > 0 ? trigger_styles|join('; ') : '' %}
 
