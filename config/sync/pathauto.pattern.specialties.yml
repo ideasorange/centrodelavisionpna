@@ -5,14 +5,14 @@ dependencies:
   module:
     - node
 id: specialties
-label: Specialties
+label: 'Node Pattern Specialties'
 type: 'canonical_entities:node'
 pattern: '/especialidades/[node:title]'
 selection_criteria:
-  760a20cf-64f8-4055-a545-ddd24772ba34:
+  533ff828-f3b7-4749-97cf-7852783db9d0:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 760a20cf-64f8-4055-a545-ddd24772ba34
+    uuid: 533ff828-f3b7-4749-97cf-7852783db9d0
     context_mapping:
       node: node
     bundles:

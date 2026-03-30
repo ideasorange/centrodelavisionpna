@@ -190,7 +190,7 @@ display:
       tags: {  }
   block_specialties_teaser:
     id: block_specialties_teaser
-    display_title: 'Block Card Teaser'
+    display_title: 'Specialties Block Cards'
     display_plugin: block
     position: 3
     display_options:
@@ -232,7 +232,7 @@ display:
             format: full_html
           tokenize: false
       display_extenders: {  }
-      block_description: Card-Teaser
+      block_description: Specialties-Card-Teaser
     cache_metadata:
       max-age: -1
       contexts:
@@ -243,7 +243,7 @@ display:
       tags: {  }
   block_specialties_title:
     id: block_specialties_title
-    display_title: 'Block Card Title'
+    display_title: 'Specialties Block Card Title'
     display_plugin: block
     position: 2
     display_options:
@@ -288,7 +288,7 @@ display:
             format: full_html
           tokenize: false
       display_extenders: {  }
-      block_description: Card-Title
+      block_description: Specialties-Card-Title
     cache_metadata:
       max-age: -1
       contexts:

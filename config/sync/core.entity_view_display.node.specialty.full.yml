@@ -20,6 +20,7 @@ bundle: specialty
 mode: full
 content: {  }
 hidden:
+  breadcrumbs: true
   field_body: true
   field_icon: true
   langcode: true
