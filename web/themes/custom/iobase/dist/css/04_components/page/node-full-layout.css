@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+.node-full-layout {
+  margin-bottom: 6rem;
+}
 .node-full-layout__title {
   font-weight: 600;
   font-size: 3rem;

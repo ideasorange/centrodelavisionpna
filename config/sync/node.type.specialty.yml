@@ -10,7 +10,7 @@ third_party_settings:
     parent: ''
 name: Especialidad
 type: specialty
-description: null
+description: 'Permite crear especialidades médicas brindadas por el centro.'
 help: null
 new_revision: false
 preview_mode: 1
