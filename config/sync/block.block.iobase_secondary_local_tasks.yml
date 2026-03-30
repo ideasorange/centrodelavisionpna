@@ -9,7 +9,7 @@ _core:
 id: iobase_secondary_local_tasks
 theme: iobase
 region: content
-weight: -5
+weight: -8
 provider: null
 plugin: local_tasks_block
 settings:

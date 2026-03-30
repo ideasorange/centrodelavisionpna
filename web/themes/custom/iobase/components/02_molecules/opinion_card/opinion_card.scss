@@ -1,0 +1,100 @@
+// Import generic styles.
+@use "../../../scss/core" as *;
+
+// Filled variant — solid panel (aligned with testimonial on brand sections).
+$opinion-card-filled-bg: #1a5276;
+
+.opinion-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  max-width: 20rem;
+  @media (min-width: $tab) {
+    max-width: 30rem;
+  }
+  margin-inline: auto;
+  padding: 1.75rem 1.5rem 1.5rem;
+  text-align: center;
+  color: $color-white;
+  border: 1px solid rgba($color-white, 0.92);
+  border-radius: 2rem;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+
+  &--filled {
+    background: $opinion-card-filled-bg;
+    box-shadow:
+      0 4px 8px rgba($color-black, 0.15),
+      0 16px 36px rgba($color-black, 0.22);
+  }
+
+  &--transparent {
+    background: transparent;
+    border-color: rgba($color-white, 0.92);
+    box-shadow: none;
+  }
+
+  &--has-icon {
+    //padding-top: 3.5rem;
+  }
+
+  // Icon sits on the top edge: light inner disc so SVG/line art contrasts with the card body.
+  &__icon-wrap {
+    //position: absolute;
+    width: 5.25rem;
+    height: 5.25rem;
+    padding: 0.80rem;
+    border-radius: 50%;
+    background: $color-white;
+    border: 1px solid $color-white;
+    box-shadow:
+      0 2px 4px rgba($color-black, 0.12),
+      0 10px 28px rgba($color-black, 0.35);
+    //transform: translate(-50%, -52%);
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+
+  &__icon {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: contain;
+    object-position: center;
+    background: $color-white;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__opinion {
+    margin: 0;
+    font-family: $base-font-family;
+    font-size: to-rem(15);
+    line-height: 1.65;
+    font-weight: 400;
+  }
+
+  &__stars {
+    margin: 0;
+    font-size: to-rem(18);
+    line-height: 1;
+    letter-spacing: 0.15em;
+    color: $color-white;
+  }
+
+  &__name {
+    margin: 0;
+    font-family: $base-font-family;
+    font-size: to-rem(14);
+    font-weight: 700;
+    color: $color-white;
+  }
+}

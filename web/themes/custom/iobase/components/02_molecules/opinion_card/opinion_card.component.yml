@@ -1,0 +1,38 @@
+$schema: 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Opinion card
+status: stable
+description: Testimonial-style card with optional top icon (SVG URL), opinion text, optional star characters, and name.
+libraryOverrides:
+  dependencies:
+    - core/drupal
+props:
+  type: object
+  required:
+    - full_name
+    - opinion
+  properties:
+    full_name:
+      type: string
+      title: Full name
+      description: Displayed at the bottom (e.g. "- Jane Doe -").
+    opinion:
+      type: string
+      title: Opinion
+      description: Plain text only. Maximum 500 characters when using a matching field in Drupal.
+      maxLength: 500
+    svg_url:
+      type: string
+      title: SVG URL
+      description: Optional URL to an SVG file shown in a circle at the top (overlapping the card border).
+    stars:
+      type: string
+      title: Stars
+      description: Optional star characters (e.g. ★★★★★ or five Unicode stars U+2605).
+    appearance:
+      type: string
+      title: Appearance
+      description: 'filled = solid panel background; transparent = no fill (white border and text only).'
+      enum:
+        - filled
+        - transparent
+      default: filled

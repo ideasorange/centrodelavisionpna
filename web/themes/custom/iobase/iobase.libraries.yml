@@ -125,7 +125,7 @@ layout:
     theme:
       dist/css/04_components/page/layout.css: { }
 
-# Splide carousel (https://splidejs.com/) – used by SDC image_gallery.
+# Splide carousel (https://splidejs.com/) – used by SDC image_gallery, slide_autoscroll.
 splide:
   remote: https://splidejs.com/
   version: 4.1.4
@@ -143,6 +143,38 @@ splide:
       type: external
       minified: true
       defer: true
+
+# Splide AutoScroll extension — register on window.splide.Extensions.AutoScroll
+splide_extension_auto_scroll:
+  remote: https://splidejs.com/extensions/auto-scroll/
+  version: 0.5.3
+  license:
+    name: MIT
+    url: https://github.com/Splidejs/splide-extension-auto-scroll/blob/master/LICENSE
+    gpl-compatible: true
+  js:
+    https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js:
+      type: external
+      minified: true
+      defer: true
+  dependencies:
+    - iobase/splide
+
+# Splide Intersection extension — pairs with AutoScroll (pause off-screen)
+splide_extension_intersection:
+  remote: https://splidejs.com/extensions/intersection/
+  version: 0.2.0
+  license:
+    name: MIT
+    url: https://github.com/Splidejs/splide-extension-intersection/blob/master/LICENSE
+    gpl-compatible: true
+  js:
+    https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-intersection@0.2.0/dist/js/splide-extension-intersection.min.js:
+      type: external
+      minified: true
+      defer: true
+  dependencies:
+    - iobase/splide
 
 ionicicon:
   remote: https://ionic.io/ionicons

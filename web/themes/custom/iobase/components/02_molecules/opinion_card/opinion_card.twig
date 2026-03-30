@@ -1,0 +1,44 @@
+{#
+ * Opinion card – testimonial with optional SVG icon, opinion, stars, and name.
+ #}
+{% set base_class = 'opinion-card' %}
+{% set svg_url = svg_url|default('')|trim %}
+{% set has_icon = svg_url is not empty %}
+{% set appearance = appearance|default('filled') %}
+{% if appearance not in ['filled', 'transparent'] %}
+  {% set appearance = 'filled' %}
+{% endif %}
+{% set card_attributes = attributes ? attributes.addClass(base_class) : create_attribute().addClass(base_class) %}
+{% set card_attributes = card_attributes.addClass(base_class ~ '--' ~ appearance) %}
+{% if has_icon %}
+  {% set card_attributes = card_attributes.addClass(base_class ~ '--has-icon') %}
+{% endif %}
+
+<article {{ card_attributes }}>
+  {% if has_icon %}
+    <div class="{{ base_class }}__icon-wrap" aria-hidden="true">
+      <img
+        class="{{ base_class }}__icon"
+        src="{{ svg_url }}"
+        alt=""
+        loading="lazy"
+        width="72"
+        height="72"
+      />
+    </div>
+  {% endif %}
+
+  <div class="{{ base_class }}__body">
+    {% if opinion %}
+      <div class="{{ base_class }}__opinion">{{ opinion|nl2br }}</div>
+    {% endif %}
+
+    {% if stars|default('')|trim is not empty %}
+      <p class="{{ base_class }}__stars">{{ stars|trim }}</p>
+    {% endif %}
+
+    {% if full_name %}
+      <p class="{{ base_class }}__name">- {{ full_name }} -</p>
+    {% endif %}
+  </div>
+</article>
