@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+.blockcard-teaser {
+  max-width: 100%;
+  margin: 2rem 0;
+}
+.blockcard-teaser__title {
+  line-height: normal;
+  color: #1F2A33;
+  margin-block-start: 0;
+}
+@media (min-width: 768px) {
+  .blockcard-teaser__title {
+    font-size: 2.5rem;
+    max-width: 40vw;
+  }
+}
+.blockcard-teaser .view-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+.blockcard-teaser__cardteaser-wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+/*# sourceMappingURL=blockcard-teaser.css.map */

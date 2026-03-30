@@ -1,0 +1,64 @@
+uuid: d6e9ae9a-34db-4d97-a71c-271ef2018d98
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.specialty.field_body
+    - field.field.node.specialty.field_icon
+    - image.style.thumbnail
+    - node.type.specialty
+  module:
+    - image
+    - path
+    - text
+id: node.specialty.default
+targetEntityType: node
+bundle: specialty
+mode: default
+content:
+  field_body:
+    type: text_textarea_with_summary
+    weight: 2
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: true
+    third_party_settings: {  }
+  field_icon:
+    type: image_image
+    weight: 3
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 0
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  promote: true
+  sticky: true
+  uid: true
+  url_redirects: true

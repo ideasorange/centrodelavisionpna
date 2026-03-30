@@ -1,0 +1,12 @@
+uuid: a72014e3-eaca-4a70-8a64-f362c8b04cc9
+langcode: es
+status: true
+dependencies: {  }
+id: card_teaser_icon_wrapper
+label: 'Card teaser icon wrapper'
+classes: "cardteaser__icon\r\n"
+type: component
+group: card_teaser
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

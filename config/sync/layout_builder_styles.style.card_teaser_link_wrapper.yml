@@ -1,0 +1,12 @@
+uuid: 74b21ce6-e081-4988-96f2-9652d6a12fb3
+langcode: es
+status: true
+dependencies: {  }
+id: card_teaser_link_wrapper
+label: 'Card teaser link wrapper'
+classes: cardteaser__link
+type: component
+group: card_teaser
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

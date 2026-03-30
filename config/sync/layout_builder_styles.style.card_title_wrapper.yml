@@ -1,0 +1,12 @@
+uuid: 7332b7b0-2914-40a9-9a5d-a326d656851d
+langcode: es
+status: true
+dependencies: {  }
+id: card_title_wrapper
+label: 'Card Title Wrapper'
+classes: cardtitle
+type: section
+group: card_teaser
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

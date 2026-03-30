@@ -14,7 +14,7 @@ dependencies:
 id: iobase_formcontact_2
 theme: iobase
 region: content
-weight: 0
+weight: 2
 provider: null
 plugin: 'ui_patterns:iobase:form_contact'
 settings:

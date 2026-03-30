@@ -1,0 +1,64 @@
+uuid: 5aff7b7b-9784-494e-b734-3047bbd5f9df
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.title
+    - field.field.node.specialty.field_body
+    - field.field.node.specialty.field_icon
+    - node.type.specialty
+  module:
+    - layout_builder
+    - layout_discovery
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout_builder_styles_style:
+            card_title_wrapper: card_title_wrapper
+            specialty_card_wrapper: 0
+        components:
+          1cfa979d-ef42-4287-8c0e-a87b60524eb3:
+            uuid: 1cfa979d-ef42-4287-8c0e-a87b60524eb3
+            region: content
+            configuration:
+              id: 'field_block:node:specialty:title'
+              label: Título
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                card_title_title_wrapper: card_title_title_wrapper
+                card_teaser_body_wrapper: 0
+                card_teaser_fields_wrapper: 0
+                card_teaser_icon_wrapper: 0
+                card_teaser_link_wrapper: 0
+        third_party_settings: {  }
+id: node.specialty.title
+targetEntityType: node
+bundle: specialty
+mode: title
+content: {  }
+hidden:
+  field_body: true
+  field_icon: true
+  langcode: true
+  layout_builder__layout: true
+  links: true

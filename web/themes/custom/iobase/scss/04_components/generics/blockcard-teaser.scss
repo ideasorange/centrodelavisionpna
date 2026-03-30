@@ -1,0 +1,34 @@
+// scss/04_components/generics/blockcard-teaser.scss
+// Import generic styles.
+@use "../../core" as *;
+
+.blockcard-teaser {
+    max-width: 100%;
+    margin: 2rem 0;
+    
+    
+    &__title {
+        line-height: normal;
+        color: #1F2A33;
+        margin-block-start: 0;
+
+            @media (min-width: $tab) {
+                font-size: 2.5rem;
+                max-width: 40vw;
+            }
+    }
+
+    .view-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+
+    &__cardteaser-wrapper {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        
+    }
+
+}

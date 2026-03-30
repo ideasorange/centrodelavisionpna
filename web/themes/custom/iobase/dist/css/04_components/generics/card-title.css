@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+.cardtitle {
+  width: 100%;
+  max-width: 100%;
+}
+.cardtitle__title {
+  width: 100%;
+  max-width: 100%;
+}
+@media (min-width: 768px) {
+  .cardtitle__title {
+    font-size: 1.3rem;
+  }
+}
+.cardtitle__title * {
+  display: block;
+  width: 100%;
+}
+.cardtitle__title a {
+  font-weight: 500;
+  padding: 1rem 0;
+  color: #56616d;
+}
+.cardtitle__title a:hover, .cardtitle__title a:focus {
+  text-decoration: none;
+  color: #1E6FA8;
+}
+/*# sourceMappingURL=card-title.css.map */
