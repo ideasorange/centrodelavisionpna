@@ -21,6 +21,8 @@
 }
 .layout-container .page-region.l-region-header {
   z-index: 100;
+  position: sticky;
+  top: 0;
 }
 .layout-container .reg-inv {
   scroll-margin-top: 80px;

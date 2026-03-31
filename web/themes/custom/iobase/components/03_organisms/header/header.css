@@ -16,11 +16,15 @@
   /* @todo Add your styles here. */
 }
 
+.header-wrapper {
+  background-color: #FFFFFF;
+}
+
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
   padding-top: 1rem;
 }
 @media (min-width: 1230px) {

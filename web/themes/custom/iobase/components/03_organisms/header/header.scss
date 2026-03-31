@@ -7,14 +7,14 @@
 
 .header-wrapper {
   @extend %breakContainer;
-  //background: #EE2624;
+  background-color: $color-white;
 }
 .header-container {
   @extend %content-container;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
   padding-top: 1rem;
 
   @media (min-width: $desk) {

@@ -1,6 +1,12 @@
+// Import generic styles.
+@use "../../../scss/core" as *;
+
 [data-component-id="iobase:logo"] {
   /* @todo Add your styles here. */
   .site-logo > img {
-    width: 110px;
+    width: 80px;
+    @media (min-width: $desk) {
+      width: 110px;
+    }
   }
 }

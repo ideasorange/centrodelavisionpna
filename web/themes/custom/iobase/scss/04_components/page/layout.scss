@@ -8,6 +8,8 @@
     &.l-region-header {
       z-index: 100;
       @extend %content-container;
+      position: sticky;
+      top: 0;
     }
   }
 
