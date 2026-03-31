@@ -1,0 +1,33 @@
+uuid: 20789200-7ac3-4cea-91b3-b3704bd3e2a4
+langcode: es
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: sL588ui1E_8-2c_UupwyYxcqX2OVyMFp3HTLbbFqvPc
+id: global
+label: Global
+tags:
+  canonical_url: '[current-page:url]'
+  description: 'Especialistas en salud visual dedicados al cuidado de tus ojos. Ofrecemos exámenes de la vista, diagnóstico de patologías, cirugía oftalmológica y la última tecnología en óptica. ¡Agenda tu cita y recupera la claridad de tu visión!'
+  fb_pages: '1606275746341459'
+  geo_placename: 'Entre Ríos'
+  geo_region: AR-E
+  image_src: /sites/default/files/cdv_logo_big.png
+  keywords: 'Oftalmología, Oftalmólogo, visión, Clínica, ocular, Salud, visual, Cuidado, ojos, Servicios, Médicos, Patologías, cirugías,tratamientos, Control, refractiva, láser, cataratas, Glaucoma, Presbicia, Miopía, Astigmatismo, Retinología, Óptica, Lentes, contacto, Anteojos, recetados, Cristales, multifocales, gafas, graduación, parana, entre, rios, Turnos'
+  og_description: 'Tu visión es nuestra prioridad. En nuestro centro oftalmológico combinamos experiencia médica y calidez humana para cuidar la salud ocular de toda tu familia.'
+  og_image: /sites/default/files/cdv_logo_big.png
+  og_region: Argentina
+  og_site_name: '[site:name]'
+  og_street_address: 'Entre Ríos'
+  og_title: 'Centro de la Visión - Tus ojos son nuestra prioridad.'
+  og_type: website
+  og_url: '[site:url]'
+  robots: 'index, follow'
+  theme_color: ' #ffffff'
+  thumbnail: '[site:url]sites/default/files/cdv_logo.png'
+  title: 'Centro de la Visión - Tus ojos son nuestra prioridad.'
+  twitter_cards_description: 'Tu visión es nuestra prioridad. En nuestro centro oftalmológico combinamos experiencia médica y calidez humana para cuidar la salud ocular de toda tu familia.'
+  twitter_cards_image: /sites/default/files/cdv_logo_big.png
+  twitter_cards_site: '@centrodelavisionpna'
+  twitter_cards_title: 'Centro de la Visión - Tus ojos son nuestra prioridad.'
+  twitter_cards_type: summary_large_image

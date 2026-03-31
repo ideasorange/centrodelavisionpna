@@ -1,0 +1,12 @@
+uuid: 0cea5fb0-27f8-4237-bb97-64c0af06faf9
+langcode: es
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 92bXZdyYJ5xqukdfmGRr_CYcwm1vfuS8b8aJ7X_G7E0
+id: taxonomy_term
+label: 'Término de taxonomía'
+tags:
+  canonical_url: '[term:url]'
+  description: '[term:description]'
+  title: '[term:name] | [site:name]'
