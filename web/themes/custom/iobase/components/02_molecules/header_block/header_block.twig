@@ -1,0 +1,50 @@
+{#
+/**
+ * @file
+ * Hero Banner Front – molecule for the front page hero section.
+ *
+ * Available config:
+ * - eyebrow: Small text above the heading.
+ * - heading: Main H1 heading.
+ * - description: Supporting paragraph.
+ * - main_image:
+ *   - src: Image URL (e.g. /sites/default/files/hero.png).
+ *   - alt: Alt text.
+ * - background_color: Optional background color.
+ *
+ * Slots:
+ * - cta: Slot for CTA component(s).
+ */
+#}
+{% set base_class = 'header-block' %}
+
+<section
+  {{ attributes.addClass(base_class, 'js-header-block') }}
+>
+  <div class="{{ base_class }}__inner">
+    <div class="{{ base_class }}__content js-header-block-content">
+      {% if heading %}
+        <h1 class="{{ base_class }}__heading">{{ heading }}</h1>
+      {% endif %}
+
+      {% if description %}
+        <p class="{{ base_class }}__description">{{ description }}</p>
+      {% endif %}
+
+      <div class="{{ base_class }}__content-wrapper">
+        {% block content %}{% endblock %}
+      </div>
+    </div>
+
+    {% if main_image and main_image.src %}
+        <div class="{{ base_class }}__image js-header-block-image">
+        <img
+          src="{{ main_image.src }}"
+          alt="{{ main_image.alt|default('') }}"
+          loading="eager"
+          fetchpriority="high"
+        />
+      </div>
+    {% endif %}
+  </div>
+</section>

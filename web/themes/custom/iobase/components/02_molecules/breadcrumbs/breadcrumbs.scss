@@ -1,0 +1,71 @@
+// Breadcrumbs SDC — pill trail.
+@use "../../../scss/core" as *;
+
+$breadcrumb-pill-bg: $color-gray-100;
+$breadcrumb-pill-border: $color-gray-200;
+$breadcrumb-link: $color-gray-900;
+$breadcrumb-accent: $color-primary;
+$breadcrumb-sep: "\00BB";
+
+.breadcrumbs {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  margin: 0;
+  padding: 0.3125rem 1.25rem;
+  font-family: $base-font-family;
+  font-weight: 400;
+  background-color: $breadcrumb-pill-bg;
+  border: 1px solid $breadcrumb-pill-border;
+  border-radius: 999px;
+
+  &__list {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+    font-size: to-rem(14);
+    line-height: 1.4;
+
+    &:not(:last-child)::after {
+      content: $breadcrumb-sep;
+      margin: 0 0.35em;
+      color: $breadcrumb-accent;
+      font-weight: 400;
+    }
+  }
+
+  &__link {
+    color: $breadcrumb-link;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-primary-dark;
+      text-decoration: underline;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-primary;
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+  }
+
+  &__current {
+    color: $breadcrumb-accent;
+    text-decoration: none;
+  }
+}
+
+[dir="rtl"] .breadcrumbs__item:not(:last-child)::after {
+  content: "\00AB";
+}

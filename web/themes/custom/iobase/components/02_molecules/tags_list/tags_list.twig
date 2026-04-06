@@ -1,0 +1,48 @@
+{#
+ * Tags list – pill chips (taxonomy / entity reference field).
+ *
+ * Props:
+ * - items: { name, url? }[] — also accepts title, label, or text for the chip label.
+ * - tags: plain string list (fallback when items is empty).
+ * - label: optional heading above the list.
+ #}
+{% set base_class = 'tags-list' %}
+{% set items = items|default([]) %}
+{% set tags = tags|default([]) %}
+{% set list_attributes = attributes ? attributes.addClass(base_class) : create_attribute().addClass(base_class) %}
+{% set has_items = items is iterable and items|length > 0 %}
+{% set has_tag_labels = tags is iterable and tags|length > 0 %}
+
+{% if has_items or has_tag_labels %}
+  <div{{ list_attributes }}>
+    {% if label|default('')|trim is not empty %}
+      <span class="{{ base_class }}__label">{{ label }}</span>
+    {% endif %}
+    <ul class="{{ base_class }}__list" role="list">
+      {% if has_items %}
+        {% for item in items %}
+          {% set chip_label = item.name|default(item.title|default(item.label|default(item.text|default(''))))|trim %}
+          {% if chip_label is not empty %}
+            {% set tag_url = item.url|default('')|trim %}
+            <li class="{{ base_class }}__item">
+              {% if tag_url %}
+                <a href="{{ tag_url }}" class="{{ base_class }}__tag {{ base_class }}__tag--link">{{ chip_label }}</a>
+              {% else %}
+                <span class="{{ base_class }}__tag">{{ chip_label }}</span>
+              {% endif %}
+            </li>
+          {% endif %}
+        {% endfor %}
+      {% elseif has_tag_labels %}
+        {% for tag in tags %}
+          {% set chip_label = ('' ~ tag)|trim %}
+          {% if chip_label is not empty %}
+            <li class="{{ base_class }}__item">
+              <span class="{{ base_class }}__tag">{{ chip_label }}</span>
+            </li>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    </ul>
+  </div>
+{% endif %}

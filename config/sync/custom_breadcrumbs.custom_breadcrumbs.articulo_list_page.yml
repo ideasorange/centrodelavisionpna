@@ -1,0 +1,15 @@
+uuid: 23dd6ec4-df8e-4b49-9c98-450f5ddc9fd5
+langcode: es
+status: true
+dependencies: {  }
+id: articulo_list_page
+label: 'Articulo List Page'
+description: ''
+entityType: _none
+entityBundle: _none
+language: und
+breadcrumbPaths: /articulos
+breadcrumbTitles: Articulos
+type: '2'
+pathPattern: /articulos
+extraCacheContexts: ''
