@@ -4,7 +4,8 @@
 }
 .node-full-layout__title {
   font-weight: 600;
-  font-size: 3rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 .node-full-layout__body .field--name-field-body {
   line-height: 1.7;
@@ -14,5 +15,9 @@
   .node-full-layout .layout__region--second {
     padding-left: 1.5rem;
   }
+}
+.node-full-layout .field.field--name-field-image.field--type-image.field--label-hidden.field__item img {
+  width: 100%;
+  object-fit: cover;
 }
 /*# sourceMappingURL=node-full-layout.css.map */

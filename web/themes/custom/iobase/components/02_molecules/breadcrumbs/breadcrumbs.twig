@@ -1,0 +1,28 @@
+{#
+ * Breadcrumbs – capsule trail (SDC); items or legacy "breadcrumb" variable from core template.
+ #}
+{% set base_class = 'breadcrumbs' %}
+{% set items = items|default(breadcrumb|default([])) %}
+{% set heading_id = heading_id|default('system-breadcrumb') %}
+{% set nav_attributes = attributes ? attributes.addClass(base_class) : create_attribute().addClass(base_class) %}
+
+{% if items is iterable and items|length > 0 %}
+  <nav{{ nav_attributes.setAttribute('aria-labelledby', heading_id) }}>
+    <h2 id="{{ heading_id }}" class="visually-hidden">{{ 'Breadcrumb'|t }}</h2>
+    <ol class="{{ base_class }}__list">
+      {% for item in items %}
+        {% set crumb_text = item.text|default('') %}
+        {% if crumb_text is not empty %}
+          <li class="{{ base_class }}__item">
+            {% set item_url = item.url|default('') %}
+            {% if item_url %}
+              <a href="{{ item_url }}" class="{{ base_class }}__link">{{ crumb_text }}</a>
+            {% else %}
+              <span class="{{ base_class }}__current" aria-current="page">{{ crumb_text }}</span>
+            {% endif %}
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ol>
+  </nav>
+{% endif %}

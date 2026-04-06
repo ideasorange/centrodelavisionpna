@@ -1,0 +1,28 @@
+$schema: 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Breadcrumbs
+status: stable
+description: 'Pill-style breadcrumb trail; use props.items for UI Patterns or rely on the theme breadcrumb template which passes the Drupal breadcrumb block data.'
+libraryOverrides:
+  dependencies:
+    - core/drupal
+props:
+  type: object
+  properties:
+    items:
+      type: array
+      title: Trail items
+      description: 'List of crumbs with text and optional url (empty url = current page). Mirrors Drupal breadcrumb template variables when passed as breadcrumb.'
+      items:
+        type: object
+        properties:
+          text:
+            type: string
+            title: Label
+          url:
+            type: string
+            title: URL
+            description: 'Omit or leave empty for the current page segment.'
+    heading_id:
+      type: string
+      title: 'Heading id (aria-labelledby)'
+      default: system-breadcrumb

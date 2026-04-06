@@ -1,7 +1,13 @@
 uuid: f82a0818-7e3d-41a6-9a36-27cd00304407
 langcode: es
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
 _core:
   default_config_hash: Fe3N1uqaAyyKJbVkqT-btXy3t98puW8GCRD822xjl10
 name: Artículo
@@ -10,4 +16,4 @@ description: 'Use los <em>artículos</em> para contenido que tenga relevancia te
 help: null
 new_revision: true
 preview_mode: 1
-display_submitted: true
+display_submitted: false

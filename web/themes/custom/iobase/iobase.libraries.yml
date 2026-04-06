@@ -1,10 +1,15 @@
+# Breadcrumbs SDC styles (attached from preprocess_breadcrumb; include alone does not load SDC assets).
+breadcrumbs-sdc:
+  version: VERSION
+  css:
+    component:
+      components/02_molecules/breadcrumbs/breadcrumbs.css: {}
+
 base:
   version: VERSION
   css:
     component:
       css/components/action-links.css:
-        weight: -10
-      css/components/breadcrumb.css:
         weight: -10
       css/components/button.css:
         weight: -10

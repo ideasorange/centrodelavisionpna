@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Hooks for Components Core module.
+ */
+
+declare(strict_types=1);
+
+/**
+ * Implements hook_views_data().
+ */
+function components_core_views_data(): array {
+  $data['views']['banner_with_bg_header'] = [
+    'title' => t('Banner with background'),
+    'help' => t("Renders the theme's <em>banner_with_bg</em> Single Directory Component with breadcrumb and optional description text."),
+    'group' => t('Components Core'),
+    'area' => [
+      'id' => 'banner_with_bg_header',
+    ],
+  ];
+
+  return $data;
+}

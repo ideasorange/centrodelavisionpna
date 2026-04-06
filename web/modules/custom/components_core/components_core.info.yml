@@ -1,0 +1,9 @@
+name: 'Components Core'
+type: module
+description: 'Reusable Views and field integrations for Single Directory Components (SDC).'
+package: Custom
+core_version_requirement: ^11
+dependencies:
+  - drupal:field
+  - drupal:views
+  - drupal:filter

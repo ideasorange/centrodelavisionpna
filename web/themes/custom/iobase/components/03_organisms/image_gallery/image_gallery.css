@@ -1,4 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+.image-gallery__heading {
+  font-family: "Albert Sans", sans-serif;
+  font-weight: 700;
+  margin: 0 0 0.5em;
+}
+
+.image-gallery__heading {
+  font-size: 2.25rem;
+  line-height: 2.1875rem;
+}
+@media (min-width: 1230px) {
+  .image-gallery__heading {
+    font-size: 3rem;
+    line-height: 2.5rem;
+  }
+}
+
 .image-gallery {
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
@@ -28,16 +45,7 @@
   }
 }
 .image-gallery__heading {
-  font-family: "Albert Sans", sans-serif;
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: #1F2A33;
   margin: 0 0 0.75rem;
-}
-@media (min-width: 1230px) {
-  .image-gallery__heading {
-    font-size: 2rem;
-  }
 }
 .image-gallery__subheading {
   font-size: 1rem;

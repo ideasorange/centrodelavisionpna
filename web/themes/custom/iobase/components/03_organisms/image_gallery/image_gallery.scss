@@ -26,15 +26,8 @@
   }
 
   &__heading {
-    font-family: $secondary-font-family;
-    font-size: to-rem(28);
-    font-weight: 700;
-    color: $color-gray-900;
+    @extend %h2;
     margin: 0 0 0.75rem;
-
-    @media (min-width: $desk) {
-      font-size: to-rem(32);
-    }
   }
 
   &__subheading {

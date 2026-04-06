@@ -1,6 +1,6 @@
 uuid: 8f099762-ff30-4409-bf35-bbcff2e43132
 langcode: es
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -11,7 +11,7 @@ _core:
 id: iobase_page_title
 theme: iobase
 region: content
-weight: -8
+weight: -9
 provider: null
 plugin: page_title_block
 settings:

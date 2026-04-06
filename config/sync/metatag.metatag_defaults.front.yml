@@ -7,5 +7,5 @@ _core:
 id: front
 label: 'Página de Inicio'
 tags:
-  canonical_url: 'https://www.centrodelavisionpna.com/'
-  shortlink: 'https://www.centrodelavisionpna.com/'
+  canonical_url: '[site:url]'
+  shortlink: '[site:url]'

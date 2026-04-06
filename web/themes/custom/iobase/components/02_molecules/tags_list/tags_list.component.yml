@@ -1,0 +1,43 @@
+# $schema: 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+# name: Tags list
+# status: stable
+# description: 'Horizontal list of pill-style tags. Map taxonomy (or any link list) via “Tags (with links)”, or plain labels via “Tag labels” (one per line). Requires UI Patterns for those prop bindings in block/field UIs.'
+# links:
+#   - url: https://project.pages.drupalcode.org/ui_patterns/2-authors/0-authoring-a-component/
+#     title: UI Patterns 2 – authoring components
+# libraryOverrides:
+#   dependencies:
+#     - core/drupal
+# props:
+#   type: object
+#   properties:
+#     items:
+#       title: 'Tags (with links)'
+#       description: 'Link list (title + URL per chip). Uses the UI Patterns links type so block/field forms can bind menus, fields, etc. Title is shown as the chip label.'
+#       "$ref": "ui-patterns://links"
+#     tags:
+#       title: 'Tag labels (plain)'
+#       description: 'Fallback when “Tags (with links)” is empty: one label per line (free list prop type).'
+#       "$ref": "ui-patterns://list"
+
+
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Tags List
+status: stable
+description: Displays a list of taxonomy tags.
+props:
+  type: object
+  properties:
+    items:
+      type: array
+      title: Tags
+      items:
+        type: object
+        properties:
+          name:
+            type: string
+          url:
+            type: string
+    label:
+      type: string
+      title: Label
