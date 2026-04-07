@@ -9,6 +9,8 @@ libraries:
   - iobase/global-styling
   - iobase/ionicicon
 libraries-extend:
+  views/views.responsive-grid:
+    - iobase/views-responsive-grid-card-fix
   user/drupal.user:
     - iobase/user
   core/drupal.dropbutton:

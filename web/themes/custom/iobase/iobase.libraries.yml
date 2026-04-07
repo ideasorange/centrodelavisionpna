@@ -122,6 +122,13 @@ global-styling:
       dist/css/fonts.css: { }
       dist/css/base.css: { }
 
+# Stretch card_article (etc.) inside Views responsive grid rows (/articulos, etc.).
+views-responsive-grid-card-fix:
+  version: VERSION
+  css:
+    theme:
+      dist/css/04_components/views/views-responsive-grid.css: {}
+
 
 
 # Layout.

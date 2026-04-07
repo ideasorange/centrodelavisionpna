@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Button atom – native <button> with CTA-aligned variants.
+ *
+ * Available config:
+ * - label: Visible text (Form API may also set value attribute for op).
+ * - variant: primary | secondary | tertiary | primary-outline | ...
+ * - attributes: Optional Attribute object (e.g. from input preprocess).
+ */
+#}
+{% set variant = variant|default('primary') %}
+{% set base_class = 'form-button' %}
+{% set normalized_variant = variant|replace({'_':'-'}) %}
+{% if normalized_variant == 'outline' %}
+  {% set normalized_variant = 'primary-outline' %}
+{% endif %}
+{% set modifier_class = base_class ~ '--' ~ normalized_variant %}
+{% set button_attributes = attributes ? attributes.addClass(base_class, modifier_class) : create_attribute().addClass(base_class, modifier_class) %}
+
+<button{{ button_attributes }}>
+  <span class="{{ base_class }}__label">{{ label }}</span>
+</button>{{ children|default('') }}

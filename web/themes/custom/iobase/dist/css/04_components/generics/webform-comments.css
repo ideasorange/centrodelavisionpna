@@ -35,7 +35,7 @@
   min-height: 150px;
   border: solid 1px #c5c5c5;
 }
-.comment__button .button {
+.comment__button .form-button {
   font-weight: 500;
   color: white;
   width: fit-content;
@@ -44,5 +44,6 @@
   border-radius: 5px;
   padding: 0.5rem;
   border: none;
+  width: 100%;
 }
 /*# sourceMappingURL=webform-comments.css.map */

@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+.form-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-family: "Albert Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+  line-height: 1.2;
+  text-align: center;
+  appearance: none;
+  width: 100%;
+}
+.form-button:hover, .form-button:focus {
+  outline: none;
+}
+.form-button:focus-visible {
+  outline: 2px solid #1E6FA8;
+  outline-offset: 2px;
+}
+.form-button:disabled, .form-button.is-disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+.form-button__label {
+  white-space: nowrap;
+}
+.form-button--primary {
+  background-color: #1E6FA8;
+  color: #FFFFFF;
+  border-color: #1E6FA8;
+}
+.form-button--primary:hover:not(:disabled):not(.is-disabled), .form-button--primary:focus:not(:disabled):not(.is-disabled) {
+  background-color: #134E75;
+  border-color: #134E75;
+  color: #FFFFFF;
+}
+.form-button--secondary {
+  background-color: #2BB3A3;
+  color: #FFFFFF;
+  border-color: #2BB3A3;
+}
+.form-button--secondary:hover:not(:disabled):not(.is-disabled), .form-button--secondary:focus:not(:disabled):not(.is-disabled) {
+  background-color: #1C857A;
+  border-color: #1C857A;
+  color: #FFFFFF;
+}
+.form-button--tertiary {
+  background-color: #1F2A33;
+  color: #FFFFFF;
+  border-color: #1F2A33;
+}
+.form-button--tertiary:hover:not(:disabled):not(.is-disabled), .form-button--tertiary:focus:not(:disabled):not(.is-disabled) {
+  background-color: #3C4A57;
+  border-color: #3C4A57;
+  color: #FFFFFF;
+}
+.form-button--primary-outline, .form-button--outline {
+  background-color: transparent;
+  color: #1E6FA8;
+  border-color: #1E6FA8;
+}
+.form-button--primary-outline:hover:not(:disabled):not(.is-disabled), .form-button--primary-outline:focus:not(:disabled):not(.is-disabled), .form-button--outline:hover:not(:disabled):not(.is-disabled), .form-button--outline:focus:not(:disabled):not(.is-disabled) {
+  background-color: #1E6FA8;
+  color: #FFFFFF;
+  border-color: #1E6FA8;
+}
+.form-button--secondary-outline {
+  background-color: transparent;
+  color: #2BB3A3;
+  border-color: #2BB3A3;
+}
+.form-button--secondary-outline:hover:not(:disabled):not(.is-disabled), .form-button--secondary-outline:focus:not(:disabled):not(.is-disabled) {
+  background-color: #2BB3A3;
+  color: #FFFFFF;
+  border-color: #2BB3A3;
+}
+.form-button--tertiary-outline {
+  background-color: transparent;
+  color: #1F2A33;
+  border-color: #1F2A33;
+}
+.form-button--tertiary-outline:hover:not(:disabled):not(.is-disabled), .form-button--tertiary-outline:focus:not(:disabled):not(.is-disabled) {
+  background-color: #1F2A33;
+  color: #FFFFFF;
+  border-color: #1F2A33;
+}
+/*# sourceMappingURL=button.css.map */
