@@ -54,5 +54,10 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
+  align-items: stretch;
+}
+.grid-cards-block__section > * {
+  min-height: 0;
+  height: 100%;
 }
 /*# sourceMappingURL=grid_cards_block.css.map */

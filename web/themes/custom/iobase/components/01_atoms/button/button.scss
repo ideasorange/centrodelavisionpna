@@ -1,0 +1,120 @@
+// Native form button – visual parity with CTA atom.
+@use "../../../scss/core" as *;
+
+.form-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-family: $secondary-font-family;
+  font-size: to-rem(16);
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: background-color $duration ease, color $duration ease, border-color $duration ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+  line-height: 1.2;
+  text-align: center;
+  appearance: none;
+  width: 100%;
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-primary;
+    outline-offset: 2px;
+  }
+
+  &:disabled,
+  &.is-disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+  }
+
+  &__label {
+    white-space: nowrap;
+  }
+
+  &--primary {
+    background-color: $color-primary;
+    color: $color-white;
+    border-color: $color-primary;
+
+    &:hover:not(:disabled):not(.is-disabled),
+    &:focus:not(:disabled):not(.is-disabled) {
+      background-color: $color-primary-dark;
+      border-color: $color-primary-dark;
+      color: $color-white;
+    }
+  }
+
+  &--secondary {
+    background-color: $color-secondary;
+    color: $color-white;
+    border-color: $color-secondary;
+
+    &:hover:not(:disabled):not(.is-disabled),
+    &:focus:not(:disabled):not(.is-disabled) {
+      background-color: $color-secondary-dark;
+      border-color: $color-secondary-dark;
+      color: $color-white;
+    }
+  }
+
+  &--tertiary {
+    background-color: $color-gray-900;
+    color: $color-white;
+    border-color: $color-gray-900;
+
+    &:hover:not(:disabled):not(.is-disabled),
+    &:focus:not(:disabled):not(.is-disabled) {
+      background-color: $color-gray-700;
+      border-color: $color-gray-700;
+      color: $color-white;
+    }
+  }
+
+  &--primary-outline,
+  &--outline {
+    background-color: transparent;
+    color: $color-primary;
+    border-color: $color-primary;
+
+    &:hover:not(:disabled):not(.is-disabled),
+    &:focus:not(:disabled):not(.is-disabled) {
+      background-color: $color-primary;
+      color: $color-white;
+      border-color: $color-primary;
+    }
+  }
+
+  &--secondary-outline {
+    background-color: transparent;
+    color: $color-secondary;
+    border-color: $color-secondary;
+
+    &:hover:not(:disabled):not(.is-disabled),
+    &:focus:not(:disabled):not(.is-disabled) {
+      background-color: $color-secondary;
+      color: $color-white;
+      border-color: $color-secondary;
+    }
+  }
+
+  &--tertiary-outline {
+    background-color: transparent;
+    color: $color-gray-900;
+    border-color: $color-gray-900;
+
+    &:hover:not(:disabled):not(.is-disabled),
+    &:focus:not(:disabled):not(.is-disabled) {
+      background-color: $color-gray-900;
+      color: $color-white;
+      border-color: $color-gray-900;
+    }
+  }
+}

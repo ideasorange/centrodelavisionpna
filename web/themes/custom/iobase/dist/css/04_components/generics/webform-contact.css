@@ -62,7 +62,7 @@
   min-height: 150px;
   border: solid 1px #c5c5c5;
 }
-.contact__button .button {
+.contact__button .form-button {
   width: 100%;
   border-width: thin;
   background: #3CB371;

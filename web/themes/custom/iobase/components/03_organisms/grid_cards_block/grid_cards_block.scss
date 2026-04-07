@@ -33,4 +33,11 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
+  align-items: stretch;
+
+  // View/UI Patterns wrappers: stretch so card-article height:100% fills the row.
+  > * {
+    min-height: 0;
+    height: 100%;
+  }
 }

@@ -1,0 +1,15 @@
+uuid: f4204376-bb49-4364-8042-0e1eaf053ebc
+langcode: es
+status: true
+dependencies: {  }
+id: node__article
+label: 'Contenido: Artículo'
+tags:
+  abstract: '[node:summary]'
+  description: 'Centro de la Visión: Artículos médicos'
+  image_src: '[node:field_image]'
+  keywords: 'Artículos médicos, [node:field_tags]'
+  og_image: '[node:field_image]'
+  title: '[node:field_icon]'
+  twitter_cards_description: '[node:summary]'
+  twitter_cards_image: '[node:field_image]'
