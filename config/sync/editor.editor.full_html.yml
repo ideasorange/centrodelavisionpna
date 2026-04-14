@@ -13,6 +13,7 @@ editor: ckeditor5
 settings:
   toolbar:
     items:
+      - heading
       - bold
       - italic
       - strikethrough
@@ -30,10 +31,12 @@ settings:
       - insertTable
       - horizontalLine
       - '|'
-      - heading
       - codeBlock
+      - mediaEmbed
+      - htmlEmbed
       - '|'
       - sourceEditing
+      - '|'
   plugins:
     ckeditor5_codeBlock:
       languages:
@@ -94,6 +97,9 @@ settings:
         startIndex: true
         styles: true
       multiBlock: true
+    ckeditor5_plugin_pack_html_embed__html_embed:
+      previews: false
+      use_purifier: false
     ckeditor5_sourceEditing:
       allowed_tags: {  }
 image_upload:
