@@ -10,6 +10,9 @@ module:
   block_content: 0
   breakpoint: 0
   ckeditor5: 0
+  ckeditor5_plugin_pack: 0
+  ckeditor5_plugin_pack_html_embed: 0
+  ckeditor5_plugin_pack_media_embed: 0
   comment: 0
   components_core: 0
   config: 0
