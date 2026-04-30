@@ -97,3 +97,10 @@ web/sites/simpletest
 /.idea/
 /.editorconfig
 /.gitattributes
+
+# Production files
+.htaccess
+default.php
+dev/
+index.html
+logo.png

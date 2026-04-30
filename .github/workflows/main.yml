@@ -1,0 +1,61 @@
+on:
+  workflow_dispatch:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - main
+name: Deploy on Centro De La Vision (main)
+jobs:
+  web-deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get latest code
+        uses: actions/checkout@v3
+      - name: Run test command (via ssh)
+        uses: garygrossgarten/github-action-ssh@release
+        with:
+          command: cd domains/centrodelavisionpna.com/public_html && ls -h
+          host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
+          username: ${{ secrets.USER }}
+          password: ${{ secrets.SSH_PASSWORD }}
+      - name: Run Composer (via ssh)
+        uses: garygrossgarten/github-action-ssh@release
+        with:
+          command: cd domains/centrodelavisionpna.com/public_html && composer2 install
+          host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
+          username: ${{ secrets.USER }}
+          password: ${{ secrets.SSH_PASSWORD }}
+      - name: Run Drush commands (via ssh)
+        uses: garygrossgarten/github-action-ssh@release
+        with:
+          command: cd domains/centrodelavisionpna.com/public_html && ./vendor/drush/drush/drush status && ./vendor/drush/drush/drush updb && ./vendor/drush/drush/drush cim -y && ./vendor/drush/drush/drush cr
+          host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
+          username: ${{ secrets.USER }}
+          password: ${{ secrets.SSH_PASSWORD }}
+      # - name: Set up Node.js
+      #   uses: actions/setup-node@v3
+      #   with:
+      #       node-version: 24.x
+      # - name: Compile SASS and JS files
+      #   run: |
+      #     node -v
+      #     npm install
+      #     npm list
+      #     npm run build
+      #     ls -la -h
+      #   working-directory: ./web/themes/custom/iobase
+      # - name: Copy compiled styles to Shared Server via ssh password
+      #   uses: appleboy/scp-action@master
+      #   with:
+      #     host: ${{ secrets.SSH_HOST }}
+      #     port: ${{ secrets.SSH_PORT }}
+      #     username: ${{ secrets.USER }}
+      #     password: ${{ secrets.SSH_PASSWORD }}
+      #     source: ./web/themes/custom/iobase/css/*
+      #     target: /home/${{ secrets.USER }}/domains/centrodelavisionpna.com/public_html/dev/web/themes/custom/iobase/
+      #     strip_components: 4
