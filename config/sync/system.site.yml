@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: ijfbzDTN4CbE7Sr-6ubWzy_t1vH4OtU1doNCLssVz-4
+langcode: es
+uuid: fdcb0350-6042-4cd8-91a1-52146195a04e
+name: 'Centro de la Visión'
+mail: ideasorange.ar@gmail.com
+slogan: 'Tu salud visual, nuestra prioridad'
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: es
+mail_notification: null

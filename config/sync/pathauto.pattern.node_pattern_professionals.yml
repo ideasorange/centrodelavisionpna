@@ -1,0 +1,22 @@
+uuid: 0612d25e-1aaf-4e63-8e8c-b7d4747c9a94
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node_pattern_professionals
+label: 'Node Pattern Professionals'
+type: 'canonical_entities:node'
+pattern: 'profesionales/[node:title]'
+selection_criteria:
+  08c3156f-c63e-40a4-a9a3-52cef9a2b47c:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 08c3156f-c63e-40a4-a9a3-52cef9a2b47c
+    context_mapping:
+      node: node
+    bundles:
+      professional: professional
+selection_logic: and
+weight: -5
+relationships: {  }

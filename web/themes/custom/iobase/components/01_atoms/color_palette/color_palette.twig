@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Color Palette atom – color swatch with label for palette display.
+ *
+ * Available config:
+ * - color: HTML color code (e.g. #1E6FA8).
+ * - text: Label below the color box.
+ */
+#}
+{% set base_class = 'color-palette' %}
+{% set palette_attributes = attributes ? attributes.addClass(base_class) : create_attribute().addClass(base_class) %}
+
+<div {{ palette_attributes }}>
+  <div
+    class="{{ base_class }}__swatch"
+    style="background-color: {{ color }};"
+    role="img"
+    aria-label="{{ text }}"
+  ></div>
+  <span class="{{ base_class }}__label">{{ text }}</span>
+</div>

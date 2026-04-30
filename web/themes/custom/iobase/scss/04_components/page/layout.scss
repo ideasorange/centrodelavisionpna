@@ -1,0 +1,40 @@
+// Import generic styles.
+@use "../../core" as *;
+
+.layout-container {
+  overflow: clip;
+  scroll-behavior: smooth;
+  .page-region {
+    &.l-region-header {
+      z-index: 100;
+      @extend %content-container;
+      position: sticky;
+      top: 0;
+    }
+  }
+
+  .l-region-system,
+  .l-region-content,
+  .l-region-pre-footer,
+  .l-region-footer {
+    .region-wrapper {
+      @extend %content-container;
+    }
+  }
+  .l-region-content {
+
+  }
+  .reg-inv {
+    scroll-margin-top: 80px;
+    @extend %breakContainer;
+    background: #9b9b9b;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    .reg-inv_cont {
+      @extend %content-container;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+  }
+}

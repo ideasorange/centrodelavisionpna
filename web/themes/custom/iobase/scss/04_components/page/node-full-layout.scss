@@ -1,0 +1,31 @@
+// Import generic styles.
+@use "../../core" as *;
+
+.node-full-layout {
+    margin-bottom: 6rem;
+
+        &__title {
+            font-weight: 600;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+
+        }
+        &__body {
+            .field--name-field-body {
+                line-height: 1.7;
+                font-weight: 300;
+           }
+        }
+        .layout__region--second {
+            @media (min-width: $tab) {
+                padding-left: 1.5rem;
+            }
+        }
+             
+        .field.field--name-field-image.field--type-image.field--label-hidden.field__item {
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+}

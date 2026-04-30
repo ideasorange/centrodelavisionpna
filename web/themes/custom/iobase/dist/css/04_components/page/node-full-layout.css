@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sora:wght@100..800&display=swap");
+.node-full-layout {
+  margin-bottom: 6rem;
+}
+.node-full-layout__title {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.node-full-layout__body .field--name-field-body {
+  line-height: 1.7;
+  font-weight: 300;
+}
+@media (min-width: 768px) {
+  .node-full-layout .layout__region--second {
+    padding-left: 1.5rem;
+  }
+}
+.node-full-layout .field.field--name-field-image.field--type-image.field--label-hidden.field__item img {
+  width: 100%;
+  object-fit: cover;
+}
+/*# sourceMappingURL=node-full-layout.css.map */

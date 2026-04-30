@@ -1,0 +1,33 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: CTA Whatsapp
+status: stable
+description: WhatsApp button/link that redirects visitors to WhatsApp Web.
+libraryOverrides:
+  dependencies:
+    - core/drupal
+props:
+  type: object
+  required:
+    - label
+    - phone_number
+  properties:
+    label:
+      type: string
+      title: Label
+      description: Button/link text (e.g. "Chat on WhatsApp", "Contactar por WhatsApp").
+    phone_number:
+      type: string
+      title: Phone number
+      description: Full number with country code, no + or spaces (e.g. 5491112345678).
+    variant:
+      type: string
+      title: Variant
+      description: Visual style variant.
+      enum:
+        - primary
+        - secondary
+      default: primary
+    pre_message:
+      type: string
+      title: Pre-filled message
+      description: Optional message text to pre-fill in the chat (URL-encoded by the component).

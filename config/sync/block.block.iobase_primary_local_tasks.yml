@@ -1,0 +1,22 @@
+uuid: 5c806045-bffe-43b2-884e-aca7a25929df
+langcode: es
+status: true
+dependencies:
+  theme:
+    - iobase
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: iobase_primary_local_tasks
+theme: iobase
+region: content
+weight: -11
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Solapas principales'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

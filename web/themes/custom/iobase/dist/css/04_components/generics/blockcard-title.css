@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sora:wght@100..800&display=swap");
+.blockcard-title {
+  max-width: 100%;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: solid 1px #dad8d8;
+  font-weight: 400;
+}
+.blockcard-title__title {
+  margin: 0;
+  line-height: normal;
+  font-weight: 500;
+  color: #1F2A33;
+}
+@media (min-width: 768px) {
+  .blockcard-title__title {
+    font-size: 1.5rem;
+  }
+}
+.blockcard-title__rowitem:not(:last-child) {
+  border-bottom: solid 1px #dad8d8;
+}
+.blockcard-title__rowitem:last-child .cardtitle__title a {
+  padding-bottom: 0;
+}
+/*# sourceMappingURL=blockcard-title.css.map */

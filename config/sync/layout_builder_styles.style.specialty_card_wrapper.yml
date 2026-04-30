@@ -1,0 +1,12 @@
+uuid: 3946a855-d9b6-4f4e-b952-46d7b6b4ec39
+langcode: es
+status: true
+dependencies: {  }
+id: specialty_card_wrapper
+label: 'Card Teaser Wrapper'
+classes: cardteaser
+type: section
+group: card_teaser
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

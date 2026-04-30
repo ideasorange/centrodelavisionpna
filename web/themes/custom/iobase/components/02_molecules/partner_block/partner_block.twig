@@ -1,0 +1,44 @@
+{% set partner_link_url = link_url|default('') %}
+{% set partner_link_title = link_title|default('') %}
+{% set partner_logo_src = logo.src|default('') %}
+{% set partner_logo_alt = logo.alt|default('') %}
+
+{% if partner is defined and partner %}
+  {% if partner.field_link is defined and partner.field_link|length %}
+    {% set partner_link_url = partner.field_link.0.url %}
+    {% set partner_link_title = partner.field_link.0.title|default(partner.label|default('')) %}
+  {% endif %}
+  {% if partner.field_brand_logo is defined and partner.field_brand_logo.entity %}
+    {% set partner_logo_src = file_url(partner.field_brand_logo.entity.fileuri) %}
+    {% set partner_logo_alt = partner.field_brand_logo.alt|default(partner.label|default('')) %}
+  {% endif %}
+{% endif %}
+<div {{ attributes.addClass('partner-block') }} role="listitem">
+  {% if partner_link_url %}
+    <a
+      class="partner-block__link"
+      href="{{ partner_link_url }}"
+      {% if partner_link_title %}aria-label="{{ partner_link_title }}"{% endif %}
+    >
+      {% if partner_logo_src %}
+        <img
+          class="partner-block__logo"
+          src="{{ partner_logo_src }}"
+          alt="{{ partner_logo_alt|default(partner_link_title|default('')) }}"
+          loading="lazy"
+        >
+      {% endif %}
+    </a>
+  {% else %}
+    <div class="partner-block__link" aria-hidden="true">
+      {% if partner_logo_src %}
+        <img
+          class="partner-block__logo"
+          src="{{ partner_logo_src }}"
+          alt="{{ partner_logo_alt|default('') }}"
+          loading="lazy"
+        >
+      {% endif %}
+    </div>
+  {% endif %}
+</div>

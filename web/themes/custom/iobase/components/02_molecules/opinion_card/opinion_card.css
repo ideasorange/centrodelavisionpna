@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sora:wght@100..800&display=swap");
+.opinion-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  max-width: 20rem;
+}
+@media (min-width: 768px) {
+  .opinion-card {
+    max-width: 30rem;
+  }
+}
+.opinion-card {
+  margin-inline: auto;
+  padding: 1.75rem 1.5rem 1.5rem;
+  text-align: center;
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.92);
+  border-radius: 2rem;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+.opinion-card--filled {
+  background: #1a5276;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 16px 36px rgba(0, 0, 0, 0.22);
+}
+.opinion-card--transparent {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.92);
+  box-shadow: none;
+}
+.opinion-card__icon-wrap {
+  width: 5.25rem;
+  height: 5.25rem;
+  padding: 0.8rem;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 10px 28px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.opinion-card__icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: contain;
+  object-position: center;
+  background: #FFFFFF;
+}
+.opinion-card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.opinion-card__opinion {
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  font-weight: 400;
+}
+.opinion-card__stars {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1;
+  letter-spacing: 0.15em;
+  color: #FFFFFF;
+}
+.opinion-card__name {
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+/*# sourceMappingURL=opinion_card.css.map */

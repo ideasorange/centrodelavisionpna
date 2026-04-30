@@ -1,0 +1,15 @@
+<div class="page-region l-region-header">
+	<div class="region-wrapper preheader">
+		{{ page.preheader }}
+	</div>
+	<div class="region-wrapper header">
+		{{ page.header }}
+	</div>
+</div>
+{% if page.system %}
+	<div class="page-region l-region-system">
+		<div class="region-wrapper">
+			{{ page.system }}
+		</div>
+	</div>
+{% endif %}

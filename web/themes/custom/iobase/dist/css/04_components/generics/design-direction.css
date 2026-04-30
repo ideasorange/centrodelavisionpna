@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sora:wght@100..800&display=swap");
+.design-direction .heading {
+  font-family: "Albert Sans", sans-serif;
+  font-weight: 700;
+  margin: 0 0 0.5em;
+}
+.design-direction .paragraph {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  margin: 0 0 0.5em;
+  color: #1F2A33;
+}
+.design-direction .description {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  margin: 0 0 0.5em;
+  color: #FFFFFF;
+}
+/*# sourceMappingURL=design-direction.css.map */

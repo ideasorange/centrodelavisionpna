@@ -1,0 +1,30 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Partners Block
+status: stable
+description: Partners grid with heading, subheading, and CTA.
+libraryOverrides:
+  dependencies:
+    - core/drupal
+props:
+  type: object
+  properties:
+    heading:
+      type: string
+      title: Heading
+      description: Section heading text.
+    subheading:
+      type: string
+      title: Subheading
+      description: Section subheading text.
+    cta:
+      type: object
+      title: Call to action
+      properties:
+        label:
+          type: string
+        url:
+          type: string
+slots:
+  items:
+    title: Items
+    description: Partner items content.

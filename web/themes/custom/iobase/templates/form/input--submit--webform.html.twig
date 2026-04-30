@@ -1,0 +1,16 @@
+{#
+/**
+ * @file
+ * Webform primary submit: render as native <button> via Button SDC.
+ *
+ * @see iobase_theme_suggestions_input_alter()
+ * @see template_preprocess_input()
+ */
+#}
+{% embed 'iobase:button' with {
+  label: element['#value']|default('Submit'|t),
+  variant: 'primary',
+  attributes: attributes,
+  children: children|default(''),
+} only %}
+{% endembed %}

@@ -1,0 +1,43 @@
+{#
+ * Card article – image, tags slot, linked title, Read more (article teaser).
+ #}
+{% set base_class = 'card-article' %}
+{% set url = url|default('')|trim %}
+{% set field_image = field_image|default('')|trim %}
+{% set read_more = read_more_label|default('Read More') %}
+{% set card_attributes = attributes ? attributes.addClass(base_class) : create_attribute().addClass(base_class) %}
+<article {{ card_attributes }}>
+  <div class="{{ base_class }}__inner">
+    {% if field_image %}
+      <div class="{{ base_class }}__media">
+        <a href="{{ url }}" class="{{ base_class }}__media-link" tabindex="-1" aria-hidden="true">
+          <img
+            class="{{ base_class }}__image"
+            src="{{ field_image }}"
+            alt="{{ field_image_alt|default('') }}"
+            loading="lazy"
+          />
+        </a>
+      </div>
+    {% endif %}
+
+    <div class="{{ base_class }}__content">
+      <div class="{{ base_class }}__tags">
+        {% block tags %}{% endblock %}
+      </div>
+
+      {% if title %}
+        <h2 class="{{ base_class }}__title">
+          <a href="{{ url }}" class="{{ base_class }}__title-link">{{ title }}</a>
+        </h2>
+      {% endif %}
+
+      {% if url %}
+        <a href="{{ url }}" class="{{ base_class }}__read-more">
+          <span class="{{ base_class }}__read-more-text">{{ read_more }}</span>
+          <span class="{{ base_class }}__read-more-icon" aria-hidden="true">→</span>
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</article>

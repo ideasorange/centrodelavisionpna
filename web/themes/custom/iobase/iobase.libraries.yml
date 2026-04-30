@@ -1,0 +1,258 @@
+# Breadcrumbs SDC styles (attached from preprocess_breadcrumb; include alone does not load SDC assets).
+breadcrumbs-sdc:
+  version: VERSION
+  css:
+    component:
+      components/02_molecules/breadcrumbs/breadcrumbs.css: {}
+
+base:
+  version: VERSION
+  css:
+    component:
+      css/components/action-links.css:
+        weight: -10
+      css/components/button.css:
+        weight: -10
+      css/components/container-inline.css:
+        weight: -10
+      css/components/details.css:
+        weight: -10
+      css/components/exposed-filters.css:
+        weight: -10
+      css/components/field.css:
+        weight: -10
+      css/components/form.css:
+        weight: -10
+      css/components/icons.css:
+        weight: -10
+      css/components/inline-form.css:
+        weight: -10
+      css/components/item-list.css:
+        weight: -10
+      css/components/link.css:
+        weight: -10
+      css/components/links.css:
+        weight: -10
+#      css/components/menu.css:
+#        weight: -10
+      css/components/more-link.css:
+        weight: -10
+      css/components/pager.css:
+        weight: -10
+      css/components/tabledrag.css:
+        weight: -10
+      css/components/tableselect.css:
+        weight: -10
+      css/components/tabs.css:
+        weight: -10
+      css/components/textarea.css:
+        weight: -10
+      css/components/ui-dialog.css:
+        weight: -10
+dialog:
+  version: VERSION
+  css:
+    component:
+      css/components/dialog.css:
+        weight: -10
+dropbutton:
+  version: VERSION
+  css:
+    component:
+      css/components/dropbutton.css:
+        weight: -10
+file:
+  version: VERSION
+  css:
+    component:
+      css/components/file.css:
+        weight: -10
+image-widget:
+  version: VERSION
+  css:
+    component:
+      css/components/image-widget.css: {  }
+indented:
+  version: VERSION
+  css:
+    component:
+      css/components/indented.css: {  }
+messages:
+  version: VERSION
+  css:
+    component:
+      css/components/messages.css:
+        weight: -10
+node:
+  version: VERSION
+  css:
+    component:
+      css/components/node.css:
+        weight: -10
+progress:
+  version: VERSION
+  css:
+    component:
+      css/components/progress.css:
+        weight: -10
+
+drupal.tablesort:
+  version: VERSION
+  css:
+    component:
+      css/components/tablesort.css:
+        weight: -10
+
+search-results:
+  version: VERSION
+  css:
+    component:
+      css/components/search-results.css: {  }
+user:
+  version: VERSION
+  css:
+    component:
+      css/components/user.css:
+        weight: -10
+
+global-styling:
+  css:
+    theme:
+      dist/css/normalize.css: { }
+      dist/css/fonts.css: { }
+      dist/css/base.css: { }
+
+# Stretch card_article (etc.) inside Views responsive grid rows (/articulos, etc.).
+views-responsive-grid-card-fix:
+  version: VERSION
+  css:
+    theme:
+      dist/css/04_components/views/views-responsive-grid.css: {}
+
+
+
+# Layout.
+layout:
+  css:
+    theme:
+      dist/css/04_components/page/layout.css: { }
+
+# Splide carousel (https://splidejs.com/) – used by SDC image_gallery, slide_autoscroll.
+splide:
+  remote: https://splidejs.com/
+  version: 4.1.4
+  license:
+    name: MIT
+    url: https://github.com/Splidejs/splide/blob/master/LICENSE
+    gpl-compatible: true
+  css:
+    theme:
+      https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css:
+        type: external
+        minified: true
+  js:
+    https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js:
+      type: external
+      minified: true
+      defer: true
+
+# Splide AutoScroll extension — register on window.splide.Extensions.AutoScroll
+splide_extension_auto_scroll:
+  remote: https://splidejs.com/extensions/auto-scroll/
+  version: 0.5.3
+  license:
+    name: MIT
+    url: https://github.com/Splidejs/splide-extension-auto-scroll/blob/master/LICENSE
+    gpl-compatible: true
+  js:
+    https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js:
+      type: external
+      minified: true
+      defer: true
+  dependencies:
+    - iobase/splide
+
+# Splide Intersection extension — pairs with AutoScroll (pause off-screen)
+splide_extension_intersection:
+  remote: https://splidejs.com/extensions/intersection/
+  version: 0.2.0
+  license:
+    name: MIT
+    url: https://github.com/Splidejs/splide-extension-intersection/blob/master/LICENSE
+    gpl-compatible: true
+  js:
+    https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-intersection@0.2.0/dist/js/splide-extension-intersection.min.js:
+      type: external
+      minified: true
+      defer: true
+  dependencies:
+    - iobase/splide
+
+ionicicon:
+  remote: https://ionic.io/ionicons
+  version: 7.1.0
+  license:
+    name: MIT
+    url: https://github.com/ionic-team/ionicons/blob/main/LICENSE
+    gpl-compatible: true
+  js:
+    https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js:
+      { type: external, minified: true, defer: true }
+
+# Custom Design Direction Page Styles
+design-direction:
+  version: VERSION
+  css:
+    theme:
+      dist/css/04_components/generics/design-direction.css: { }
+
+# Webform Contact Component
+webform-contact:
+  version: VERSION
+  css:
+    theme:
+      dist/css/04_components/generics/webform-contact.css: { }
+
+# Webform Comment Component
+webform-comments:
+  version: VERSION
+  css:
+    theme:
+      dist/css/04_components/generics/webform-comments.css: { }
+
+# Card Component implememt with Teaser view mode
+card-teaser:
+  version: VERSION
+  css:
+    theme:
+      dist/css/04_components/generics/card-teaser.css: { }
+
+# Block Card teaser component
+blockcard-teaser:
+  version: VERSION
+  css:
+    theme:
+      dist/css/04_components/generics/blockcard-teaser.css: { }
+
+# List Component implememt with Title view mode
+card-title:
+  version: VERSION
+  css:
+    theme:
+      dist/css/04_components/generics/card-title.css: { }
+
+
+# Block Card title component
+blockcard-title:
+  version: VERSION
+  css:
+    theme:
+      dist/css/04_components/generics/blockcard-title.css: { }
+
+# Page full width layout component
+node-full-layout:
+  css:
+    theme:
+      dist/css/04_components/page/node-full-layout.css: { }
+  dependencies:
+    - iobase/node

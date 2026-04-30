@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sora:wght@100..800&display=swap");
+.comment {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #FFFFFF;
+  border-radius: 0.75rem;
+  box-shadow: 0 12px 30px rgba(31, 42, 51, 0.08);
+  padding: 1.5rem;
+}
+@media (min-width: 768px) {
+  .comment {
+    grid-area: form;
+    padding: 2rem;
+    max-width: 460px;
+  }
+}
+.comment__title {
+  line-height: 1.5;
+  font-weight: 500;
+  font-size: 25px;
+}
+.comment__input {
+  padding: 15px;
+  border-width: thin;
+  border-radius: 7px;
+  max-width: 100%;
+  border: solid 1px #c5c5c5;
+}
+.comment__textarea {
+  padding: 15px;
+  border-radius: 7px;
+  max-width: 100%;
+  min-height: 150px;
+  border: solid 1px #c5c5c5;
+}
+.comment__button .form-button {
+  font-weight: 500;
+  color: white;
+  width: fit-content;
+  border-width: thin;
+  background: #3CB371;
+  border-radius: 5px;
+  padding: 0.5rem;
+  border: none;
+  width: 100%;
+}
+/*# sourceMappingURL=webform-comments.css.map */

@@ -1,0 +1,12 @@
+uuid: 8eaccb4a-b5e2-4b57-bc08-2d7efe4d6867
+langcode: es
+status: true
+dependencies: {  }
+id: card_teaser_body_wrapper
+label: 'Card teaser body wrapper'
+classes: cardteaser__body
+type: component
+group: card_teaser
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

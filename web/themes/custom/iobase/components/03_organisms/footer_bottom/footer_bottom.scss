@@ -1,0 +1,31 @@
+// Import generic styles.
+@use "../../../scss/core" as *;
+
+//[data-component-id="iobase:footer_bottom"] {
+//  /* @todo Add your styles here. */
+//}
+.footer-bottom_wrapper {
+  @extend %breakContainer;
+  background: #011625;
+}
+
+.footer-bottom {
+  @extend %content-container;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  text-align: center;
+
+  @media (min-width: $desk) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    align-items: center;
+    justify-items: stretch;
+  }
+
+  .content {
+    width: 100%;
+  }
+}

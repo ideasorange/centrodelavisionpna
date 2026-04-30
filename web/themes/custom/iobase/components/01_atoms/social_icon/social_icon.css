@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sora:wght@100..800&display=swap");
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background-color: transparent;
+  border: 1px solid #FFFFFF;
+  color: #3C4A57;
+  text-decoration: none;
+  transition: background-color 0.4s ease, color 0.4s ease, transform 0.4s ease;
+}
+.social-icon:hover, .social-icon:focus {
+  background-color: #1E6FA8;
+  color: #FFFFFF;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+.social-icon:focus-visible {
+  outline: 2px solid #1E6FA8;
+  outline-offset: 2px;
+}
+.social-icon__icon {
+  font-size: 1.3rem;
+  color: #FFFFFF;
+}
+.social-icon__icon ion-icon {
+  display: block;
+}
+/*# sourceMappingURL=social_icon.css.map */

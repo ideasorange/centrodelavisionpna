@@ -1,0 +1,6 @@
+{% if active %}
+  {% set classes = 'is-active active' %}
+{% endif %}
+<li class="menu-item">
+  <a href="{{ url }}" class="sdc-item {{ classes }}">{{ title }}</a>
+</li>

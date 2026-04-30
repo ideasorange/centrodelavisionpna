@@ -1,0 +1,27 @@
+// Import generic styles.
+@use "../../../scss/core" as *;
+
+[data-component-id="iobase:header"] {
+  /* @todo Add your styles here. */
+}
+
+.header-wrapper {
+  @extend %breakContainer;
+  background-color: $color-white;
+}
+.header-container {
+  @extend %content-container;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.5rem;
+  padding-top: 1rem;
+
+  @media (min-width: $desk) {
+    .navigation-menu {
+      display: flex !important;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+}

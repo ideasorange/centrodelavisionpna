@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sora:wght@100..800&display=swap");
+.footer-bottom {
+  max-width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-bottom_wrapper {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.footer-bottom_wrapper {
+  background: #011625;
+}
+
+.footer-bottom {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  text-align: center;
+}
+@media (min-width: 1230px) {
+  .footer-bottom {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    align-items: center;
+    justify-items: stretch;
+  }
+}
+.footer-bottom .content {
+  width: 100%;
+}
+/*# sourceMappingURL=footer_bottom.css.map */

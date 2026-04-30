@@ -1,0 +1,15 @@
+uuid: 68aeebcd-82d1-4c89-a3b2-0cf38623840d
+langcode: es
+status: true
+dependencies: {  }
+id: node__specialty
+label: 'Contenido: Especialidad'
+tags:
+  description: '[node:summary]'
+  image_src: '[node:field_icon]'
+  og_description: '[node:summary]'
+  og_image: '[node:field_icon]'
+  og_type: service
+  thumbnail: '[node:field_icon:entity:url]'
+  twitter_cards_description: '[node:summary]'
+  twitter_cards_image: '[node:field_icon]'

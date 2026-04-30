@@ -1,0 +1,16 @@
+{#
+/**
+ * @file
+ * Theme override for a breadcrumb trail — renders the iobase:breadcrumbs SDC.
+ *
+ * Available variables:
+ * - breadcrumb: Breadcrumb trail items.
+ * - attributes: (optional) Nav attributes.
+ */
+#}
+{% if breadcrumb %}
+  {% include '@iobase/components/02_molecules/breadcrumbs/breadcrumbs.twig' with {
+    breadcrumb: breadcrumb,
+    attributes: attributes|default(create_attribute())
+  } only %}
+{% endif %}

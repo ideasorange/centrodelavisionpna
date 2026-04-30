@@ -1,0 +1,20 @@
+uuid: 83b8b668-2b63-4c89-a2b5-5119eb6bffe4
+langcode: es
+status: true
+dependencies:
+  theme:
+    - iobase
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: iobase_primary_admin_actions
+theme: iobase
+region: header
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Acciones principales de administración'
+  label_display: '0'
+  provider: core
+visibility: {  }

@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sora:wght@100..800&display=swap");
+.menu .menu-item {
+  list-style: none;
+}
+@media (min-width: 1230px) {
+  .menu .menu-item:last-child {
+    margin-left: 3rem;
+  }
+}
+.menu .menu-item:last-child {
+  border: solid 1px #1C857A;
+  background: #1C857A;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+.menu .menu-item:last-child:hover {
+  background: #1F2A33;
+  border: solid 1px #1F2A33;
+  color: #FFFFFF;
+}
+.menu .menu-item:last-child a {
+  color: white;
+}
+.menu .menu-item:last-child a:hover {
+  color: #FFFFFF;
+}
+
+.sdc-item {
+  text-decoration: none;
+  font-family: "Sora", sans-serif;
+  color: black;
+  padding: 1rem;
+  font-size: 1rem;
+}
+.sdc-item:hover {
+  color: #1C857A;
+  text-decoration: none;
+}
+/*# sourceMappingURL=menu_item.css.map */

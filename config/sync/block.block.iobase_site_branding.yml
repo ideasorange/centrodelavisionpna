@@ -1,0 +1,25 @@
+uuid: 268ac86b-da4b-4f94-ab83-347ea18a46a8
+langcode: es
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - iobase
+_core:
+  default_config_hash: '-OAAZDw1OR_UyAEPEKX0Hu4LaZD149vW9PmMnIC-v0o'
+id: iobase_site_branding
+theme: iobase
+region: header
+weight: -6
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Marca del sitio'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

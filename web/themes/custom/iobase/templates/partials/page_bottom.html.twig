@@ -1,0 +1,84 @@
+{% if page.prefooter %}
+	<div class="page-region l-region-pre-footer">
+		<div class="region-wrapper">
+			{{ page.prefooter }}
+		</div>
+	</div>
+{% endif %}
+{# {% if page.footer %} #}
+	<footer class="page-region l-region-footer" role="contentinfo">
+		<div class="region-wrapper">
+			{{ page.footer }}
+			{% embed 'iobase:footer_main' with {
+				title: 'Centro de la Visión Paraná'|t
+			} %}
+			{% block content %}
+				{% embed 'iobase:block_items_simple' with {
+					title: ''|t,
+					description: ''|t
+				} %}
+				{% block content %}
+					{% include 'iobase:logo_brand' with {
+						image: '/sites/default/files/logo_outlined.png',
+						alt: 'Centro de la Visión Paraná',
+						url: '/'  
+					} %}
+					<p class="description">Ofrecemos soluciones sanitarias, medicamentos, diagnósticos y productos de bienestar para una mejor salud.</p>
+					{% include 'iobase:social_icon' with {
+						icon: 'logo-facebook',
+						url: 'https://www.facebook.com/centrodelavisionparana'
+					} %}
+					{% include 'iobase:social_icon' with {
+						icon: 'logo-instagram',
+						url: 'https://www.instagram.com/centrodelavisionpna'
+					} %}
+				{% endblock %}
+				{% endembed %}
+
+				{% embed 'iobase:block_items_simple' with {
+					title: 'Enlaces de interés'|t,
+					description: ''|t
+				} %}
+				{% block content %}
+					<ul class="{{ base_class }}__list">
+						<li class="description"><a href="/#webform-submission-contactanos-add-form" class="link">Solicita tu turno</a></li>
+						<li class="description"><a href="/#block-iobase-imagegallery" class="link">Nuestro centro</a></li>
+						<li class="description"><a href="/#block-iobase-views-block-professionals-block-1" class="link">Profesionales</a></li>
+						<li class="description"><a href="/#block-iobase-views-block-specialties-block-specialties-teaser" class="link">Especialidades</a></li>
+					</ul> 
+				{% endblock %}	
+				{% endembed %}
+				
+				{% embed 'iobase:block_items_simple' with {
+					title: 'Horarios de atención'|t,
+					description: ''|t
+				} %}
+				{% block content %}
+					<ul class="{{ base_class }}__list">
+						<li class="schedule"><a href="#" class="link">Lunes a Viernes: 08:00 - 18:00</a></li>
+						<li class="schedule"><a href="#" class="link">Sábados: 08:00 - 13:00</a></li>
+						<li class="schedule"><a href="#" class="link">Domingos: Cerrado</a></li>
+					</ul> 	
+				{% endblock %}	
+				{% endembed %}
+
+				{% embed 'iobase:block_items_simple' with {
+					title: 'Nuestras direcciones'|t,
+					description: ''|t
+				} %}
+				{% block content %}
+					<ul class="{{ base_class }}__list">
+						<li class="address"><a href="https://maps.app.goo.gl/2uA8mtkET54MED158" target="_blank" class="link">Urquiza 651, Paraná, Entre Ríos</a></li>
+						<li class="address"><a href="https://maps.app.goo.gl/G7EXQh2YpRt5hRWg6" target="_blank" class="link">Malvinas 91, Paraná, Entre Ríos</a></li>
+					</ul> 	
+				{% endblock %}	
+				{% endembed %}
+
+			{% endblock %}
+			{% endembed %}
+			{% include 'iobase:footer_bottom' %}
+		</div>
+	</footer>
+{# {% endif %} #}
+
+

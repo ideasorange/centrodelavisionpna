@@ -1,0 +1,72 @@
+// Import generic styles.
+@use "../../../scss/core" as *;
+
+.banner-with-bg {
+  @extend %breakContainer;
+  padding: 3rem 0;
+  background-color: transparent;
+}
+
+.banner-with-bg__inner {
+  @extend %content-container;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: $tab) {
+    //flex-direction: row;
+  }
+  gap: 1rem;
+}
+
+.banner-with-bg__heading {
+  @extend %h2;
+  color: $color-gray-900;
+}
+
+.banner-with-bg__subheading {
+  margin: 0;
+  font-size: to-rem(18);
+  color: $color-primary-dark;
+}
+
+.banner-with-bg__description {
+  margin-top: 0.5rem;
+  color: $color-primary-dark;
+}
+
+.banner-with-bg--light {
+  background-color: $color-gray-100;
+}
+
+.banner-with-bg--dark {
+  background-color: $color-primary-dark;
+}
+
+.banner-with-bg--primary {
+  background-color: $primary-color;
+}
+
+.banner-with-bg--secondary {
+  background-color: $secondary-color;
+}
+
+.banner-with-bg--dark,
+.banner-with-bg--primary,
+.banner-with-bg--secondary {
+  .banner-with-bg__heading,
+  .banner-with-bg__subheading,
+  .banner-with-bg__description,
+  a {
+    color: $color-white;
+  }
+}
+
+@media (min-width: $tab) {
+  .banner-with-bg__inner {
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .banner-with-bg__subheading {
+    font-size: to-rem(20);
+  }
+}

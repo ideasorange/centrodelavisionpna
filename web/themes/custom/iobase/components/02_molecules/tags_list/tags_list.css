@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sora:wght@100..800&display=swap");
+.tags-list {
+  box-sizing: border-box;
+  max-width: 100%;
+  font-family: "Rubik", sans-serif;
+}
+.tags-list__label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #3C4A57;
+}
+.tags-list__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.tags-list__item {
+  margin: 0;
+}
+.tags-list__tag {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #000000;
+  text-align: center;
+  background: #FFFFFF;
+  border: 1px solid #E6EDF3;
+  border-radius: 999px;
+}
+.tags-list__tag--link {
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+}
+.tags-list__tag--link:hover {
+  color: #134E75;
+  border-color: #C8D4E0;
+  background-color: #F7F9FB;
+}
+.tags-list__tag--link:focus-visible {
+  outline: 2px solid #1E6FA8;
+  outline-offset: 2px;
+}
+/*# sourceMappingURL=tags_list.css.map */

@@ -1,0 +1,12 @@
+uuid: 5289c8f1-c1ed-4ad2-ae5c-b2a01d404b0b
+langcode: es
+status: true
+dependencies: {  }
+id: node_full_body_wrapper
+label: 'node full body wrapper'
+classes: node-full-layout__body
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

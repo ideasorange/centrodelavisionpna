@@ -1,0 +1,46 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Hero Banner Front
+status: stable
+description: Hero banner for the front page with heading, description, image and CTA slot.
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - core/once
+props:
+  type: object
+  required:
+    - heading
+  properties:
+    eyebrow:
+      type: string
+      title: Eyebrow
+      description: Small text above the heading (e.g. "Welcome", "Discover").
+    heading:
+      type: string
+      title: Heading
+      description: Main heading text (H1).
+    description:
+      type: string
+      title: Description
+      description: Supporting paragraph text.
+    main_image:
+      type: object
+      title: Main Image
+      description: Hero image displayed on the right side.
+      properties:
+        src:
+          type: string
+          title: Image URL
+          description: URL to the image (e.g. /sites/default/files/hero.png).
+        alt:
+          type: string
+          title: Alt text
+          description: Alternative text for accessibility.
+    background_color:
+      type: string
+      title: Background Color
+      description: Optional background color (CSS value). Defaults to light gray.
+slots:
+  cta:
+    title: CTA
+    description: Slot for one or more CTA components.

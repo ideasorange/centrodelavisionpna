@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sora:wght@100..800&display=swap");
+.banner-with-bg__heading {
+  font-family: "Albert Sans", sans-serif;
+  font-weight: 700;
+  margin: 0 0 0.5em;
+}
+
+.banner-with-bg__heading {
+  font-size: 2.25rem;
+  line-height: 2.1875rem;
+}
+@media (min-width: 1230px) {
+  .banner-with-bg__heading {
+    font-size: 3rem;
+    line-height: 2.5rem;
+  }
+}
+
+.banner-with-bg__inner {
+  max-width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.banner-with-bg {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.banner-with-bg {
+  padding: 3rem 0;
+  background-color: transparent;
+}
+
+.banner-with-bg__inner {
+  display: flex;
+  flex-direction: column;
+}
+.banner-with-bg__inner {
+  gap: 1rem;
+}
+
+.banner-with-bg__heading {
+  color: #1F2A33;
+}
+
+.banner-with-bg__subheading {
+  margin: 0;
+  font-size: 1.125rem;
+  color: #134E75;
+}
+
+.banner-with-bg__description {
+  margin-top: 0.5rem;
+  color: #134E75;
+}
+
+.banner-with-bg--light {
+  background-color: #F7F9FB;
+}
+
+.banner-with-bg--dark {
+  background-color: #134E75;
+}
+
+.banner-with-bg--primary {
+  background-color: #1E6FA8;
+}
+
+.banner-with-bg--secondary {
+  background-color: #2BB3A3;
+}
+
+.banner-with-bg--dark .banner-with-bg__heading,
+.banner-with-bg--dark .banner-with-bg__subheading,
+.banner-with-bg--dark .banner-with-bg__description,
+.banner-with-bg--dark a,
+.banner-with-bg--primary .banner-with-bg__heading,
+.banner-with-bg--primary .banner-with-bg__subheading,
+.banner-with-bg--primary .banner-with-bg__description,
+.banner-with-bg--primary a,
+.banner-with-bg--secondary .banner-with-bg__heading,
+.banner-with-bg--secondary .banner-with-bg__subheading,
+.banner-with-bg--secondary .banner-with-bg__description,
+.banner-with-bg--secondary a {
+  color: #FFFFFF;
+}
+
+@media (min-width: 768px) {
+  .banner-with-bg__inner {
+    gap: 1rem;
+    text-align: center;
+  }
+  .banner-with-bg__subheading {
+    font-size: 1.25rem;
+  }
+}
+/*# sourceMappingURL=banner_with_bg.css.map */

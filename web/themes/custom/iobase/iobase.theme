@@ -1,0 +1,169 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming.
+ */
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function iobase_page_attachments_alter(array &$attachments): void {
+  $attachments['#attached']['html_head_link'][] = [
+    [
+      'rel' => 'preconnect',
+      'href' => 'https://fonts.googleapis.com',
+    ],
+  ];
+  $attachments['#attached']['html_head_link'][] = [
+    [
+      'rel' => 'preconnect',
+      'href' => 'https://fonts.gstatic.com',
+      'crossorigin' => 'anonymous',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_breadcrumb().
+ */
+function iobase_preprocess_breadcrumb(array &$variables): void {
+  $variables['#attached']['library'][] = 'iobase/breadcrumbs-sdc';
+}
+
+/**
+ * Implements hook_preprocess_image_widget().
+ */
+function iobase_preprocess_image_widget(array &$variables): void {
+  $data = &$variables['data'];
+
+  // This prevents image widget templates from rendering preview container HTML
+  // to users that do not have permission to access these previews.
+  // @todo revisit in https://drupal.org/node/953034
+  // @todo revisit in https://drupal.org/node/3114318
+  if (isset($data['preview']['#access']) && $data['preview']['#access'] === FALSE) {
+    unset($data['preview']);
+  }
+}
+
+/**
+ * Implements hook_preprocess_menu().
+ */
+function iobase_preprocess_menu__main(array &$variables): void
+{
+  $items = $variables["items"];
+
+  $variables['array_for_sdc'] = processNestedArray($items);
+}
+
+/**
+ * Process a nested array structure recursively
+ *
+ * @param array $items The input array to process
+ * @return array
+ */
+function processNestedArray($items): array
+{
+  $result = [];
+  $current_path = \Drupal::service('path.current')->getPath(); // Get the current path
+
+  // Get the front page path from configuration
+  $front_page = \Drupal::config('system.site')->get('page.front');
+
+  foreach ($items as $item) {
+    $newItem = [
+      'title' => $item['title'] ?? '',
+      'url' => $item['url']?->toString() ?? '#',
+      // 'target' => '__self',
+      'class' => '',
+    ];
+
+    // Add 'active' class if the menu item is in the active trail
+    if (!empty($item['in_active_trail'])) {
+      $newItem['class'] = 'active';
+    }
+
+    // Add active class if the menu item's URL matches the current path
+    if (!empty($item['url']) && $item['url']->toString() === $current_path) {
+      $newItem['class'] = 'active';
+    }
+
+    // Ensure Home is active only when on the front page
+    if (($current_path === '/' || $current_path === $front_page) && ($item['url']?->toString() === '/' || $item['url']?->toString() === $front_page)) {
+      $newItem['class'] = 'active';
+    }
+
+    // Process children recursively if they exist
+    if (!empty($item['below']) && is_array($item['below'])) {
+      $newItem['children'] = processNestedArray($item['below']);
+    }
+
+    $result[] = $newItem;
+  }
+
+  return $result;
+}
+
+/**
+ * Implements hook_theme_suggestions_input_alter().
+ */
+function iobase_theme_suggestions_input_alter(array &$suggestions, array $variables, string $base_theme_hook): void {
+  $element = $variables['element'] ?? [];
+  if (($element['#type'] ?? '') !== 'submit') {
+    return;
+  }
+  $classes = $element['#attributes']['class'] ?? [];
+  if (!is_array($classes)) {
+    $classes = [$classes];
+  }
+  if (in_array('webform-button--submit', $classes, TRUE)) {
+    $suggestions[] = 'input__submit__webform';
+  }
+}
+
+/**
+ * Implements hook_preprocess_webform().
+ */
+function iobase_preprocess_webform(&$variables)
+{
+  // Verified your webform ID
+  if ($variables['element']['#webform_id'] === 'contact') {
+    $variables['#attached']['library'][] = 'iobase/webform-contact';
+  }
+
+  if ($variables['element']['#webform_id'] === 'comentarios') {
+    $variables['#attached']['library'][] = 'iobase/webform-comments';
+  }
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function iobase_preprocess_node(&$variables)
+{
+  // Only view_mode verification
+  if ($variables['view_mode'] === 'teaser') {
+    $variables['#attached']['library'][] = 'iobase/card-teaser';
+  }
+  if ($variables['view_mode'] === 'title') {
+    $variables['#attached']['library'][] = 'iobase/card-title';
+  }
+}
+
+/**
+ * Implements hook_preprocess_views_view().
+ */
+function iobase_preprocess_views_view(&$variables)
+{
+  $view = $variables['view'];
+
+  // VerificationID of display
+  if ($view->current_display === 'block_specialties_teaser' || 'page_specialties' ) {
+    // Attach "block-card" librarie
+    $variables['#attached']['library'][] = 'iobase/blockcard-teaser';
+  }
+  if ($view->current_display === 'block_specialties_title') {
+    // Attach "block-card" librarie
+    $variables['#attached']['library'][] = 'iobase/blockcard-title';
+  }
+}

@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sora:wght@100..800&display=swap");
+.views-view-responsive-grid--horizontal {
+  align-items: stretch;
+}
+.views-view-responsive-grid--horizontal > .views-view-responsive-grid__item {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+.views-view-responsive-grid--horizontal > .views-view-responsive-grid__item > .views-view-responsive-grid__item-inner:has(.card-article) {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+.views-view-responsive-grid--horizontal > .views-view-responsive-grid__item > .views-view-responsive-grid__item-inner:has(.card-article) > .card-article {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+/*# sourceMappingURL=views-responsive-grid.css.map */

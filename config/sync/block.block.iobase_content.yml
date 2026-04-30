@@ -1,0 +1,22 @@
+uuid: 8c6f3791-955a-4b78-80e5-9528f26b395a
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - iobase
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: iobase_content
+theme: iobase
+region: content
+weight: -6
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Contenido principal de la página'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,25 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Menu Item
+status: stable
+description: Menu item
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: Title
+      description: Item title
+      # @todo Add examples here.
+      examples: []
+    url:
+      type: string
+      title: URL
+      description: Item url
+      # @todo Add examples here.
+      examples: []
+    active:
+      type: string
+      title: Active
+      description: Item status
+      # @todo Add examples here.
+      examples: []

@@ -1,0 +1,30 @@
+{#
+ * Professional Block – heading + responsive list of cards.
+ #}
+{% set base_class = 'grid-cards-block' %}
+{% set section_attributes = attributes ? attributes.addClass(base_class) : create_attribute().addClass(base_class) %}
+
+<section {{ section_attributes }}>
+  <div class="{{ base_class }}__inner">
+    <div class="{{ base_class }}__header">
+      {% if heading %}
+        <header class="{{ base_class }}__heading-container">
+          <h2 class="{{ base_class }}__heading">{{ heading }}</h2>
+        </header> 
+      {% endif %}
+      {% if cta_text and cta_url %} 
+        <div class="{{ base_class }}__cta-container">
+          {{ include('iobase:cta', {
+            title: cta_text,
+            url: cta_url,
+            target: cta_target,
+          }) }}
+        </div>
+      {% endif %}
+    </div>
+    <div class="{{ base_class }}__section" role="list">
+      {% block items %}{% endblock %}
+    </div>
+  </div>
+</section>
+

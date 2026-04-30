@@ -1,0 +1,27 @@
+uuid: 72ca1407-aeee-4b56-840e-5c601833a8ea
+langcode: es
+status: false
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - iobase
+_core:
+  default_config_hash: KWAiziL39uEzmOJEql_wbUP2RtqGceL3WM2CfxhMelE
+id: iobase_main_menu
+theme: iobase
+region: header
+weight: -4
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Navegación principal'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 2
+  expand_all_items: true
+visibility: {  }

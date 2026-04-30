@@ -1,0 +1,28 @@
+// Import generic styles.
+@use "../../core" as *;
+
+// Equal-height cells for Views "Responsive grid" style + card_article (and similar
+// full-height children). Core grid stretches the __ item box, but __item-inner
+// defaults to content height unless we run a flex column to the card.
+
+.views-view-responsive-grid--horizontal {
+  align-items: stretch;
+
+  > .views-view-responsive-grid__item {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  > .views-view-responsive-grid__item > .views-view-responsive-grid__item-inner:has(.card-article) {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+
+    > .card-article {
+      flex: 1 1 auto;
+      min-height: 0;
+    }
+  }
+}

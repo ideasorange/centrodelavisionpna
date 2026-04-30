@@ -1,0 +1,22 @@
+uuid: eec3edc9-882f-4850-9b23-59fdbfe7c250
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: specialties
+label: 'Node Pattern Specialties'
+type: 'canonical_entities:node'
+pattern: '/especialidades/[node:title]'
+selection_criteria:
+  533ff828-f3b7-4749-97cf-7852783db9d0:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 533ff828-f3b7-4749-97cf-7852783db9d0
+    context_mapping:
+      node: node
+    bundles:
+      specialty: specialty
+selection_logic: and
+weight: -5
+relationships: {  }

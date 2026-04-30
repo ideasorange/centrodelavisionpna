@@ -1,0 +1,80 @@
+// Import generic styles.
+@use "../../../scss/core" as *;
+
+.generic-2cols {
+  @extend %breakContainer;
+  background-color: var(--generic-2cols-bg, #F1FCF9);
+  
+
+  &__inner {
+    //@extend %content-container;
+    height: 100%;    
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1rem;
+
+    @media (min-width: $tab) {
+      gap: 3rem;
+    }
+  }
+
+  &__title {
+    font-family: $secondary-font-family;
+    font-size: to-rem(28);
+    font-weight: 700;
+    color: $color-gray-900;
+    margin: 0 0 0.75rem;
+
+    @media (min-width: $desk) {
+      font-size: to-rem(32);
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    overflow: hidden;
+  }
+
+  &__right {
+    overflow: hidden;
+    // background-color: $color-white;
+    // border-radius: 0.75rem;
+    // box-shadow: 0 12px 30px rgba($color-gray-900, 0.08);
+    // padding: 1.5rem;
+    
+
+    // @media (min-width: $tab) {
+    //   padding: 2rem;
+    //   margin-top: 5rem;
+    //   margin-bottom: 5rem;
+    //   max-width: 460px;
+    // }
+  }
+
+
+  /* Background variants (can be overridden by --form-contact-bg inline style) */
+  &--bg-none {
+    --generic-2cols-bg: transparent;
+  }
+
+  &--bg-mint {
+    --generic-2cols-bg: #F1FCF9;
+  }
+
+  &--bg-white {
+    --generic-2cols-bg: #FFFFFF;
+  }
+
+  &--bg-light {
+    --generic-2cols-bg: #{$color-gray-100};
+  }
+
+  &--bg-dark {
+    --generic-2cols-bg: #{$color-gray-900};
+  }
+}

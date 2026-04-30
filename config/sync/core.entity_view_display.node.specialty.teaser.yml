@@ -1,0 +1,134 @@
+uuid: d6c23760-896d-4250-829d-2350f50f109b
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.specialty.field_body
+    - field.field.node.specialty.field_icon
+    - node.type.specialty
+  module:
+    - layout_builder
+    - layout_discovery
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Contenido
+          context_mapping: {  }
+          layout_builder_styles_style:
+            specialty_card_wrapper: specialty_card_wrapper
+        components:
+          72a734c3-4725-425c-b72d-c806b0cae8be:
+            uuid: 72a734c3-4725-425c-b72d-c806b0cae8be
+            region: content
+            configuration:
+              id: 'field_block:node:specialty:field_icon'
+              label: Icon
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: thumbnail
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 11
+            additional:
+              layout_builder_styles_style:
+                card_teaser_icon_wrapper: card_teaser_icon_wrapper
+                card_teaser_body_wrapper: 0
+                card_teaser_fields_wrapper: 0
+                card_teaser_link_wrapper: 0
+          6902ef88-b2ff-4682-924f-d87e5eb86a6f:
+            uuid: 6902ef88-b2ff-4682-924f-d87e5eb86a6f
+            region: content
+            configuration:
+              id: 'field_block:node:specialty:title'
+              label: Título
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 12
+            additional:
+              layout_builder_styles_style:
+                card_teaser_fields_wrapper: card_teaser_fields_wrapper
+                card_teaser_body_wrapper: 0
+                card_teaser_icon_wrapper: 0
+                card_teaser_link_wrapper: 0
+          ad879637-0a25-45d2-a73e-5db574ca915c:
+            uuid: ad879637-0a25-45d2-a73e-5db574ca915c
+            region: content
+            configuration:
+              id: 'field_block:node:specialty:field_body'
+              label: Descripción
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_summary_or_trimmed
+                label: hidden
+                settings:
+                  trim_length: 200
+                third_party_settings: {  }
+            weight: 13
+            additional:
+              layout_builder_styles_style:
+                card_teaser_body_wrapper: card_teaser_body_wrapper
+                card_teaser_fields_wrapper: 0
+                card_teaser_icon_wrapper: 0
+                card_teaser_link_wrapper: 0
+                card_title_title_wrapper: 0
+          7d8a59ab-b6a2-4c33-964a-1add28392e06:
+            uuid: 7d8a59ab-b6a2-4c33-964a-1add28392e06
+            region: content
+            configuration:
+              id: 'extra_field_block:node:specialty:links'
+              label: 'Leer mas'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                settings: {  }
+                third_party_settings: {  }
+            weight: 14
+            additional:
+              layout_builder_styles_style:
+                card_teaser_link_wrapper: card_teaser_link_wrapper
+                card_teaser_body_wrapper: 0
+                card_teaser_fields_wrapper: 0
+                card_teaser_icon_wrapper: 0
+        third_party_settings: {  }
+id: node.specialty.teaser
+targetEntityType: node
+bundle: specialty
+mode: teaser
+content: {  }
+hidden:
+  breadcrumbs: true
+  field_body: true
+  field_icon: true
+  langcode: true
+  links: true

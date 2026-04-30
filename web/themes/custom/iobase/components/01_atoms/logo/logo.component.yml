@@ -1,0 +1,19 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Brand logo
+status: stable
+description: Brand logo component
+props:
+  type: object
+  properties:
+    image:
+      type: string
+      title: image url
+      description: Logo image url
+      # @todo Add examples here.
+      examples: []
+    alt:
+      type: string
+      title: alt
+      description: Alt image property
+      # @todo Add examples here.
+      examples: []

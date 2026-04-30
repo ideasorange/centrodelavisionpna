@@ -1,0 +1,38 @@
+@use "variables" as *;
+
+html {
+  scroll-behavior: smooth;
+}
+
+html body {
+  color: $color-black-01;
+  font-family: $base-font-family;
+  font-size: to-rem($base-font-size);
+  font-weight: 400;
+  line-height: $base-line-height;
+  margin: 0;
+  scroll-behavior: smooth;
+
+  &::selection,
+  &::-moz-selection {
+    color: white;
+    background: $gradient-01;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  a {
+    color: $primary-color;
+    text-decoration: none;
+    transition: all $duration;
+    cursor: pointer;
+    outline: none;
+
+    &:focus,
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

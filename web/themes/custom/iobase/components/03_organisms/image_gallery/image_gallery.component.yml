@@ -1,0 +1,82 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Image gallery
+status: stable
+description: Building / facility image gallery with Splide main carousel and synced thumbnail strip. Up to 10 images as plain URL + alt text (UI Patterns friendly).
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - core/once
+    - iobase/splide
+props:
+  type: object
+  properties:
+    heading:
+      type: string
+      title: Heading
+      description: Main section title displayed above the gallery.
+    subheading:
+      type: string
+      title: Subheading
+      description: Supporting text below the heading.
+    image_1_url:
+      type: string
+      title: 'Image 1 — URL'
+      description: 'Full URL or site path, e.g. /sites/default/files/gallery/photo1.jpg'
+    image_1_alt:
+      type: string
+      title: 'Image 1 — Alt text'
+      description: Short description for accessibility.
+    image_2_url:
+      type: string
+      title: 'Image 2 — URL'
+    image_2_alt:
+      type: string
+      title: 'Image 2 — Alt text'
+    image_3_url:
+      type: string
+      title: 'Image 3 — URL'
+    image_3_alt:
+      type: string
+      title: 'Image 3 — Alt text'
+    image_4_url:
+      type: string
+      title: 'Image 4 — URL'
+    image_4_alt:
+      type: string
+      title: 'Image 4 — Alt text'
+    image_5_url:
+      type: string
+      title: 'Image 5 — URL'
+    image_5_alt:
+      type: string
+      title: 'Image 5 — Alt text'
+    image_6_url:
+      type: string
+      title: 'Image 6 — URL'
+    image_6_alt:
+      type: string
+      title: 'Image 6 — Alt text'
+    image_7_url:
+      type: string
+      title: 'Image 7 — URL'
+    image_7_alt:
+      type: string
+      title: 'Image 7 — Alt text'
+    image_8_url:
+      type: string
+      title: 'Image 8 — URL'
+    image_8_alt:
+      type: string
+      title: 'Image 8 — Alt text'
+    image_9_url:
+      type: string
+      title: 'Image 9 — URL'
+    image_9_alt:
+      type: string
+      title: 'Image 9 — Alt text'
+    image_10_url:
+      type: string
+      title: 'Image 10 — URL'
+    image_10_alt:
+      type: string
+      title: 'Image 10 — Alt text'

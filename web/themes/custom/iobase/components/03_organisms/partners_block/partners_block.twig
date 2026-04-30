@@ -1,0 +1,26 @@
+<section {{ attributes.addClass('partners-block') }}>
+  <div class="partners-block__inner">
+    {% if heading or subheading %}
+      <header class="partners-block__header">
+        {% if heading %}
+          <h2 class="partners-block__heading">{{ heading }}</h2>
+        {% endif %}
+        {% if subheading %}
+          <p class="partners-block__subheading">{{ subheading }}</p>
+        {% endif %}
+      </header>
+    {% endif %}
+
+    <div class="partners-block__grid" role="list">
+      {% block items %}{% endblock %}
+    </div>
+
+    {% if cta and cta.label and cta.url %}
+      <div class="partners-block__cta">
+        <a class="partners-block__cta-link" href="{{ cta.url }}">
+          {{ cta.label }}
+        </a>
+      </div>
+    {% endif %}
+  </div>
+</section>

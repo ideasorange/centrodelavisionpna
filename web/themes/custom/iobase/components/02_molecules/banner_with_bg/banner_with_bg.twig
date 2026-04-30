@@ -1,0 +1,20 @@
+{% set classes = ['banner-with-bg'] %}
+{% if background_variant and background_variant != 'none' %}
+  {% set classes = classes|merge(['banner-with-bg--' ~ background_variant]) %}
+{% endif %}
+
+<section {{ attributes.addClass(classes) }}>
+  <div class="banner-with-bg__inner">
+    {% if heading %}
+      <h2 class="banner-with-bg__heading">{{ heading }}</h2>
+    {% endif %}
+
+    {% if subheading %}
+      <p class="banner-with-bg__subheading">{{ subheading }}</p>
+    {% endif %}
+
+    <div class="banner-with-bg__description">
+      {% block description %}{% endblock %}
+    </div>
+  </div>
+</section>

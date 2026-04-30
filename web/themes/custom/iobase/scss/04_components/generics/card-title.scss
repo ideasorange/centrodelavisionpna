@@ -1,0 +1,37 @@
+// scss/04_components/generics/card-title.scss
+// Import generic styles.
+@use "../../core" as *;
+
+.cardtitle {
+    width: 100%;
+    max-width: 100%;
+
+        
+    &__title {
+        width: 100%;
+        max-width: 100%;
+        
+        @media (min-width: $tab) {
+            font-size: 1.3rem;
+            }
+        
+        * {
+            display: block;
+            width: 100%;
+        }
+    
+        a {
+            // line-height: 1.2;
+            font-weight: 500;
+            padding: 1rem 0;
+            color: #56616d;
+            
+            &:hover, &:focus {
+                text-decoration: none;
+                color: #1E6FA8;
+            }
+    }
+    }
+    
+
+}

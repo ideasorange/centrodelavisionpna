@@ -1,0 +1,226 @@
+uuid: 4312654e-a431-438d-9a1f-25b6cd052ad9
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+    - ui_patterns
+    - ui_patterns_blocks
+  theme:
+    - iobase
+id: iobase_bannerwithbackground
+theme: iobase
+region: content
+weight: -4
+provider: null
+plugin: 'ui_patterns:iobase:banner_with_bg'
+settings:
+  id: 'ui_patterns:iobase:banner_with_bg'
+  label: 'Banner With Background'
+  label_display: '0'
+  provider: ui_patterns_blocks
+  ui_patterns:
+    component_id: 'iobase:banner_with_bg'
+    variant_id: null
+    props:
+      attributes:
+        source_id: attributes
+        source:
+          value: ''
+      heading:
+        source_id: textfield
+        source:
+          value: '10 años mejorando la salud visual de nuestros pacientes'
+      subheading:
+        source_id: textfield
+        source:
+          value: 'En estos 10 años hemos consolidado un equipo profesional capaz de brindar un servicio de salud oftalmologica de calidad '
+      background_variant:
+        source_id: select
+        source:
+          value: primary
+    slots:
+      description:
+        sources:
+          -
+            source_id: component
+            source:
+              component:
+                component_id: 'iobase:slide_autoscroll'
+                variant_id: null
+                props:
+                  attributes:
+                    source_id: attributes
+                    source:
+                      value: ''
+                  heading:
+                    source_id: textfield
+                    source:
+                      value: ''
+                  subheading:
+                    source_id: textfield
+                    source:
+                      value: ''
+                slots:
+                  scrolling_content:
+                    sources:
+                      4:
+                        source_id: component
+                        source:
+                          component:
+                            component_id: 'iobase:opinion_card'
+                            variant_id: null
+                            props:
+                              attributes:
+                                source_id: attributes
+                                source:
+                                  value: ''
+                              full_name:
+                                source_id: textfield
+                                source:
+                                  value: 'Carlos Rigoni '
+                              opinion:
+                                source_id: textfield
+                                source:
+                                  value: 'Desde que me opere, mi vida cambio, gracias al equipo'
+                              svg_url:
+                                source_id: textfield
+                                source:
+                                  value: /sites/default/files/opinion.svg
+                              stars:
+                                source_id: textfield
+                                source:
+                                  value: ★★★★★
+                              appearance:
+                                source_id: select
+                                source:
+                                  value: transparent
+                            slots: {  }
+                            third_party_settings: ''
+                            node_id: ''
+                        _weight: '4'
+                        node_id: ''
+                        third_party_settings: ''
+                      5:
+                        source_id: component
+                        source:
+                          component:
+                            component_id: 'iobase:opinion_card'
+                            variant_id: null
+                            props:
+                              attributes:
+                                source_id: attributes
+                                source:
+                                  value: ''
+                              full_name:
+                                source_id: textfield
+                                source:
+                                  value: 'Mariana Cardozo'
+                              opinion:
+                                source_id: textfield
+                                source:
+                                  value: 'Gracias a los doctores por la atencion y calidad !'
+                              svg_url:
+                                source_id: textfield
+                                source:
+                                  value: /sites/default/files/opinion.svg
+                              stars:
+                                source_id: textfield
+                                source:
+                                  value: ★★★★★
+                              appearance:
+                                source_id: select
+                                source:
+                                  value: transparent
+                            slots: {  }
+                            third_party_settings: ''
+                            node_id: ''
+                        _weight: '5'
+                        node_id: ''
+                        third_party_settings: ''
+                      6:
+                        source_id: component
+                        source:
+                          component:
+                            component_id: 'iobase:opinion_card'
+                            variant_id: null
+                            props:
+                              attributes:
+                                source_id: attributes
+                                source:
+                                  value: ''
+                              full_name:
+                                source_id: textfield
+                                source:
+                                  value: 'Estella Diaz'
+                              opinion:
+                                source_id: textfield
+                                source:
+                                  value: 'Excelente atencion y calidad.'
+                              svg_url:
+                                source_id: textfield
+                                source:
+                                  value: /sites/default/files/opinion.svg
+                              stars:
+                                source_id: textfield
+                                source:
+                                  value: ★★★★★
+                              appearance:
+                                source_id: select
+                                source:
+                                  value: transparent
+                            slots: {  }
+                            third_party_settings: ''
+                            node_id: ''
+                        _weight: '6'
+                        node_id: ''
+                        third_party_settings: ''
+                      7:
+                        source_id: component
+                        source:
+                          component:
+                            component_id: 'iobase:opinion_card'
+                            variant_id: null
+                            props:
+                              attributes:
+                                source_id: attributes
+                                source:
+                                  value: ''
+                              full_name:
+                                source_id: textfield
+                                source:
+                                  value: 'Inés Colombatti'
+                              opinion:
+                                source_id: textfield
+                                source:
+                                  value: 'Realmente tienen un gran equipo médico y un servicio administrativo que me ha sorprendido gratamente. Felicitaciones por todos los servicios ofrecidos.'
+                              svg_url:
+                                source_id: textfield
+                                source:
+                                  value: /sites/default/files/opinion.svg
+                              stars:
+                                source_id: textfield
+                                source:
+                                  value: ★★★★★
+                              appearance:
+                                source_id: select
+                                source:
+                                  value: transparent
+                            slots: {  }
+                            third_party_settings: ''
+                            node_id: ''
+                        _weight: '7'
+                        node_id: ''
+                        third_party_settings: ''
+                third_party_settings: ''
+                node_id: ''
+            _weight: '0'
+            node_id: ''
+            third_party_settings: ''
+    third_party_settings: ''
+    node_id: ''
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

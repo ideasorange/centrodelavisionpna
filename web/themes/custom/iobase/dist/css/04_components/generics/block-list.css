@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+.block-card-tite {
+  max-width: 100%;
+}
+.block-card-tite__title {
+  line-height: normal;
+}
+@media (min-width: 768px) {
+  .block-card-tite__title {
+    font-size: 2.5rem;
+    max-width: 30vw;
+  }
+}
+.block-card-tite .view-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+.block-card-tite__cardteaser-wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+/*# sourceMappingURL=block-list.css.map */

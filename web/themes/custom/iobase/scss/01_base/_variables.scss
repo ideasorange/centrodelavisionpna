@@ -1,0 +1,164 @@
+// ------------------------------------------
+// Functions
+// ------------------------------------------
+
+// To rem function.
+@function to-rem($size) {
+  $calc: calc($size / $base-font-size);
+  $rem-size: $calc  + rem;
+  @return #{$rem-size};
+}
+
+// Font sizes responsive.
+@mixin font-size($mob, $desktop: $mob) {
+  // Mobile
+  font-size: to-rem($mob);
+
+  @media (min-width: $desk) {
+    // desktop
+    font-size: to-rem($desktop);
+  }
+}
+
+@mixin line-height($mob, $desktop: $mob) {
+  // Mobile
+  line-height: to-rem($mob);
+
+  @media (min-width: $desk) {
+    // desktop
+    line-height: to-rem($desktop);
+  }
+}
+
+// ------------------------------------------
+// Colors
+// ------------------------------------------
+
+// Primary Brand Colors
+$color-primary: #1E6FA8;      // Azul institucional principal
+$color-primary-light: #4A95C9;
+$color-primary-dark: #134E75;
+
+// Secondary Colors
+$color-secondary: #2BB3A3;    // Verde/teal médico
+$color-secondary-light: #6ED1C5;
+$color-secondary-dark: #1C857A;
+
+// Neutral Colors
+$color-white: #FFFFFF;
+$color-gray-100: #F7F9FB;
+$color-gray-200: #E6EDF3;
+$color-gray-300: #C8D4E0;
+$color-gray-500: #6B7A89;
+$color-gray-700: #3C4A57;
+$color-gray-900: #1F2A33;
+
+// Functional Colors
+$color-success: #3CB371;
+$color-warning: #F4B942;
+$color-danger: #E0565B;
+$color-info: #3A8DFF;
+$color-black: #000000;
+$color-black-01: #000000;
+
+// Backgrounds
+$bg-primary: $color-white;
+$bg-secondary: $color-gray-100;
+$bg-accent: #EDF6FB;
+
+// Text
+$text-primary: $color-gray-900;
+$text-secondary: $color-gray-500;
+$text-on-primary: #FFFFFF;
+
+// Borders
+$border-light: $color-gray-200;
+$border-default: $color-gray-300;
+
+// Gradient
+$gradient-01: linear-gradient(270deg, $color-primary 52.66%, $color-primary-light 70.97%);
+$gradient-02: linear-gradient(180deg, $color-primary-dark 1.04%, $color-primary 70.75%);
+$gradient-03: linear-gradient(180deg, $color-primary-dark 0%, $color-primary 70%);
+$gradient-04: linear-gradient(270deg, $color-primary-dark 20%, $color-primary 100%);
+
+// Base colors
+$primary-color:  $color-primary;
+$secondary-color: $color-secondary;
+// ------------------------------------------
+// Breakpoints
+// ------------------------------------------
+$mob: 320px;
+$mob-lg: 400px;
+$tab: 768px;
+$desk: 1230px;
+$max: 1336px;
+
+// ------------------------------------------
+// Various
+// ------------------------------------------
+// Image path
+$image_base_path: '/themes/custom/iobase/images/';
+
+// Animations
+$duration: .4s;
+
+// Gutter
+$gutter: 15px;
+
+// ------------------------------------------
+// Fonts
+// ------------------------------------------
+$base-font-family: 'Rubik', sans-serif;
+$secondary-font-family: 'Albert Sans', sans-serif;
+$base-font-size: 16;
+$base-line-height: 1.5;
+
+// ------------------------------------------
+// Headings
+// ------------------------------------------
+
+%h1, %h2, %h3 {
+  font-family: $secondary-font-family;
+  font-weight: 700;
+  margin: 0 0 0.5em;
+}
+
+%h1 {
+  font-size: to-rem(58);
+  line-height: to-rem(45);
+
+  @media (min-width: $desk) {
+    font-size: to-rem(40);
+    line-height: to-rem(50);
+  }
+}
+
+%h2 {
+  font-size: to-rem(36);
+  line-height: to-rem(35);
+
+  @media (min-width: $desk) {
+    font-size: to-rem(48);
+    line-height: to-rem(40);
+  }
+}
+
+%h3 {
+  font-size: to-rem(20);
+  line-height: to-rem(25);
+
+  @media (min-width: $desk) {
+    font-size: to-rem(24);
+    line-height: 1;
+  }
+}
+
+%h4 {
+  font-size: to-rem(18);
+  line-height: 1;
+
+  @media (min-width: $desk) {
+    font-size: to-rem(20);
+  }
+}
+

@@ -1,0 +1,85 @@
+uuid: 1de2eacc-ee6e-4716-85b6-19fb484d97b2
+langcode: es
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+  module:
+    - ui_patterns
+    - ui_patterns_blocks
+  theme:
+    - iobase
+id: iobase_ctablock
+theme: iobase
+region: content
+weight: 0
+provider: null
+plugin: 'ui_patterns:iobase:cta_block'
+settings:
+  id: 'ui_patterns:iobase:cta_block'
+  label: 'CTA Block'
+  label_display: '0'
+  provider: ui_patterns_blocks
+  ui_patterns:
+    component_id: 'iobase:cta_block'
+    variant_id: null
+    props:
+      attributes:
+        source_id: attributes
+        source:
+          value: ''
+      title:
+        source_id: textfield
+        source:
+          value: 'Quiero mi turno'
+      color:
+        source_id: textfield
+        source:
+          value: '#1E6FA8'
+    slots:
+      content:
+        sources:
+          -
+            source_id: wysiwyg
+            source:
+              value:
+                value: '<h3>Nuestros horarios de atencion !&nbsp;</h3><ul><li data-list-item-id="ed33f954bc17b4ca573c2b5c33d87ecaf">Lunes a Viernes: 08:00 - 18:00&nbsp;</li><li data-list-item-id="e867aec2d4bccca0ffb4ef1f9080e0934">Sábados: 08:00 - 13:00&nbsp;</li><li data-list-item-id="e86067ad56f472958d88082155eef773d">Domingos: Cerrado</li></ul><h3>Dirección</h3><ul><li data-list-item-id="e80e20e8fdb707fb52282943865a463de">Urquiza 1234, Paraná, Entre Ríos</li><li data-list-item-id="efccfe9d1e669441239a5d4e1b83105b0"><p>Malvinas 91, Paraná, Entre Ríos</p><p>&nbsp;</p></li></ul>'
+                format: full_html
+            _weight: '0'
+            node_id: ''
+            third_party_settings: ''
+          -
+            source_id: component
+            source:
+              component:
+                component_id: 'iobase:cta_whatsapp'
+                variant_id:
+                  source_id: select
+                  source:
+                    value: primary
+                props:
+                  attributes:
+                    source_id: attributes
+                    source:
+                      value: ''
+                  label:
+                    source_id: textfield
+                    source:
+                      value: 'Turno por Whatsapp'
+                  phone_number:
+                    source_id: textfield
+                    source:
+                      value: '5493434582274'
+                  pre_message:
+                    source_id: textfield
+                    source:
+                      value: 'Hola quiero solicitar un turno'
+                slots: {  }
+                third_party_settings: ''
+                node_id: ''
+            _weight: '1'
+            node_id: ''
+            third_party_settings: ''
+    third_party_settings: ''
+    node_id: ''
+visibility: {  }

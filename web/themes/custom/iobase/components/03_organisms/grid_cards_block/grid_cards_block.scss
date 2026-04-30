@@ -1,0 +1,43 @@
+// Import generic styles.
+@use "../../../scss/core" as *;
+
+.grid-cards-block {
+  @extend %breakContainer;
+  padding: 6rem 0;
+}
+
+.grid-cards-block__inner {
+  @extend %content-container;
+}
+
+.grid-cards-block__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 2rem;
+  @media (min-width: $tab) {
+    flex-direction: row;
+    align-items: center;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+.grid-cards-block__heading {
+  @extend %h2;
+}
+
+.grid-cards-block__section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+
+  // View/UI Patterns wrappers: stretch so card-article height:100% fills the row.
+  > * {
+    min-height: 0;
+    height: 100%;
+  }
+}

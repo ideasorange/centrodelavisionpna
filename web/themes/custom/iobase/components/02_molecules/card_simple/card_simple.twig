@@ -1,0 +1,31 @@
+{#
+ * Card Simple – title, description, and image.
+ #}
+{% set base_class = 'card-simple' %}
+{% set card_attributes = attributes ? attributes.addClass(base_class) : create_attribute().addClass(base_class) %}
+
+<article {{ card_attributes }}>
+  <div class="{{ base_class }}__inner">
+    <header class="{{ base_class }}__header">
+      {% if title %}
+        {# <p class="{{ base_class }}__eyebrow">{{ 'Booking'|t }}</p> #}
+        <h2 class="{{ base_class }}__title">{{ title }}</h2>
+      {% endif %}
+
+      {% if description %}
+        <p class="{{ base_class }}__description">{{ description }}</p>
+      {% endif %}
+    </header>
+
+    {% if image %}
+      <div class="{{ base_class }}__image-wrapper">
+        <img
+          class="{{ base_class }}__image"
+          src="{{ image }}"
+          alt="{{ alt|default('') }}"
+          loading="lazy"
+        />
+      </div>
+    {% endif %}
+  </div>
+</article>

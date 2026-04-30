@@ -1,0 +1,50 @@
+{#
+/**
+ * @file
+ * Fixed bottom CTA that toggles a panel; slot holds schedules, WhatsApp, etc.
+ *
+ * Props: title (required), color (optional button background/border).
+ * Slot: content.
+ */
+#}
+{% set base_class = 'cta-block' %}
+{% set trigger_styles = [] %}
+{% if color %}
+  {% set trigger_styles = trigger_styles|merge(['background-color: ' ~ color]) %}
+{% endif %}
+{% set trigger_style_attr = trigger_styles|length > 0 ? trigger_styles|join('; ') : '' %}
+
+<div {{ attributes.addClass(base_class) }}>
+  <div
+    class="{{ base_class }}__backdrop"
+    data-cta-block-backdrop
+    aria-hidden="true"
+  ></div>
+
+  <div
+    class="{{ base_class }}__panel"
+    data-cta-block-panel
+    role="region"
+    aria-hidden="true"
+    {% if title %}
+      aria-label="{{ title }}"
+    {% endif %}
+  >
+    <div class="{{ base_class }}__panel-inner">
+      {% block content %}{% endblock %}
+    </div>
+  </div>
+
+  <button
+    type="button"
+    class="{{ base_class }}__trigger"
+    data-cta-block-toggle
+    aria-expanded="false"
+    {% if trigger_style_attr %}
+      style="{{ trigger_style_attr }}"
+    {% endif %}
+  >
+    <span class="{{ base_class }}__trigger-label">{{ title }}</span>
+    <span class="{{ base_class }}__trigger-icon" aria-hidden="true"></span>
+  </button>
+</div>

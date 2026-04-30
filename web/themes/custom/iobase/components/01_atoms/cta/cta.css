@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sora:wght@100..800&display=swap");
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-family: "Albert Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+.cta:hover, .cta:focus {
+  text-decoration: none;
+}
+.cta:focus-visible {
+  outline: 2px solid #1E6FA8;
+  outline-offset: 2px;
+}
+.cta__label {
+  white-space: nowrap;
+}
+.cta--primary {
+  background-color: #1E6FA8;
+  color: #FFFFFF;
+  border-color: #1E6FA8;
+}
+.cta--primary:hover, .cta--primary:focus {
+  background-color: #134E75;
+  border-color: #134E75;
+  color: #FFFFFF;
+}
+.cta--secondary {
+  background-color: #2BB3A3;
+  color: #FFFFFF;
+  border-color: #2BB3A3;
+}
+.cta--secondary:hover, .cta--secondary:focus {
+  background-color: #1C857A;
+  border-color: #1C857A;
+  color: #FFFFFF;
+}
+.cta--tertiary {
+  background-color: #1F2A33;
+  color: #FFFFFF;
+  border-color: #1F2A33;
+}
+.cta--tertiary:hover, .cta--tertiary:focus {
+  background-color: #3C4A57;
+  border-color: #3C4A57;
+  color: #FFFFFF;
+}
+.cta--primary-outline, .cta--outline {
+  background-color: transparent;
+  color: #1E6FA8;
+  border-color: #1E6FA8;
+}
+.cta--primary-outline:hover, .cta--primary-outline:focus, .cta--outline:hover, .cta--outline:focus {
+  background-color: #1E6FA8;
+  color: #FFFFFF;
+  border-color: #1E6FA8;
+}
+.cta--secondary-outline {
+  background-color: transparent;
+  color: #2BB3A3;
+  border-color: #2BB3A3;
+}
+.cta--secondary-outline:hover, .cta--secondary-outline:focus {
+  background-color: #2BB3A3;
+  color: #FFFFFF;
+  border-color: #2BB3A3;
+}
+.cta--tertiary-outline {
+  background-color: transparent;
+  color: #1F2A33;
+  border-color: #1F2A33;
+}
+.cta--tertiary-outline:hover, .cta--tertiary-outline:focus {
+  background-color: #1F2A33;
+  color: #FFFFFF;
+  border-color: #1F2A33;
+}
+/*# sourceMappingURL=cta.css.map */

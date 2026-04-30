@@ -1,0 +1,99 @@
+// Import generic styles.
+@use "../../../scss/core" as *;
+
+//[data-component-id="iobase:hero_banner"] {
+//  /* @todo Add your styles here. */
+//}
+
+.hero-banner {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 1rem;
+  font-family: 'Sora', sans-serif;
+  @extend %breakContainer;
+}
+
+.hero-banner__overlay {
+  @extend %content-container;
+  //background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-banner__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero-banner__content {
+  color: #fff;
+}
+
+.hero-banner__title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 1rem;
+}
+
+.hero-banner__subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-banner__cta {
+  display: inline-block;
+  text-decoration: none;
+  padding: 1rem;
+  font-size: to-rem(16);
+
+  //padding: 0.75rem 1.5rem;
+  background: #fff;
+  color: $color-primary-dark;
+  border: solid 1px $color-primary-dark;
+  text-decoration: none;
+  border-radius: 10px;
+  &:hover {
+    color: white;
+    background: $color-primary-dark;
+    text-decoration: none;
+    border: solid 1px white;
+  }
+}
+
+.hero-banner__image img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .hero-banner__container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+
+/* Initial state */
+.hero-banner__content,
+.hero-banner__image {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+/* Active state */
+.hero-banner.is-loaded .hero-banner__content,
+.hero-banner.is-loaded .hero-banner__image {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional: stagger effect */
+.hero-banner.is-loaded .hero-banner__image {
+  transition-delay: 0.15s;
+}
+

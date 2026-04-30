@@ -1,0 +1,29 @@
+uuid: 21fa1bbe-0b90-4e6b-9486-e9ba879a5b71
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.articles_block
+  module:
+    - system
+    - views
+  theme:
+    - iobase
+id: iobase_views_block__articles_block_block_articles_cards
+theme: iobase
+region: content
+weight: 3
+provider: null
+plugin: 'views_block:articles_block-block_articles_cards'
+settings:
+  id: 'views_block:articles_block-block_articles_cards'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: null
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "<front>\r\n/design-direction"

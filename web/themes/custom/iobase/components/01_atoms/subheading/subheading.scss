@@ -1,0 +1,15 @@
+// Import generic styles.
+@use "../../../scss/core" as *;
+
+// Block
+.subheading {
+  font-family: $base-font-family;
+  font-size: to-rem(16);
+  line-height: 1.6;
+  color: $color-gray-500;
+  margin: 0 0 1em;
+
+  @media (min-width: $desk) {
+    font-size: to-rem(17);
+  }
+}

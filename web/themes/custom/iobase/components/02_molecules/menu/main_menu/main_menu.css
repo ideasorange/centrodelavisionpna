@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sora:wght@100..800&display=swap");
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFFFFF;
+  width: 100%;
+  padding: 2rem 0;
+  margin-top: 0;
+}
+@media (min-width: 1230px) {
+  .menu {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+  }
+}
+
+.hamburger {
+  display: flex;
+}
+@media (min-width: 1230px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+.navigation-menu {
+  display: none;
+  background-color: #FFFFFF;
+  position: static;
+}
+@media (min-width: 1230px) {
+  .navigation-menu {
+    display: block;
+  }
+}
+.navigation-menu.open {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 80px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding-top: 2rem;
+  z-index: 9;
+  height: 100vh;
+}
+.navigation-menu.open > .menu {
+  gap: 25px;
+}
+/*# sourceMappingURL=main_menu.css.map */

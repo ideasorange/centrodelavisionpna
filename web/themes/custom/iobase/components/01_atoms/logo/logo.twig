@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Template for Navbar brand component.
+ *
+ * Available config:
+ * - text: the text to use for the brand.
+ * - path: the path for the link. Leave blank for no link.
+ * - image:
+ *   - src: The source of the image
+ *   - width: The width of the image
+ *   - height: The height of the image
+ *   - alt: The alternative text of the image
+ * - navbar_brand_utility_classes: An array of utility classes.
+ */
+#}
+<div {{ attributes }}>
+  <a href="{{ path('<front>') }}" rel="home" class="site-logo">
+    <img src="{{ image }}" alt="{{ 'Home'|t }}" fetchpriority="high" />
+  </a>
+</div>
