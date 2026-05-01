@@ -43,7 +43,7 @@ settings:
                   image:
                     source_id: textfield
                     source:
-                      value: /sites/default/files/cdv_logo_200.png
+                      value: /sites/default/files/logo.svg
                   alt:
                     source_id: textfield
                     source:
@@ -55,17 +55,7 @@ settings:
             node_id: ''
             third_party_settings: ''
       center: {  }
-      right:
-        sources:
-          -
-            source_id: ''
-            source:
-              value:
-                value: ''
-                format: plain_text
-            _weight: '0'
-            node_id: ''
-            third_party_settings: ''
+      right: {  }
     third_party_settings: ''
     node_id: ''
 visibility: {  }

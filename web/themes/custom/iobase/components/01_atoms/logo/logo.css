@@ -3,11 +3,13 @@
   /* @todo Add your styles here. */
 }
 [data-component-id="iobase:logo"] .site-logo > img {
-  width: 80px;
+  max-width: 100px;
+  height: auto;
 }
 @media (min-width: 1230px) {
   [data-component-id="iobase:logo"] .site-logo > img {
-    width: 110px;
+    max-width: 120px;
+    height: auto;
   }
 }
 /*# sourceMappingURL=logo.css.map */
