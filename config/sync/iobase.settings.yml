@@ -5,6 +5,6 @@ features:
   favicon: 1
 logo:
   use_default: 0
-  path: 'public://cdv_logo_200.png'
+  path: 'public://logo.svg'
 favicon:
   use_default: 1
