@@ -1,0 +1,29 @@
+{#
+ * Card opinion — optional stars from valoracion (integer, e.g. field_valoracion), quote + customer.
+ #}
+{% set base_class = 'card-opinion' %}
+{% set v = (valoracion|default(0))|round(0, 'floor') %}
+{% set star_display = v > 10 ? 10 : (v < 0 ? 0 : v) %}
+{% set card_attributes = attributes ? attributes.addClass(base_class) : create_attribute().addClass(base_class) %}
+
+<article {{ card_attributes }}>
+  <div class="{{ base_class }}__inner">
+
+    {% if star_display > 0 %}
+      <p class="{{ base_class }}__stars" aria-hidden="true">
+        {% for _i in 1..star_display %}
+          ★
+        {% endfor %}
+      </p>
+    {% endif %}
+
+    <div class="{{ base_class }}__quote">
+      <blockquote class="{{ base_class }}__blockquote">
+        <p class="{{ base_class }}__opinion">“{{ opinion|nl2br }}”</p>
+      </blockquote>
+      {% if customer %}
+        <p class="{{ base_class }}__customer">{{ customer }}</p>
+      {% endif %}
+    </div>
+  </div>
+</article>

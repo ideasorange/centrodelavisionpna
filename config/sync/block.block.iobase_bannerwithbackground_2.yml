@@ -1,0 +1,45 @@
+uuid: 1e912c33-a399-4bfa-8735-8130ffd08f0f
+langcode: es
+status: true
+dependencies:
+  module:
+    - ui_patterns
+    - ui_patterns_blocks
+  theme:
+    - iobase
+id: iobase_bannerwithbackground_2
+theme: iobase
+region: content
+weight: -6
+provider: null
+plugin: 'ui_patterns:iobase:banner_with_bg'
+settings:
+  id: 'ui_patterns:iobase:banner_with_bg'
+  label: 'Wide banner 10'
+  label_display: '0'
+  provider: ui_patterns_blocks
+  ui_patterns:
+    component_id: 'iobase:banner_with_bg'
+    variant_id: null
+    props:
+      attributes:
+        source_id: attributes
+        source:
+          value: ''
+      heading:
+        source_id: textfield
+        source:
+          value: '10 años mejorando la salud visual de nuestros pacientes'
+      subheading:
+        source_id: textfield
+        source:
+          value: 'En estos 10 años hemos consolidado un equipo profesional capaz de brindar un servicio de salud oftalmologica de calidad.'
+      background_variant:
+        source_id: select
+        source:
+          value: primary
+    slots:
+      description: {  }
+    third_party_settings: ''
+    node_id: ''
+visibility: {  }

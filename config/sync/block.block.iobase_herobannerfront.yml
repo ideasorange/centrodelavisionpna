@@ -11,7 +11,7 @@ dependencies:
 id: iobase_herobannerfront
 theme: iobase
 region: content
-weight: -8
+weight: -9
 provider: null
 plugin: 'ui_patterns:iobase:hero_banner_front'
 settings:

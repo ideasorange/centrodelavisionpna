@@ -12,7 +12,7 @@ dependencies:
 id: iobase_views_block__articles_block_block_articles_cards
 theme: iobase
 region: content
-weight: 3
+weight: 2
 provider: null
 plugin: 'views_block:articles_block-block_articles_cards'
 settings:

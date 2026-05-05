@@ -12,7 +12,7 @@ dependencies:
 id: iobase_views_block__specialties_block_specialties_teaser
 theme: iobase
 region: content
-weight: -3
+weight: -5
 provider: null
 plugin: 'views_block:specialties-block_specialties_teaser'
 settings:
