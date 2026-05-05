@@ -1,0 +1,17 @@
+uuid: eb6aa94d-bdd8-4c32-a660-53ceea5436af
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Opinión
+type: opinion
+description: 'Representa una opinión por parte de un paciente o cliente.'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

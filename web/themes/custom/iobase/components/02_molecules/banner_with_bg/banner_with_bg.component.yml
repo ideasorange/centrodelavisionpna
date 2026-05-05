@@ -9,7 +9,6 @@ props:
   type: object
   required:
     - heading
-    - subheading
   properties:
     heading:
       type: string

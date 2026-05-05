@@ -1,0 +1,39 @@
+uuid: 7169ef8d-13bc-48fb-b715-9c4aad9e770a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.opinion.field_opinion
+    - field.field.node.opinion.field_valoracion
+    - node.type.opinion
+  module:
+    - user
+id: node.opinion.default
+targetEntityType: node
+bundle: opinion
+mode: default
+content:
+  field_opinion:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_valoracion:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  breadcrumbs: true
+  langcode: true

@@ -1,6 +1,6 @@
 uuid: 4312654e-a431-438d-9a1f-25b6cd052ad9
 langcode: es
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -11,7 +11,7 @@ dependencies:
 id: iobase_bannerwithbackground
 theme: iobase
 region: content
-weight: -4
+weight: 3
 provider: null
 plugin: 'ui_patterns:iobase:banner_with_bg'
 settings:

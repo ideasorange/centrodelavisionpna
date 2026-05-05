@@ -1,0 +1,101 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sora:wght@100..800&display=swap");
+.card-opinion {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 40.5rem;
+  margin-inline: auto;
+  padding-block: 1.5rem 2rem;
+  padding-inline: 1rem;
+  font-family: "Rubik", sans-serif;
+  color: #000000;
+  background: #FFFFFF;
+  text-align: center;
+  max-width: 350px;
+}
+@media (min-width: 768px) {
+  .card-opinion {
+    padding-block: 2rem 2.5rem;
+    padding-inline: 1.5rem;
+  }
+}
+.card-opinion__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+@media (min-width: 768px) {
+  .card-opinion__inner {
+    gap: 1rem;
+  }
+}
+.card-opinion__stars {
+  margin: 0;
+  padding-block: 0.25rem 0;
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: 0.12em;
+  color: #e6b422;
+}
+.card-opinion__quote {
+  position: relative;
+  width: 100%;
+  margin-top: 0;
+  padding-block: 1.75rem 0.5rem;
+  padding-inline: 0.5rem;
+}
+.card-opinion__quote::before {
+  content: "“";
+  position: absolute;
+  left: 50%;
+  top: 42%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: clamp(5.5rem, 28vw, 12rem);
+  line-height: 1;
+  color: #C8D4E0;
+  opacity: 0.45;
+  pointer-events: none;
+}
+@media (min-width: 768px) {
+  .card-opinion__quote {
+    padding-block: 2.25rem 0.75rem;
+  }
+  .card-opinion__quote::before {
+    top: 40%;
+    opacity: 0.5;
+  }
+}
+.card-opinion__blockquote {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.card-opinion__opinion {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.65;
+  font-style: italic;
+  font-weight: 400;
+  color: #6B7A89;
+}
+.card-opinion__customer {
+  position: relative;
+  z-index: 1;
+  margin: 1.25rem 0 0;
+  font-size: 0.9375rem;
+  line-height: 1.4;
+  font-weight: 700;
+  color: #000000;
+}
+@media (min-width: 768px) {
+  .card-opinion__customer {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+  }
+}
+/*# sourceMappingURL=card_opinion.css.map */

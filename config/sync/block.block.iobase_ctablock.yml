@@ -12,7 +12,7 @@ dependencies:
 id: iobase_ctablock
 theme: iobase
 region: content
-weight: 0
+weight: -1
 provider: null
 plugin: 'ui_patterns:iobase:cta_block'
 settings:

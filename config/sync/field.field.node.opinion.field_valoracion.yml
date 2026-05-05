@@ -1,0 +1,23 @@
+uuid: dcc30308-f805-4ea4-9dc7-257833cb2501
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_valoracion
+    - node.type.opinion
+id: node.opinion.field_valoracion
+field_name: field_valoracion
+entity_type: node
+bundle: opinion
+label: Valoración
+description: 'Valoración del comentario de 1 a 5.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: 5
+  prefix: ''
+  suffix: ''
+field_type: integer
