@@ -20,7 +20,7 @@ categories: {  }
 elements: |-
   consulta:
     '#type': label
-    '#title': 'Consultános lo que necesites'
+    '#title': 'Dejános tus datos y te contactamos'
     '#attributes':
       class:
         - contact__consulta
@@ -43,6 +43,35 @@ elements: |-
     '#attributes':
       class:
         - contact__input
+  tu_obra_social:
+    '#type': textfield
+    '#title': 'Tu Obra Social'
+    '#title_display': none
+    '#placeholder': 'Obra Social'
+    '#required': true
+    '#attributes':
+      class:
+        - contact__input
+  horario_de_preferencia:
+    '#type': select
+    '#title': 'Horario de Preferencia'
+    '#options':
+      Mañana: Mañana
+      Tarde: Tarde
+    '#empty_option': 'Cualquier horario'
+    '#empty_value': 'Cualquier horario'
+  dias_de_preferencia:
+    '#type': checkboxes
+    '#title': 'Días de Preferencia'
+    '#options':
+      Lunes: Lunes
+      Martes: Martes
+      Miércoles: Miércoles
+      Jueves: Jueves
+      Viernes: Viernes
+    '#options_all': true
+    '#options_all_value': Todos
+    '#options_all_text': Todos
   message:
     '#type': textarea
     '#title': Consulta

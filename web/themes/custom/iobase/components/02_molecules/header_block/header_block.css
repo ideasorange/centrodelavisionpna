@@ -51,14 +51,14 @@
 .header-block__inner {
   position: relative;
   z-index: 1;
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 2rem;
 }
 @media (min-width: 768px) {
   .header-block__inner {
-    grid-template-columns: 1fr 1fr;
+    flex-direction: row;
     gap: 3rem;
   }
 }

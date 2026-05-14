@@ -43,13 +43,13 @@
   @extend %content-container;
   position: relative;
   z-index: 1;
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 2rem;
 
   @media (min-width: $tab) {
-    grid-template-columns: 1fr 1fr;
+    flex-direction: row;
     gap: 3rem;
   }
 

@@ -43,7 +43,7 @@ settings:
             source_id: wysiwyg
             source:
               value:
-                value: '<h3>Nuestros horarios de atencion !&nbsp;</h3><ul><li data-list-item-id="ed33f954bc17b4ca573c2b5c33d87ecaf">Lunes a Viernes: 08:00 - 18:00&nbsp;</li><li data-list-item-id="e867aec2d4bccca0ffb4ef1f9080e0934">Sábados: 08:00 - 13:00&nbsp;</li><li data-list-item-id="e86067ad56f472958d88082155eef773d">Domingos: Cerrado</li></ul><h3>Dirección</h3><ul><li data-list-item-id="e80e20e8fdb707fb52282943865a463de">Urquiza 1234, Paraná, Entre Ríos</li><li data-list-item-id="efccfe9d1e669441239a5d4e1b83105b0"><p>Malvinas 91, Paraná, Entre Ríos</p><p>&nbsp;</p></li></ul>'
+                value: '<h3>Nuestros horarios de atencion !&nbsp;</h3><ul><li data-list-item-id="ed33f954bc17b4ca573c2b5c33d87ecaf">Lunes a Viernes: 08:00 - 20:00&nbsp;</li><li data-list-item-id="e867aec2d4bccca0ffb4ef1f9080e0934">Sábados y Domingos: Cerrado</li><li data-list-item-id="e8ed88476711f29de8975a2647b6ea653">Direcciones: Urquiza 651 y Malvinas 91, Paraná, Entre Ríos</li></ul><h3>Urgencias</h3><ul><li data-list-item-id="e98bffd6e36575c6f0b5263e06bc84a25">Lunes a Viernes: Se coordinan con el médico que esté atendiendo.</li><li data-list-item-id="eb57b740f7e4dbe6fb5c48259a404cce1">Sábados y Domingos: Se coordina con el médico&nbsp;disponible, tiene un costo de $85.000,00 que debe ser abonado previo a la confirmación del turno.&nbsp;</li></ul>'
                 format: full_html
             _weight: '0'
             node_id: ''

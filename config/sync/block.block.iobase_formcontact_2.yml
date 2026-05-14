@@ -88,7 +88,7 @@ settings:
                   image:
                     source_id: textfield
                     source:
-                      value: /sites/default/files/girlphone.png
+                      value: /sites/default/files/girlphone.webp
                   alt:
                     source_id: textfield
                     source:

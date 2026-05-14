@@ -57,7 +57,7 @@
   &__image {
     display: block;
     width: 100%;
-    height: 350px;
+    max-height: 650px;
     object-fit: cover;
   }
 }
