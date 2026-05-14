@@ -20,6 +20,7 @@ props:
       type: string
       title: Description
       description: Card body text.
+      maxLength: 256
     image:
       type: string
       title: Image URL

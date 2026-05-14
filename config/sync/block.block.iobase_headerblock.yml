@@ -1,6 +1,6 @@
-uuid: f311d19f-baa7-4179-ba24-7e98e6e89268
+uuid: 5cfb43ec-8e59-46e9-ac35-134b62d1434c
 langcode: es
-status: false
+status: true
 dependencies:
   module:
     - system
@@ -8,33 +8,29 @@ dependencies:
     - ui_patterns_blocks
   theme:
     - iobase
-id: iobase_herobannerfront
+id: iobase_headerblock
 theme: iobase
 region: content
-weight: -10
+weight: -9
 provider: null
-plugin: 'ui_patterns:iobase:hero_banner_front'
+plugin: 'ui_patterns:iobase:header_block'
 settings:
-  id: 'ui_patterns:iobase:hero_banner_front'
-  label: 'Specialty detail header'
+  id: 'ui_patterns:iobase:header_block'
+  label: 'Specialty details'
   label_display: '0'
   provider: ui_patterns_blocks
   ui_patterns:
-    component_id: 'iobase:hero_banner_front'
+    component_id: 'iobase:header_block'
     variant_id: null
     props:
       attributes:
         source_id: attributes
         source:
           value: ''
-      eyebrow:
-        source_id: textfield
-        source:
-          value: ''
       heading:
         source_id: textfield
         source:
-          value: 'Detalle de la Especialidad'
+          value: 'Detalles de la especialidad'
       description:
         source_id: textfield
         source:
@@ -42,10 +38,10 @@ settings:
       background_color:
         source_id: textfield
         source:
-          value: ''
+          value: '#d6e5cb'
       main_image: {  }
     slots:
-      cta:
+      content:
         sources:
           -
             source_id: block

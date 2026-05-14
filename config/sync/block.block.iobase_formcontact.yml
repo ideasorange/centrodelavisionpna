@@ -83,11 +83,11 @@ settings:
                   description:
                     source_id: textfield
                     source:
-                      value: 'Agendá tu consulta ahora y descubrí la excelencia en el cuidado de tus ojos. Contamos con un equipo especializado dedicado a bri'
+                      value: 'Solicitá tu consulta ahora y descubrí la excelencia en el cuidado de tu salud visual. Contamos con un equipo especializado dedicado a brindarte un acompañamiento intergral ajustado a tus necesidades.'
                   image:
                     source_id: textfield
                     source:
-                      value: /sites/default/files/eyes.png
+                      value: /sites/default/files/secretaria.webp
                   alt:
                     source_id: textfield
                     source:
