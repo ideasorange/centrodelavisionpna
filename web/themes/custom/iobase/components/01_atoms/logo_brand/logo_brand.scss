@@ -9,7 +9,11 @@
 
   &__image {
     display: block;
-    max-width: 180px;
+    max-width: 120px;
     height: auto;
+
+    @media (min-width: $desk) {
+      max-width: 180px;
+    }
   }
 }
