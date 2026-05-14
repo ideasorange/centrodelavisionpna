@@ -8,7 +8,7 @@
  * - heading: Main H1 heading.
  * - description: Supporting paragraph.
  * - main_image:
- *   - src: Image URL (e.g. /sites/default/files/hero.png).
+ *   - src: Image URL used as full background (e.g. /sites/default/files/hero.png).
  *   - alt: Alt text.
  * - background_color: Optional background color.
  *
@@ -17,15 +17,25 @@
  */
 #}
 {% set base_class = 'hero-banner-front' %}
+{% set has_background_image = main_image and main_image.src %}
+{% set classes = [base_class, 'js-hero-banner-front'] %}
+{% if has_background_image %}
+  {% set classes = classes|merge([base_class ~ '--with-image']) %}
+{% endif %}
+{% set inline_styles = [] %}
+{% if background_color %}
+  {% set inline_styles = inline_styles|merge(['--hero-banner-front-bg-color: ' ~ background_color ~ ';']) %}
+{% endif %}
+{% if has_background_image %}
+  {% set inline_styles = inline_styles|merge(['--hero-banner-front-bg-image: url(' ~ main_image.src ~ ');']) %}
+{% endif %}
 
 <section
-  {{ attributes.addClass(base_class, 'js-hero-banner-front') }}
-  {% if background_color %}
-    style="--hero-banner-front-bg-color: {{ background_color }};"
+  {{ attributes.addClass(classes) }}
+  {% if inline_styles %}
+    style="{{ inline_styles|join(' ') }}"
   {% endif %}
 >
-  <div class="{{ base_class }}__shape" aria-hidden="true"></div>
-
   <div class="{{ base_class }}__inner">
     <div class="{{ base_class }}__content js-hero-banner-front-content">
       {% if eyebrow %}
@@ -47,16 +57,5 @@
         {% block cta %}{% endblock %}
       </div>
     </div>
-
-    {% if main_image and main_image.src %}
-      <div class="{{ base_class }}__image js-hero-banner-front-image">
-        <img
-          src="{{ main_image.src }}"
-          alt="{{ main_image.alt|default('') }}"
-          loading="eager"
-          fetchpriority="high"
-        />
-      </div>
-    {% endif %}
   </div>
 </section>
