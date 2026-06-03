@@ -38,7 +38,7 @@ settings:
       image_1_url:
         source_id: textfield
         source:
-          value: /sites/default/files/images_gallery/image001.webp
+          value: /sites/default/files/images_gallery/centro001.webp
       image_1_alt:
         source_id: textfield
         source:
@@ -46,7 +46,7 @@ settings:
       image_2_url:
         source_id: textfield
         source:
-          value: /sites/default/files/images_gallery/image002.webp
+          value: /sites/default/files/images_gallery/centro002.webp
       image_2_alt:
         source_id: textfield
         source:
@@ -54,7 +54,7 @@ settings:
       image_3_url:
         source_id: textfield
         source:
-          value: /sites/default/files/images_gallery/image003.webp
+          value: /sites/default/files/images_gallery/centro003.webp
       image_3_alt:
         source_id: textfield
         source:
@@ -62,7 +62,7 @@ settings:
       image_4_url:
         source_id: textfield
         source:
-          value: /sites/default/files/images_gallery/image004.webp
+          value: /sites/default/files/images_gallery/centro004.webp
       image_4_alt:
         source_id: textfield
         source:
@@ -70,7 +70,7 @@ settings:
       image_5_url:
         source_id: textfield
         source:
-          value: /sites/default/files/images_gallery/image005.webp
+          value: /sites/default/files/images_gallery/centro005.webp
       image_5_alt:
         source_id: textfield
         source:
@@ -78,7 +78,7 @@ settings:
       image_6_url:
         source_id: textfield
         source:
-          value: /sites/default/files/images_gallery/image006.webp
+          value: /sites/default/files/images_gallery/centro006.webp
       image_6_alt:
         source_id: textfield
         source:
@@ -86,7 +86,7 @@ settings:
       image_7_url:
         source_id: textfield
         source:
-          value: /sites/default/files/images_gallery/image007.webp
+          value: /sites/default/files/images_gallery/centro007.webp
       image_7_alt:
         source_id: textfield
         source:
@@ -94,7 +94,7 @@ settings:
       image_8_url:
         source_id: textfield
         source:
-          value: /sites/default/files/images_gallery/image008.webp
+          value: ''
       image_8_alt:
         source_id: textfield
         source:
