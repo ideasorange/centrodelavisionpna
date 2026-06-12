@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sora:wght@100..800&display=swap");
+.service-info-card {
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(31, 42, 51, 0.08);
+  font-family: "Rubik", sans-serif;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+@media (min-width: 768px) {
+  .service-info-card {
+    border-radius: 1.25rem;
+  }
+}
+.service-info-card__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 100%;
+}
+@media (min-width: 768px) {
+  .service-info-card__inner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: stretch;
+  }
+}
+.service-info-card__inner--no-media {
+  grid-template-columns: 1fr;
+}
+.service-info-card__media {
+  position: relative;
+  min-height: 220px;
+  overflow: hidden;
+  background-color: #F7F9FB;
+}
+@media (min-width: 768px) {
+  .service-info-card__media {
+    min-height: 100%;
+  }
+}
+.service-info-card__media .image,
+.service-info-card__media figure {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+.service-info-card__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
+}
+@media (min-width: 768px) {
+  .service-info-card__media img {
+    min-height: 100%;
+  }
+}
+.service-info-card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.5rem;
+}
+@media (min-width: 768px) {
+  .service-info-card__content {
+    padding: 2rem 2.25rem;
+  }
+}
+@media (min-width: 1230px) {
+  .service-info-card__content {
+    padding: 2.5rem 2.75rem;
+  }
+}
+.service-info-card__title {
+  font-family: "Albert Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #1E6FA8;
+  margin: 0;
+}
+@media (min-width: 1230px) {
+  .service-info-card__title {
+    font-size: 1.75rem;
+  }
+}
+.service-info-card__description {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: #3C4A57;
+}
+.service-info-card__description p {
+  margin: 0 0 0.75rem;
+}
+.service-info-card__description p:last-child {
+  margin-bottom: 0;
+}
+.service-info-card__description strong,
+.service-info-card__description b {
+  font-weight: 700;
+  color: #1F2A33;
+}
+.service-info-card__description em,
+.service-info-card__description i {
+  font-style: italic;
+}
+/*# sourceMappingURL=service_info_card.css.map */

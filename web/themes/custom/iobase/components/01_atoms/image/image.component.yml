@@ -1,0 +1,41 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Image
+status: stable
+description: Renders a Drupal image render array or a fallback img tag.
+props:
+  type: object
+  properties:
+    image:
+      type: object
+      title: Image render array
+      description: Drupal render array for an image field (e.g. content.field_image).
+    src:
+      type: string
+      title: Image URL
+      description: Fallback source URL when image render array is not provided.
+    alt:
+      type: string
+      title: Alt text
+      description: Fallback alt text when src is used.
+    loading:
+      type: string
+      title: Loading behavior
+      description: Browser loading strategy for fallback img tag.
+      enum:
+        - lazy
+        - eager
+      default: lazy
+    height:
+      type: string
+      title: Image height
+      description: Optional CSS height value (e.g. 320px, 40vh, auto).
+    object_fit:
+      type: string
+      title: Object fit
+      description: Optional object-fit behavior for rendered img.
+      enum:
+        - fill
+        - contain
+        - cover
+        - none
+        - scale-down

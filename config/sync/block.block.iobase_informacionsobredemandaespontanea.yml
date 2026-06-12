@@ -1,0 +1,28 @@
+uuid: 71824942-540c-4def-8de4-19367236f60f
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:info_card:4281e02d-c8ff-40ea-aef6-3471bf407d87'
+  module:
+    - block_content
+    - system
+  theme:
+    - iobase
+id: iobase_informacionsobredemandaespontanea
+theme: iobase
+region: content
+weight: -5
+provider: null
+plugin: 'block_content:4281e02d-c8ff-40ea-aef6-3471bf407d87'
+settings:
+  id: 'block_content:4281e02d-c8ff-40ea-aef6-3471bf407d87'
+  label: 'Información sobre demanda espontánea'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

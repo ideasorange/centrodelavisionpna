@@ -1,0 +1,15 @@
+// Import generic styles.
+@use "../../../scss/core" as *;
+
+[data-component-id="iobase:image"] {
+  .image {
+    margin: 0;
+  }
+
+  .image img {
+    display: block;
+    max-width: 100%;
+    height: var(--image-height, auto);
+    object-fit: var(--image-object-fit, fill);
+  }
+}

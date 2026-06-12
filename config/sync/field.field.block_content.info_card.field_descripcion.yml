@@ -1,0 +1,26 @@
+uuid: c3ef3e5b-b44b-4734-97cf-e503b8d27315
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.info_card
+    - field.storage.block_content.field_descripcion
+    - filter.format.basic_html
+    - filter.format.full_html
+  module:
+    - text
+id: block_content.info_card.field_descripcion
+field_name: field_descripcion
+entity_type: block_content
+bundle: info_card
+label: Descripción
+description: 'Info block description'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+    - basic_html
+field_type: text_long

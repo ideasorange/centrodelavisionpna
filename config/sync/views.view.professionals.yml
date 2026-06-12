@@ -3,6 +3,7 @@ langcode: es
 status: true
 dependencies:
   config:
+    - core.base_field_override.node.opinion.title
     - core.base_field_override.node.professional.title
     - field.field.media.image.field_media_image
     - field.field.node.professional.field_description
@@ -209,7 +210,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 6
+          items_per_page: 9
       exposed_form:
         type: basic
         options:
@@ -367,7 +368,10 @@ display:
     display_plugin: block
     position: 1
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
     cache_metadata:
       max-age: -1
       contexts:
