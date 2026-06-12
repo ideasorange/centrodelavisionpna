@@ -1,0 +1,37 @@
+{#
+/**
+ * @file
+ * Generic image atom.
+ *
+ * Available config:
+ * - image: Drupal render array for an image field.
+ * - src: Fallback image URL.
+ * - alt: Fallback alt text.
+ * - loading: lazy|eager for fallback img rendering.
+ * - height: Optional CSS height (e.g. 320px, 40vh, auto).
+ * - object_fit: Optional fit (fill|contain|cover|none|scale-down).
+ */
+#}
+{% set base_class = 'image' %}
+{% set image_attributes = attributes ? attributes.addClass(base_class) : create_attribute().addClass(base_class) %}
+{% set image_styles = [] %}
+{% if height %}
+  {% set image_styles = image_styles|merge(['height: ' ~ height]) %}
+{% endif %}
+{% if object_fit %}
+  {% set image_styles = image_styles|merge(['object-fit: ' ~ object_fit]) %}
+{% endif %}
+{% set image_style_attr = image_styles|length > 0 ? image_styles|join('; ') : '' %}
+
+<figure {{ image_attributes }}>
+  {% if image is defined and image %}
+    {{ image }}
+  {% elseif src %}
+    <img
+      {% if image_style_attr %} style="{{ image_style_attr }}"{% endif %}
+      src="{{ src }}"
+      alt="{{ alt|default('') }}"
+      loading="{{ loading|default('lazy') }}"
+    />
+  {% endif %}
+</figure>

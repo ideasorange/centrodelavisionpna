@@ -27,6 +27,7 @@
         "drupal/custom_breadcrumbs": "^1.1",
         "drupal/devel": "^5.5",
         "drupal/environment_indicator": "^4.0",
+        "drupal/focal_point": "^2.1",
         "drupal/honeypot": "^2.2",
         "drupal/layout_builder_styles": "^2.1",
         "drupal/mailsystem": "^4.5",

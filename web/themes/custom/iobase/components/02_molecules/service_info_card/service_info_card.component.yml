@@ -1,0 +1,29 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Service Info Card
+status: stable
+description: Horizontal info card with image on the left and title plus rich text on the right.
+libraryOverrides:
+  dependencies:
+    - core/drupal
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: Title
+      description: Card heading text.
+    description:
+      type: string
+      title: Description
+      description: Optional plain-text description when the description slot is not used.
+    # image:
+    #   type: object
+    #   title: Image render array
+    #   description: Optional Drupal image render array (e.g. from a managed image field).
+slots:
+  image:
+    title: Image
+    description: Drupal image output from a field formatter (Layout Builder field block).
+  # description:
+  #   title: Description
+  #   description: Rich text / formatted description content.

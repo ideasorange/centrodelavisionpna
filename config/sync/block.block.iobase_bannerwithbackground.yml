@@ -11,7 +11,7 @@ dependencies:
 id: iobase_bannerwithbackground
 theme: iobase
 region: content
-weight: 3
+weight: 4
 provider: null
 plugin: 'ui_patterns:iobase:banner_with_bg'
 settings:

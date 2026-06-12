@@ -1,0 +1,8 @@
+uuid: 8197e779-75b4-4143-9a09-1c795e7af817
+langcode: es
+status: true
+dependencies: {  }
+id: info_card
+label: 'Info card'
+revision: false
+description: 'Info card component with a title, description and an image.'

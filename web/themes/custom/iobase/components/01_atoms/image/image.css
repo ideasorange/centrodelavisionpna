@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sora:wght@100..800&display=swap");
+[data-component-id="iobase:image"] .image {
+  margin: 0;
+}
+[data-component-id="iobase:image"] .image img {
+  display: block;
+  max-width: 100%;
+  height: var(--image-height, auto);
+  object-fit: var(--image-object-fit, fill);
+}
+/*# sourceMappingURL=image.css.map */

@@ -1,0 +1,145 @@
+uuid: d197bad0-bd9c-4184-9623-6402c016d979
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.info_card
+    - field.field.block_content.info_card.field_descripcion
+    - field.field.block_content.info_card.field_imagen
+    - field.field.block_content.info_card.field_title
+    - field.field.media.image.field_media_image
+  module:
+    - layout_builder
+    - layout_discovery
+    - ui_patterns
+    - ui_patterns_blocks
+  theme:
+    - iobase
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          3a49a1b7-7763-476f-ae2b-483890d1c639:
+            uuid: 3a49a1b7-7763-476f-ae2b-483890d1c639
+            region: content
+            configuration:
+              id: 'ui_patterns_entity:iobase:service_info_card'
+              label: 'Service Info Card'
+              label_display: '0'
+              provider: ui_patterns_blocks
+              context_mapping:
+                entity: layout_builder.entity
+              ui_patterns:
+                component_id: 'iobase:service_info_card'
+                variant_id: null
+                props:
+                  attributes:
+                    source_id: attributes
+                    source:
+                      value: ''
+                  title:
+                    source_id: entity_field
+                    source:
+                      derivable_context: 'field:block_content:info_card:field_title'
+                      'field:block_content:info_card:field_title':
+                        value:
+                          source_id: 'field_property:block_content:field_title:value'
+                  description:
+                    source_id: entity_field
+                    source:
+                      derivable_context: 'field:block_content:info_card:field_descripcion'
+                      'field:block_content:info_card:field_descripcion':
+                        value:
+                          source_id: 'field_property:block_content:field_descripcion:value'
+                slots:
+                  image:
+                    sources:
+                      -
+                        source_id: component
+                        source:
+                          component:
+                            component_id: 'iobase:image'
+                            variant_id: null
+                            props:
+                              attributes:
+                                source_id: attributes
+                                source:
+                                  value: ''
+                              src:
+                                source_id: entity_field
+                                source:
+                                  derivable_context: 'field:block_content:info_card:field_imagen'
+                                  'field:block_content:info_card:field_imagen':
+                                    value:
+                                      source_id: 'entity:field_property:block_content:field_imagen:target_id'
+                                      source:
+                                        derivable_context: 'entity_reference:block_content:info_card:field_imagen:media:image'
+                                        'entity_reference:block_content:info_card:field_imagen:media:image':
+                                          value:
+                                            source_id: entity_field
+                                            source:
+                                              derivable_context: 'field:media:image:field_media_image'
+                                              'field:media:image:field_media_image':
+                                                value:
+                                                  source_id: 'entity:field_property:media:field_media_image:target_id'
+                                                  source:
+                                                    derivable_context: 'entity_reference:media:image:field_media_image:file:file'
+                                                    'entity_reference:media:image:field_media_image:file:file':
+                                                      value:
+                                                        source_id: entity_field
+                                                        source:
+                                                          derivable_context: 'field:file:file:uri'
+                                                          'field:file:file:uri':
+                                                            value:
+                                                              source_id: 'field_property:file:uri:url'
+                              alt:
+                                source_id: textfield
+                                source:
+                                  value: ''
+                              loading:
+                                source_id: select
+                                source:
+                                  value: lazy
+                              height:
+                                source_id: textfield
+                                source:
+                                  value: ''
+                              object_fit:
+                                source_id: select
+                                source:
+                                  value: ''
+                            slots: {  }
+                            third_party_settings: ''
+                            node_id: ''
+                        _weight: '0'
+                        node_id: ''
+                        third_party_settings: ''
+                third_party_settings: ''
+                node_id: ''
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                card_teaser_body_wrapper: 0
+                card_teaser_fields_wrapper: 0
+                card_teaser_icon_wrapper: 0
+                card_teaser_link_wrapper: 0
+                card_title_title_wrapper: 0
+                node_full_body_wrapper: 0
+        third_party_settings: {  }
+id: block_content.info_card.default
+targetEntityType: block_content
+bundle: info_card
+mode: default
+content: {  }
+hidden:
+  breadcrumbs: true
+  field_descripcion: true
+  field_imagen: true
+  field_title: true
+  langcode: true

@@ -11,7 +11,7 @@ dependencies:
 id: iobase_headerblock
 theme: iobase
 region: content
-weight: -9
+weight: -10
 provider: null
 plugin: 'ui_patterns:iobase:header_block'
 settings:

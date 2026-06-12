@@ -1,0 +1,52 @@
+{#
+/**
+ * @file
+ * Service Info Card – horizontal card with image left and text right.
+ *
+ * Props:
+ * - title: Card heading.
+ * - description: Optional plain-text fallback.
+ * - image: Optional Drupal image render array.
+ *
+ * Slots:
+ * - image: Image field output (field block).
+ * - description: Formatted text field output.
+ */
+#}
+{% set base_class = 'service-info-card' %}
+{% set card_attributes = attributes ? attributes.addClass(base_class) : create_attribute().addClass(base_class) %}
+{% set has_image_prop = image is defined and image %}
+{% set has_description_prop = description is defined and description %}
+{% set image_slot %}{% block image %}{% endblock %}{% endset %}
+{% set has_image = has_image_prop or image_slot|trim is not empty %}
+
+<article {{ card_attributes }}>
+  <div class="{{ base_class }}__inner{% if not has_image %} {{ base_class }}__inner--no-media{% endif %}">
+    {% if has_image %}
+      <div class="{{ base_class }}__media">
+        {% if has_image_prop %}
+          {% include 'iobase:image' with {
+            image: image,
+            object_fit: 'cover',
+            height: '100%',
+          } only %}
+        {% else %}
+          {{ image_slot }}
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="{{ base_class }}__content">
+      {% if title %}
+        <h2 class="{{ base_class }}__title">{{ title }}</h2>
+      {% endif %}
+
+      <div class="{{ base_class }}__description">
+        {% if has_description_prop %}
+          <p>{{ description }}</p>
+        {% endif %}
+        {% block description %}{% endblock %}
+      </div>
+    </div>
+  </div>
+</article>
